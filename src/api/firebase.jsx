@@ -29,3 +29,8 @@ export const createUser = async ({ email, password }, callback) => {
       callback("가입에 실패했습니다.");
     });
 };
+
+// 로그인
+export const loginUser = ({ email, password }) => {
+  signInWithEmailAndPassword(auth, email, password);
+};
