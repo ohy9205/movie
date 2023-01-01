@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import Button from "./ui/Button";
 
-export default function SignForm({ onSubmit, login, join }) {
+export default function SignForm({ onSubmit, isLogin }) {
   const [user, setUser] = useState({});
-  const title = (login && "로그인") || (join && "회원가입");
-  const btnText = (login && "로그인하기") || (join && "가입하기");
+  const btnText = isLogin ? "로그인하기" : "가입하기";
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
-    console.log(e.target);
     setUser((state) => ({ ...state, [name]: value }));
   };
 
@@ -18,7 +16,6 @@ export default function SignForm({ onSubmit, login, join }) {
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <h1>{title}</h1>
       <input
         type="text"
         name="userId"
