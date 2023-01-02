@@ -4,8 +4,8 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
-import { useNavigate } from "react-router";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -20,17 +20,33 @@ const auth = getAuth(firebase);
 
 // 회원가입
 export const createUser = async ({ email, password }, callback) => {
-  callback("가입중...");
-  return await createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      callback("가입이 완료되었습니다.");
+  return createUserWithEmailAndPassword(auth, email, password)
+    .then((res) => {
+      alert("가입완료");
+      return res;
     })
-    .catch((error) => {
-      callback("가입에 실패했습니다.");
-    });
+    .catch((error) => callback(`가입에 실패했습니다. ${error.code}`));
 };
 
 // 로그인
-export const loginUser = ({ email, password }) => {
-  signInWithEmailAndPassword(auth, email, password);
+export const loginUser = async ({ email, password }, callback) => {
+  return await signInWithEmailAndPassword(auth, email, password)
+    .then((res) => res)
+    .catch((error) => callback(`로그인에 실패했습니다. ${error.code}`));
+};
+
+// 로그아웃
+export const logoutUser = async () => {
+  console.log(auth);
+  signOut(auth).catch((error) => {
+    // An error happened.
+    console.log(error);
+  });
+};
+
+// 유저 관찰
+export const onUserStateChange = (callback) => {
+  onAuthStateChanged(auth, (user) => {
+    callback(user);
+  });
 };
