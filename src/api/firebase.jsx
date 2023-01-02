@@ -1,8 +1,10 @@
-import { initializeApp } from "firebase/app";
+import firebase, { initializeApp } from "firebase/app";
 import {
+  browserSessionPersistence,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  setPersistence,
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
@@ -15,8 +17,8 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
-const firebase = initializeApp(firebaseConfig);
-const auth = getAuth(firebase);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 // 회원가입
 export const createUser = async ({ email, password }, callback) => {
@@ -30,6 +32,8 @@ export const createUser = async ({ email, password }, callback) => {
 
 // 로그인
 export const loginUser = async ({ email, password }, callback) => {
+  await setPersistence(auth, browserSessionPersistence);
+
   return await signInWithEmailAndPassword(auth, email, password)
     .then((res) => res)
     .catch((error) => callback(`로그인에 실패했습니다. ${error.code}`));
@@ -49,4 +53,7 @@ export const onUserStateChange = (callback) => {
   onAuthStateChanged(auth, (user) => {
     callback(user);
   });
+  // onAuthStateChanged(auth, (user) => {
+  //   callback(user);
+  // });
 };
