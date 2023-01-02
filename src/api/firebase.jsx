@@ -40,12 +40,8 @@ export const loginUser = async ({ email, password }, callback) => {
 };
 
 // 로그아웃
-export const logoutUser = async () => {
-  console.log(auth);
-  signOut(auth).catch((error) => {
-    // An error happened.
-    console.log(error);
-  });
+export const logoutUser = () => {
+  signOut(auth);
 };
 
 // 유저 관찰
