@@ -1,14 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SignForm from "../components/SignForm";
 
 export default function Login() {
   return (
     <section>
-      <h1>로그인</h1>
-      {<SignForm isLogin />}
+      <h1>회원가입</h1>
+      {<SignForm />}
 
-      <Link to="/signup">
-        <p>아직 가입을 안하셨나요?</p>
+      <Link to="/login">
+        <p>로그인 하러가기</p>
       </Link>
     </section>
   );

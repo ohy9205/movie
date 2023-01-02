@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { AuthProvider } from "./store/AuthContext";
+import SignUp from "./pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [{ index: true, element: <Home /> }],
   },
   { path: "login", element: <Login /> },
+  { path: "signup", element: <SignUp /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
