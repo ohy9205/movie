@@ -1,4 +1,4 @@
-import firebase, { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import {
   browserSessionPersistence,
   createUserWithEmailAndPassword,
@@ -53,7 +53,4 @@ export const onUserStateChange = (callback) => {
   onAuthStateChanged(auth, (user) => {
     callback(user);
   });
-  // onAuthStateChanged(auth, (user) => {
-  //   callback(user);
-  // });
 };
