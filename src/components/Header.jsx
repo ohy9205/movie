@@ -11,7 +11,7 @@ export default function Header() {
   const userExist = (
     <ul>
       <li>
-        <Link to="/">Movies</Link>
+        <Link to="/movies">Movies</Link>
       </li>
       <li>
         <Button text="로그아웃" onClick={logoutUser} />
