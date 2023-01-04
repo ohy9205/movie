@@ -38,23 +38,37 @@ export const getRecentMoviesFetch = () => {
         title,
         genre,
         repRlsDate,
+        prodYear,
         posters,
-        plots,
+        plots: {
+          plot: [{ plotText }],
+        },
         runtime,
         rating,
         nation,
+        titleEng,
+        titleOrg,
+        directors: {
+          director: [{ directorNm }],
+        },
+        actors: { actor },
       } = data;
 
       return {
         id: movieSeq,
         genre,
         title,
-        release: repRlsDate,
+        releaseDate: repRlsDate,
+        prodYear,
         poster: posters.split("|")[0],
-        summary: plots.plot[0].plotText,
+        summary: plotText,
         runtime,
         rating,
         nation,
+        titleEng,
+        titleOrg,
+        director: directorNm,
+        actors: actor.map((it) => it.actorNm),
       };
     });
     await dispatch(moviesAction.getRecentMovies(recentMovies));
