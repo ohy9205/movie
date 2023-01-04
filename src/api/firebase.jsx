@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { child, get, getDatabase, ref, set } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -19,6 +20,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getDatabase(app);
+const dbRef = ref(db);
 
 // 회원가입
 export const createUser = async ({ email, password }, callback) => {
@@ -49,4 +52,34 @@ export const onUserStateChange = (callback) => {
   onAuthStateChanged(auth, (user) => {
     callback(user);
   });
+};
+
+// db데이터 들고오기
+
+// db로부터 데이터 찾기
+export const searchMovies = async ({ title, releaseDate, movieCode }) => {
+  const snapshot = await get(child(dbRef, "/movies"));
+  if (snapshot.exists() !== null) {
+    const values = Object.values(snapshot.val());
+    values.map((movie) => {
+      if (movie.movieCode === movieCode) {
+        return movie;
+      } else if (movie.title === title && movie.releaseDate === releaseDate) {
+        return movie;
+      } else {
+        return null;
+      }
+    });
+  } else {
+    return null;
+  }
+};
+
+// 데이터베이스에 저장
+export const addMovie = async (movie) => {
+  try {
+    await set(ref(db, `/movies/${movie.id}`), movie);
+  } catch (error) {
+    console.log(error);
+  }
 };
