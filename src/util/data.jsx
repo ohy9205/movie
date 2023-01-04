@@ -27,7 +27,11 @@ export const dataFormat = (response) => {
     } = data;
 
     /**정규표현식으로  */
-    let titleForamt = title.replace(/!HS/g, "").replace(/!HE/g, "");
+    let titleForamt = title
+      .replace(/!HS/g, "")
+      .replace(/!HE/g, "")
+      .replace(/^\s+|\s+$/g, "")
+      .replace(/ +/g, " ");
 
     return {
       id: movieSeq,
