@@ -18,10 +18,6 @@ export default function Home() {
     dispatch(getBoxOfficeMoviesFetch());
   }, [dispatch]);
 
-  if (!boxOfficeMovies && !recentMovies) {
-    return <section>Loading...</section>;
-  }
-
   return (
     <section>
       <article>
