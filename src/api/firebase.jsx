@@ -54,14 +54,13 @@ export const onUserStateChange = (callback) => {
   });
 };
 
-// db데이터 들고오기
-
 // db로부터 데이터 찾기
 export const searchMovies = async ({ title, releaseDate, movieCode }) => {
   const snapshot = await get(child(dbRef, "/movies"));
-  if (snapshot.exists() !== null) {
+  if (snapshot.exists() && snapshot.val() !== null) {
     const values = Object.values(snapshot.val());
-    values.map((movie) => {
+
+    return values.find((movie) => {
       if (movie.movieCode === movieCode) {
         return movie;
       } else if (movie.title === title && movie.releaseDate === releaseDate) {
@@ -78,7 +77,9 @@ export const searchMovies = async ({ title, releaseDate, movieCode }) => {
 // 데이터베이스에 저장
 export const addMovie = async (movie) => {
   try {
-    await set(ref(db, `/movies/${movie.id}`), movie);
+    await set(ref(db, `/movies/${movie.id}`), movie).then((it) =>
+      console.log(it)
+    );
   } catch (error) {
     console.log(error);
   }

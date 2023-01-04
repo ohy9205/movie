@@ -34,12 +34,11 @@ const getBoxOffice = async () => {
 };
 
 // 박스오피스 영화 정보 패칭
-export const getBoxOfficeMovies = (boxOfficeData) => {
-  // map으로 순회
-  // db에서 데이터 찾고, 없으면 k에서 찾음
-  return boxOfficeData.map(async (data) => {
-    const movie = await searchMovies(data);
+export const getBoxOfficeMovies = async (boxOfficeData) => {
+  let moviesList = [];
 
+  for await (const data of boxOfficeData) {
+    const movie = await searchMovies(data);
     if (!movie) {
       const response = await moviesClient.get("", {
         params: {
@@ -50,35 +49,30 @@ export const getBoxOfficeMovies = (boxOfficeData) => {
 
       if (response) {
         const movieFormat = dataFormat(response)[0];
+        moviesList.push(movieFormat);
         saveMovie(movieFormat);
-        return movieFormat;
-      } else {
-        return null;
       }
     } else {
-      return movie;
+      moviesList.push(movie);
     }
-  });
+  }
+  return moviesList;
 };
 
-// db에 데이터 저장
+// db에 박스오피스 데이터 저장
 export const saveMovie = async (movie) => {
-  // console.log(movie);
   addMovie(movie);
-  // await movies.map((movie) => addMovie(movie));
 };
 
-// 리덕스에 저장
+// 리덕스에 박스오피스 데이터 저장
 export const getBoxOfficeMoviesFetch = () => {
   return async (dispatch) => {
-    const boxOfficeData = await getBoxOffice();
-    console.log(boxOfficeData);
+    const boxOfficeData = await getBoxOffice(); // 박스오피스 데이터를 불러오고
     if (boxOfficeData) {
-      const boxOfficeMovies = await Promise.all(
-        getBoxOfficeMovies(boxOfficeData)
-      );
-      dispatch(moviesAction.getBoxOfficeMovies(boxOfficeMovies));
-    } else {
+      const moviesList = await getBoxOfficeMovies(boxOfficeData); // 데이터에 해당하는 영화정보를 불러오고 (없으면 db에 저장하고)
+
+      // 리덕스에 저장
+      dispatch(moviesAction.getBoxOfficeMovies(moviesList));
     }
   };
 };
@@ -88,17 +82,11 @@ export const getRecentMoviesFetch = () => {
   return async (dispatch) => {
     const response = await moviesClient.get("", {
       params: {
-        listCount: 10,
+        listCount: 15,
         releaseDts: getTodayDate(),
       },
     });
     const recentMovies = dataFormat(response);
-    console.log(recentMovies);
     dispatch(moviesAction.getRecentMovies(recentMovies));
   };
-};
-
-// 특정 영화 검색
-export const getMovie = async (data) => {
-  return await searchMovies(data);
 };
