@@ -61,9 +61,9 @@ export const searchMovies = async ({ title, releaseDate, movieCode }) => {
     const values = Object.values(snapshot.val());
 
     return values.find((movie) => {
-      if (movie.movieCode === movieCode) {
+      if (movie.title === title && movie.releaseDate === releaseDate) {
         return movie;
-      } else if (movie.title === title && movie.releaseDate === releaseDate) {
+      } else if (movie.title === title && movie.movieCode === movieCode) {
         return movie;
       } else {
         return null;
@@ -77,10 +77,8 @@ export const searchMovies = async ({ title, releaseDate, movieCode }) => {
 // 데이터베이스에 저장
 export const addMovie = async (movie) => {
   try {
-    await set(ref(db, `/movies/${movie.id}`), movie).then((it) =>
-      console.log(it)
-    );
+    await set(ref(db, `/movies/${movie.id}`), movie);
   } catch (error) {
-    console.log(error);
+    return;
   }
 };

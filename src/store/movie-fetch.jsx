@@ -48,9 +48,12 @@ export const getBoxOfficeMovies = async (boxOfficeData) => {
       });
 
       if (response) {
-        const movieFormat = dataFormat(response)[0];
-        moviesList.push(movieFormat);
-        saveMovie(movieFormat);
+        const responseData = responseMovieData(response);
+        for (const data of responseData) {
+          const movieFormat = dataFormat(data);
+          saveMovie(movieFormat);
+          moviesList.push(movieFormat);
+        }
       }
     } else {
       moviesList.push(movie);
@@ -79,6 +82,8 @@ export const getBoxOfficeMoviesFetch = () => {
 
 // 최신 영화 데이터 패칭
 export const getRecentMoviesFetch = () => {
+  let moviesList = [];
+
   return async (dispatch) => {
     const response = await moviesClient.get("", {
       params: {
@@ -86,7 +91,26 @@ export const getRecentMoviesFetch = () => {
         releaseDts: getTodayDate(),
       },
     });
-    const recentMovies = dataFormat(response);
-    dispatch(moviesAction.getRecentMovies(recentMovies));
+
+    // db에 해당 데이터 있는지 확인하고 만약 데이터가 없으면 db에 저장
+    if (response) {
+      const responseData = responseMovieData(response);
+      for (const data of responseData) {
+        const movieFormat = dataFormat(data);
+        moviesList.push(movieFormat);
+
+        const movie = await searchMovies(movieFormat);
+        if (!movie) {
+          saveMovie(movieFormat);
+        }
+      }
+    }
+
+    dispatch(moviesAction.getRecentMovies(moviesList));
   };
+};
+
+// api response에서 영화 정보 추출
+const responseMovieData = (response) => {
+  return response.data.Data[0].Result;
 };
