@@ -1,0 +1,2415 @@
+{
+  "Query": "",
+  "KMAQuery": "반지 제왕 반지의제왕",
+  "TotalCount": 3,
+  "Data": [
+    {
+      "CollName": "kmdb_new2",
+      "TotalCount": 3,
+      "Count": 3,
+      "Result": [
+        {
+          "DOCID": "F08116",
+          "movieId": "F",
+          "movieSeq": "08116",
+          "title": "  !HS 반지 !HE 의  !HS 제왕 !HE : 두 개의 탑",
+          "titleEng": "The Lord of the Rings: The Two Towers",
+          "titleOrg": "The Lord of the Rings: The Two Towers",
+          "titleEtc": "반지의제왕:두개의탑^반지의 제왕: 두 개의 탑^The Lord of the Rings: The Two Towers^반지의제왕, 두개의탑^The Lord of the Rings: The Two Towers^The Lord of the Rings: The Two Towers",
+          "prodYear": "2002",
+          "directors": {
+            "director": [
+              {
+                "directorNm": "피터 잭슨",
+                "directorEnNm": "Peter Jackson",
+                "directorId": "00108698"
+              }
+            ]
+          },
+          "actors": {
+            "actor": [
+              {
+                "actorNm": "일라이저 우드",
+                "actorEnNm": "Elijah Wood",
+                "actorId": "00049007"
+              },
+              {
+                "actorNm": "이안 맥켈런",
+                "actorEnNm": "lan McKellen",
+                "actorId": "00049820"
+              },
+              {
+                "actorNm": "비고 모텐슨",
+                "actorEnNm": "Viggo Mortensen",
+                "actorId": "00122383"
+              },
+              {
+                "actorNm": "숀 애스틴",
+                "actorEnNm": "Sean Astin",
+                "actorId": "00048830"
+              },
+              {
+                "actorNm": "빌리 보이드",
+                "actorEnNm": "Billy Boyd",
+                "actorId": "00058550"
+              },
+              {
+                "actorNm": "리브 타일러",
+                "actorEnNm": "Liv Tyler",
+                "actorId": "00049811"
+              },
+              {
+                "actorNm": "도미니크 모나핸",
+                "actorEnNm": "Dominic Monaghan",
+                "actorId": "00067552"
+              },
+              {
+                "actorNm": "크리스토퍼 리",
+                "actorEnNm": "Christopher Lee",
+                "actorId": "00048840"
+              },
+              {
+                "actorNm": "미란다 오토",
+                "actorEnNm": "Miranda Otto",
+                "actorId": "00103971"
+              },
+              {
+                "actorNm": "브래드 도리프",
+                "actorEnNm": "Brad Dourif",
+                "actorId": "00059104"
+              },
+              {
+                "actorNm": "올랜도 블룸",
+                "actorEnNm": "Orlando Bloom",
+                "actorId": "00106613"
+              },
+              {
+                "actorNm": "케이트 블란쳇",
+                "actorEnNm": "Cate Blanchett",
+                "actorId": "00049090"
+              }
+            ]
+          },
+          "nation": "미국",
+          "company": "New Line Cinema,The Saul Zaentz Company,WingNut Fi",
+          "plots": {
+            "plot": [
+              {
+                "plotLang": "한국어",
+                "plotText": "운명을 건 최후의 전쟁이 시작된다. 9명으로 이루어진 중간대륙의 반지원정대는 사우론의 사악한 세력에 맞서 반지를 지켜냈지만 반지원정대는 뿔뿔이 흩어지게 된다. 호빗족으로 절대반지에 유일한 내성을 보이는 프로도는 일행과 떨어져 샘과 함께 불의 산으로 모험을 감행하지만 골룸이라는 새로운 위협을 맞이하고 사루만의 우루크하이 군대에게 잡혀간 메리와 피핀은 엔트 족의 영역에서 나무수염이라는 엔트 족에게 구출 받게 된다. 한편 메리와 피핀을 구하기 위해 우루크하이"
+              }
+            ]
+          },
+          "runtime": "177",
+          "rating": "12세관람가",
+          "genre": "액션,드라마,어드벤처,판타지",
+          "kmdbUrl": "https://www.kmdb.or.kr/db/kor/detail/movie/F/08116",
+          "type": "극영화",
+          "use": "극장용",
+          "episodes": "",
+          "ratedYn": "Y",
+          "repRatDate": "20021126",
+          "repRlsDate": "20021219",
+          "ratings": {
+            "rating": [
+              {
+                "ratingMain": "Y",
+                "ratingDate": "20021126",
+                "ratingNo": "2002-F341",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20021219",
+                "runtime": "177"
+              },
+              {
+                "ratingMain": "N",
+                "ratingDate": "20170104",
+                "ratingNo": "2017-MF00045",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20170118",
+                "runtime": "235"
+              },
+              {
+                "ratingMain": "",
+                "ratingDate": "",
+                "ratingNo": "",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20210318",
+                "runtime": ""
+              }
+            ]
+          },
+          "keywords": "배신,블록버스터,서사극,성,소설원작,속편,숲,시리즈,오크,왕,우정,전사,전설,추적,호빗,고대,군대,마법,몬스터,반지,재개봉",
+          "posters": "http://file.koreafilm.or.kr/thm/02/00/02/87/tn_DPF007680.JPG|http://file.koreafilm.or.kr/thm/02/99/17/23/tn_DPF022184.jpg",
+          "stlls": "http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710984.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710985.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710986.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710987.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710988.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710989.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710990.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710991.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710992.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710993.jpg",
+          "staffs": {
+            "staff": [
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "감독",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "프란 월쉬",
+                "staffEnNm": "Fran Walsh",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00071500"
+              },
+              {
+                "staffNm": "필리파 보엔스",
+                "staffEnNm": "Philippa Boyens",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00109309"
+              },
+              {
+                "staffNm": "스티번 신클레",
+                "staffEnNm": "Stephen Sinclair",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00117605"
+              },
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "일라이저 우드",
+                "staffEnNm": "Elijah Wood",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049007"
+              },
+              {
+                "staffNm": "이안 맥켈런",
+                "staffEnNm": "lan McKellen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049820"
+              },
+              {
+                "staffNm": "비고 모텐슨",
+                "staffEnNm": "Viggo Mortensen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00122383"
+              },
+              {
+                "staffNm": "숀 애스틴",
+                "staffEnNm": "Sean Astin",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00048830"
+              },
+              {
+                "staffNm": "빌리 보이드",
+                "staffEnNm": "Billy Boyd",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00058550"
+              },
+              {
+                "staffNm": "리브 타일러",
+                "staffEnNm": "Liv Tyler",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049811"
+              },
+              {
+                "staffNm": "도미니크 모나핸",
+                "staffEnNm": "Dominic Monaghan",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00067552"
+              },
+              {
+                "staffNm": "크리스토퍼 리",
+                "staffEnNm": "Christopher Lee",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00048840"
+              },
+              {
+                "staffNm": "미란다 오토",
+                "staffEnNm": "Miranda Otto",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00103971"
+              },
+              {
+                "staffNm": "브래드 도리프",
+                "staffEnNm": "Brad Dourif",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059104"
+              },
+              {
+                "staffNm": "올랜도 블룸",
+                "staffEnNm": "Orlando Bloom",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00106613"
+              },
+              {
+                "staffNm": "케이트 블란쳇",
+                "staffEnNm": "Cate Blanchett",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049090"
+              },
+              {
+                "staffNm": "New Line Cinema",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "The Saul Zaentz Company",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "WingNut Films",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "마이클 린",
+                "staffEnNm": "Michael Lynne",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00102650"
+              },
+              {
+                "staffNm": "마크 오데스키",
+                "staffEnNm": "Mark Ordesky",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100147"
+              },
+              {
+                "staffNm": "로버트 샤이",
+                "staffEnNm": "ROBERT SHAYE",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00134043"
+              },
+              {
+                "staffNm": "밥 웨인스타인",
+                "staffEnNm": "Bob Weinstein",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00058911"
+              },
+              {
+                "staffNm": "하비 웨인스타인",
+                "staffEnNm": "Harvey Weinstein",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00076060"
+              },
+              {
+                "staffNm": "앤드류 레스니에",
+                "staffEnNm": "Andrew Lesnie",
+                "staffRoleGroup": "촬영",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00054963"
+              },
+              {
+                "staffNm": "마이클 호튼",
+                "staffEnNm": "Michael Horton",
+                "staffRoleGroup": "편집",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00102505"
+              },
+              {
+                "staffNm": "자베즈 올센",
+                "staffEnNm": "Jabez Olssen",
+                "staffRoleGroup": "편집",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00085212"
+              },
+              {
+                "staffNm": "하워드 쇼어",
+                "staffEnNm": "Howard Shore",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084020"
+              },
+              {
+                "staffNm": "프란 월쉬",
+                "staffEnNm": "Fran Walsh",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00071500"
+              },
+              {
+                "staffNm": "조 블레이클리",
+                "staffEnNm": "Joe Bleakley",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00089321"
+              },
+              {
+                "staffNm": "필립 아이비",
+                "staffEnNm": "Philip Ivey",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00109231"
+              },
+              {
+                "staffNm": "라브 아우터사이드",
+                "staffEnNm": "Rob Outterside",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00112196"
+              },
+              {
+                "staffNm": "크리스찬 리버스",
+                "staffEnNm": "Christian Rivers",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00062490"
+              },
+              {
+                "staffNm": "마크 로빈스",
+                "staffEnNm": "Mark Robins",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100185"
+              },
+              {
+                "staffNm": "그랜트 메이저",
+                "staffEnNm": "Grant Major",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "제작디자인",
+                "staffId": "00074806"
+              },
+              {
+                "staffNm": "하워드 쇼어",
+                "staffEnNm": "Howard Shore",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084020"
+              },
+              {
+                "staffNm": "프란 월쉬",
+                "staffEnNm": "Fran Walsh",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00071500"
+              },
+              {
+                "staffNm": "Ethan Van der Ryn",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "Supervising sound editor",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Jim Rygiel",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "Mike Hopkins / visual effects supervisor",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Randall William Cook / visual effects director of photography: Alex Funke / set decorator: Dan Hennah",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "Joe Letteri / creature effects supervisor/designer",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Christopher Boyes",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "Alan Lee / sound re-recording mixer",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Michael Semanick",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Hammond Peek / Costume Design by: Ngila Dickson",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "Michael Hedges / production sound mixer",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Peter Owen",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "Richard Taylor / makeup designer",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Peter King",
+                "staffEnNm": "",
+                "staffRoleGroup": "기타스탭",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "New Line Cinema",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "The Saul Zaentz Company",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "WingNut Films",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "New Line Cinema",
+                "staffEnNm": "",
+                "staffRoleGroup": "배급사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "워너브러더스코리아㈜",
+                "staffEnNm": "Warner Bros. Korea",
+                "staffRoleGroup": "배급사",
+                "staffRole": "재개봉 배급",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "㈜태원엔터테인먼트",
+                "staffEnNm": "",
+                "staffRoleGroup": "수입사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "워너브러더스코리아㈜",
+                "staffEnNm": "Warner Bros. Korea",
+                "staffRoleGroup": "수입사",
+                "staffRole": "재개봉 수입",
+                "staffEtc": "",
+                "staffId": ""
+              }
+            ]
+          },
+          "vods": { "vod": [{ "vodClass": "", "vodUrl": "" }] },
+          "openThtr": "",
+          "stat": [
+            {
+              "screenArea": "",
+              "screenCnt": "",
+              "salesAcc": "",
+              "audiAcc": "",
+              "statSouce": "",
+              "statDate": ""
+            }
+          ],
+          "screenArea": "",
+          "screenCnt": "",
+          "salesAcc": "",
+          "audiAcc": "",
+          "statSouce": "",
+          "statDate": "",
+          "themeSong": "",
+          "soundtrack": "",
+          "fLocation": "",
+          "Awards1": "아카데미 시상식(2003) : 시각효과상 - Jim Rygiel|아카데미 시상식(2003) : 음향효과상 - Ethan Van der Ryn",
+          "Awards2": "",
+          "regDate": "19000101",
+          "modDate": "20221117",
+          "Codes": {
+            "Code": [
+              { "CodeNm": "FIMS", "CodeNo": "20020234" },
+              { "CodeNm": "FIMS(추가)", "CodeNo": "20168664" }
+            ]
+          },
+          "CommCodes": {
+            "CommCode": [{ "CodeNm": "FIMS", "CodeNo": "20020234" }]
+          },
+          "ALIAS": "srcKmdb2"
+        },
+        {
+          "DOCID": "F09308",
+          "movieId": "F",
+          "movieSeq": "09308",
+          "title": "  !HS 반지 !HE 의  !HS 제왕 !HE : 왕의 귀환",
+          "titleEng": "The Lord of the Rings: The Return of the King",
+          "titleOrg": "The Lord of the Rings: The Return of the King",
+          "titleEtc": "반지의제왕:왕의귀환^반지의 제왕: 왕의 귀환^The Lord of the Rings: The Return of the King^반지의제왕:왕의귀환^The Lord of the Rings: The Return of the King^The Lord of the Rings: The Return of the King",
+          "prodYear": "2003",
+          "directors": {
+            "director": [
+              {
+                "directorNm": "피터 잭슨",
+                "directorEnNm": "Peter Jackson",
+                "directorId": "00108698"
+              }
+            ]
+          },
+          "actors": {
+            "actor": [
+              {
+                "actorNm": "노엘 애플비",
+                "actorEnNm": "Noel Appleby",
+                "actorId": "00106056"
+              },
+              {
+                "actorNm": "알렉산드라 애스틴",
+                "actorEnNm": "Alexandra Astin",
+                "actorId": "00053708"
+              },
+              {
+                "actorNm": "숀 애스틴",
+                "actorEnNm": "Sean Astin",
+                "actorId": "00048830"
+              },
+              {
+                "actorNm": "존 바흐",
+                "actorEnNm": "John Bach",
+                "actorId": "00089738"
+              },
+              {
+                "actorNm": "숀 빈",
+                "actorEnNm": "Sean Bean",
+                "actorId": "00049141"
+              },
+              {
+                "actorNm": "케이트 블란쳇",
+                "actorEnNm": "Cate Blanchett",
+                "actorId": "00049090"
+              },
+              {
+                "actorNm": "올랜도 블룸",
+                "actorEnNm": "Orlando Bloom",
+                "actorId": "00106613"
+              },
+              {
+                "actorNm": "빌리 보이드",
+                "actorEnNm": "Billy Boyd",
+                "actorId": "00058550"
+              },
+              {
+                "actorNm": "마톤 소카즈",
+                "actorEnNm": "Marton Csokas",
+                "actorId": "00100664"
+              },
+              {
+                "actorNm": "버나드 힐",
+                "actorEnNm": "Bernard Hill",
+                "actorId": "00057967"
+              },
+              {
+                "actorNm": "이안 홀름",
+                "actorEnNm": "Ian Holm",
+                "actorId": "00084302"
+              },
+              {
+                "actorNm": "브루스 홉킨스",
+                "actorEnNm": "Bruce Hopkins",
+                "actorId": "00059859"
+              },
+              {
+                "actorNm": "이안 휴즈",
+                "actorEnNm": "Ian Hughes",
+                "actorId": "00084303"
+              },
+              {
+                "actorNm": "로렌스 마코아르",
+                "actorEnNm": "Lawrence Makoare",
+                "actorId": "00095971"
+              },
+              {
+                "actorNm": "이안 맥켈런",
+                "actorEnNm": "lan McKellen",
+                "actorId": "00049820"
+              },
+              {
+                "actorNm": "사라 맥로드",
+                "actorEnNm": "Sarah McLeod",
+                "actorId": "00114914"
+              },
+              {
+                "actorNm": "메이지 맥로드 리에라",
+                "actorEnNm": "Maisy McLeod-Riera",
+                "actorId": "00098493"
+              },
+              {
+                "actorNm": "비고 모텐슨",
+                "actorEnNm": "Viggo Mortensen",
+                "actorId": "00122383"
+              },
+              {
+                "actorNm": "존 노블",
+                "actorEnNm": "John Noble",
+                "actorId": "00090467"
+              },
+              {
+                "actorNm": "폴 노렐",
+                "actorEnNm": "Paul Norell",
+                "actorId": "00107904"
+              },
+              {
+                "actorNm": "미란다 오토",
+                "actorEnNm": "Miranda Otto",
+                "actorId": "00103971"
+              },
+              {
+                "actorNm": "브루스 필립스",
+                "actorEnNm": "Bruce Phillips",
+                "actorId": "00059903"
+              },
+              {
+                "actorNm": "존 라이스 데이비스",
+                "actorEnNm": "John Rhys Davies",
+                "actorId": "00049627"
+              },
+              {
+                "actorNm": "토마스 로빈스",
+                "actorEnNm": "Thomas Robins",
+                "actorId": "00119827"
+              },
+              {
+                "actorNm": "앤디 서키스",
+                "actorEnNm": "Andy Serkis",
+                "actorId": "00055158"
+              },
+              {
+                "actorNm": "해리 싱클레어",
+                "actorEnNm": "Harry Sinclair",
+                "actorId": "00075979"
+              },
+              {
+                "actorNm": "피터 테이트",
+                "actorEnNm": "Peter Tait",
+                "actorId": "00108970"
+              },
+              {
+                "actorNm": "리브 타일러",
+                "actorEnNm": "Liv Tyler",
+                "actorId": "00049811"
+              },
+              {
+                "actorNm": "칼 어번",
+                "actorEnNm": "Karl Urban",
+                "actorId": "00093061"
+              },
+              {
+                "actorNm": "스티븐 우레",
+                "actorEnNm": "Stephen Ure",
+                "actorId": "00117625"
+              },
+              {
+                "actorNm": "휴고 위빙",
+                "actorEnNm": "Hugo Weaving",
+                "actorId": "00049885"
+              },
+              {
+                "actorNm": "데이비드 웬함",
+                "actorEnNm": "David Wenham",
+                "actorId": "00066322"
+              },
+              {
+                "actorNm": "일라이저 우드",
+                "actorEnNm": "Elijah Wood",
+                "actorId": "00049007"
+              },
+              {
+                "actorNm": "살라 베이커",
+                "actorEnNm": "SALA BAKER",
+                "actorId": "00134033"
+              },
+              {
+                "actorNm": "브래드 도리프",
+                "actorEnNm": "Brad Dourif",
+                "actorId": "00059104"
+              },
+              {
+                "actorNm": "크리스토퍼 리",
+                "actorEnNm": "Christopher Lee",
+                "actorId": "00048840"
+              },
+              {
+                "actorNm": "브루스 스펜스",
+                "actorEnNm": "Bruce Spence",
+                "actorId": "00059919"
+              },
+              {
+                "actorNm": "피터 잭슨",
+                "actorEnNm": "Peter Jackson",
+                "actorId": "00108698"
+              },
+              {
+                "actorNm": "새드윈 브로피",
+                "actorEnNm": "Sadwyn Brophy",
+                "actorId": "00137872"
+              },
+              {
+                "actorNm": "앨리스테어 브로닝",
+                "actorEnNm": "Alistair Browning",
+                "actorId": "00054050"
+              },
+              {
+                "actorNm": "브렛 맥켄지",
+                "actorEnNm": "Bret McKenzie",
+                "actorId": "00059382"
+              },
+              {
+                "actorNm": "로이드 톨킨",
+                "actorEnNm": "Royd Tolkien",
+                "actorId": "00113933"
+              },
+              {
+                "actorNm": "도미니크 모나핸",
+                "actorEnNm": "Dominic Monaghan",
+                "actorId": "00067552"
+              }
+            ]
+          },
+          "nation": "뉴질랜드,미국,독일",
+          "company": "New Line Cinema,The Saul Zaentz Company",
+          "plots": {
+            "plot": [
+              {
+                "plotLang": "한국어",
+                "plotText": "절대반지의 영원한 파괴를 위해, '프로도'와 그의 친구들, 엘프족 '레골라스', 난쟁이족 '김리', 두 명의 인간전사 '아라곤'과 '보로미르', 그리고 마법사 '간달프'...등, 9명으로 이뤄진 '반지원정대'가 '불의 산'을 향하게 되고, 그들은 '사우론'의 사악한 세력에 맞서려 한다. 그러나 이들은 다시 뿔뿔이 흩어지게 되고, 암흑세계의 두 개의 탑을 통합하여 그 세력을 확장하고 있는 '사우론'은 서서히 중간대륙을 거대한 전쟁의 소용돌이로 몰아가며 '로한왕국'을 향해 진격을 시작한다. 이에 '아라곤'은 자유종족들을 통합하여 '사우론'에게 정면 대항하게 되는데..... '사우론'의 군대는 인간 종족을 멸망시키기 위해, 마지막으로 곤도르 왕국의 수도인 '미나스 티리스'를 공격한다. 과거의 위대함은 사라진 채 그 명맥만을 유지해오던 곤도르 왕국은 이제 그 어느 때보다도 왕이 절실하다. 하지만, '아라곤'이 왕위를 계승하여 자신의 운명을 마주 할 수 있을 것인가? 전투에 앞서, '간달프'는 필사적으로 흩어진 곤도르의 병력을 수습하고, '세오덴'은 로한의 전사들을 규합한다. 용기와 충성심에 불타 있기는 하지만, 인간의 군대는 곤도르로 빽빽이 몰려드는 적들에게 적수가 되지 못한다. 승리의 순간에도 희생이 따르고, 많은 이들을 잃어가면서도, 원정대는 '사우론'의 주의를 딴 곳으로 돌려 '프로도'가 임무를 달성할 수 있게 돕는다는 하나의 목표 아래, 그들 생애 가장 큰 전투를 치러 나간다. 한편, '프로도'는 위험한 적의 땅을 가로질러 가면서, 반지가 끊임없이 그의 의지와 인간성을 시험하자 점점 더 '샘'과 '골룸'에게 의지하게 되는데."
+              }
+            ]
+          },
+          "runtime": "199",
+          "rating": "12세관람가",
+          "genre": "액션,드라마,어드벤처,판타지,전쟁",
+          "kmdbUrl": "https://www.kmdb.or.kr/db/kor/detail/movie/F/09308",
+          "type": "극영화",
+          "use": "극장용",
+          "episodes": "",
+          "ratedYn": "Y",
+          "repRatDate": "20031209",
+          "repRlsDate": "20031217",
+          "ratings": {
+            "rating": [
+              {
+                "ratingMain": "Y",
+                "ratingDate": "20031209",
+                "ratingNo": "2003-F336",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20031217",
+                "runtime": "199"
+              },
+              {
+                "ratingMain": "N",
+                "ratingDate": "20170119",
+                "ratingNo": "2017-MF00053",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20170125",
+                "runtime": "263"
+              },
+              {
+                "ratingMain": "",
+                "ratingDate": "",
+                "ratingNo": "",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20210318",
+                "runtime": ""
+              }
+            ]
+          },
+          "keywords": "고대,마법,몬스터,반지,블록버스터,서사극,성,소설원작,속편,시리즈,오크,왕,우정,전사,전설,호빗,재개봉",
+          "posters": "http://file.koreafilm.or.kr/thm/02/00/03/30/tn_DPF09308A.jpg|http://file.koreafilm.or.kr/thm/02/99/17/23/tn_DPF022185.jpg|http://file.koreafilm.or.kr/thm/02/00/03/97/tn_DPF09308B.jpg",
+          "stlls": "http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711005.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711006.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711007.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711008.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711009.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711010.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711011.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711012.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711013.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST711014.jpg",
+          "staffs": {
+            "staff": [
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "감독",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "프란 월쉬",
+                "staffEnNm": "Fran Walsh",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00071500"
+              },
+              {
+                "staffNm": "필리파 보엔스",
+                "staffEnNm": "Philippa Boyens",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00109309"
+              },
+              {
+                "staffNm": "노엘 애플비",
+                "staffEnNm": "Noel Appleby",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00106056"
+              },
+              {
+                "staffNm": "알렉산드라 애스틴",
+                "staffEnNm": "Alexandra Astin",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00053708"
+              },
+              {
+                "staffNm": "숀 애스틴",
+                "staffEnNm": "Sean Astin",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00048830"
+              },
+              {
+                "staffNm": "존 바흐",
+                "staffEnNm": "John Bach",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00089738"
+              },
+              {
+                "staffNm": "숀 빈",
+                "staffEnNm": "Sean Bean",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049141"
+              },
+              {
+                "staffNm": "케이트 블란쳇",
+                "staffEnNm": "Cate Blanchett",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049090"
+              },
+              {
+                "staffNm": "올랜도 블룸",
+                "staffEnNm": "Orlando Bloom",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00106613"
+              },
+              {
+                "staffNm": "빌리 보이드",
+                "staffEnNm": "Billy Boyd",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00058550"
+              },
+              {
+                "staffNm": "마톤 소카즈",
+                "staffEnNm": "Marton Csokas",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100664"
+              },
+              {
+                "staffNm": "버나드 힐",
+                "staffEnNm": "Bernard Hill",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00057967"
+              },
+              {
+                "staffNm": "이안 홀름",
+                "staffEnNm": "Ian Holm",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084302"
+              },
+              {
+                "staffNm": "브루스 홉킨스",
+                "staffEnNm": "Bruce Hopkins",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059859"
+              },
+              {
+                "staffNm": "이안 휴즈",
+                "staffEnNm": "Ian Hughes",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084303"
+              },
+              {
+                "staffNm": "로렌스 마코아르",
+                "staffEnNm": "Lawrence Makoare",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00095971"
+              },
+              {
+                "staffNm": "이안 맥켈런",
+                "staffEnNm": "lan McKellen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049820"
+              },
+              {
+                "staffNm": "사라 맥로드",
+                "staffEnNm": "Sarah McLeod",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00114914"
+              },
+              {
+                "staffNm": "메이지 맥로드 리에라",
+                "staffEnNm": "Maisy McLeod-Riera",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00098493"
+              },
+              {
+                "staffNm": "비고 모텐슨",
+                "staffEnNm": "Viggo Mortensen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00122383"
+              },
+              {
+                "staffNm": "존 노블",
+                "staffEnNm": "John Noble",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00090467"
+              },
+              {
+                "staffNm": "폴 노렐",
+                "staffEnNm": "Paul Norell",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00107904"
+              },
+              {
+                "staffNm": "미란다 오토",
+                "staffEnNm": "Miranda Otto",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00103971"
+              },
+              {
+                "staffNm": "브루스 필립스",
+                "staffEnNm": "Bruce Phillips",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059903"
+              },
+              {
+                "staffNm": "존 라이스 데이비스",
+                "staffEnNm": "John Rhys Davies",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049627"
+              },
+              {
+                "staffNm": "토마스 로빈스",
+                "staffEnNm": "Thomas Robins",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00119827"
+              },
+              {
+                "staffNm": "앤디 서키스",
+                "staffEnNm": "Andy Serkis",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00055158"
+              },
+              {
+                "staffNm": "해리 싱클레어",
+                "staffEnNm": "Harry Sinclair",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00075979"
+              },
+              {
+                "staffNm": "피터 테이트",
+                "staffEnNm": "Peter Tait",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108970"
+              },
+              {
+                "staffNm": "리브 타일러",
+                "staffEnNm": "Liv Tyler",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049811"
+              },
+              {
+                "staffNm": "칼 어번",
+                "staffEnNm": "Karl Urban",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00093061"
+              },
+              {
+                "staffNm": "스티븐 우레",
+                "staffEnNm": "Stephen Ure",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00117625"
+              },
+              {
+                "staffNm": "휴고 위빙",
+                "staffEnNm": "Hugo Weaving",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049885"
+              },
+              {
+                "staffNm": "데이비드 웬함",
+                "staffEnNm": "David Wenham",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00066322"
+              },
+              {
+                "staffNm": "일라이저 우드",
+                "staffEnNm": "Elijah Wood",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049007"
+              },
+              {
+                "staffNm": "살라 베이커",
+                "staffEnNm": "SALA BAKER",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00134033"
+              },
+              {
+                "staffNm": "브래드 도리프",
+                "staffEnNm": "Brad Dourif",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059104"
+              },
+              {
+                "staffNm": "크리스토퍼 리",
+                "staffEnNm": "Christopher Lee",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00048840"
+              },
+              {
+                "staffNm": "브루스 스펜스",
+                "staffEnNm": "Bruce Spence",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059919"
+              },
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "새드윈 브로피",
+                "staffEnNm": "Sadwyn Brophy",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00137872"
+              },
+              {
+                "staffNm": "앨리스테어 브로닝",
+                "staffEnNm": "Alistair Browning",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00054050"
+              },
+              {
+                "staffNm": "브렛 맥켄지",
+                "staffEnNm": "Bret McKenzie",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059382"
+              },
+              {
+                "staffNm": "로이드 톨킨",
+                "staffEnNm": "Royd Tolkien",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00113933"
+              },
+              {
+                "staffNm": "도미니크 모나핸",
+                "staffEnNm": "Dominic Monaghan",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00067552"
+              },
+              {
+                "staffNm": "배리 M. 오스본",
+                "staffEnNm": "Barrie M. Osborne",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00057353"
+              },
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "프란 월쉬",
+                "staffEnNm": "Fran Walsh",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00071500"
+              },
+              {
+                "staffNm": "마크 오데스키",
+                "staffEnNm": "Mark Ordesky",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100147"
+              },
+              {
+                "staffNm": "밥 웨인스타인",
+                "staffEnNm": "Bob Weinstein",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00058911"
+              },
+              {
+                "staffNm": "하비 웨인스타인",
+                "staffEnNm": "Harvey Weinstein",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00076060"
+              },
+              {
+                "staffNm": "로버트 샤이",
+                "staffEnNm": "ROBERT SHAYE",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00134043"
+              },
+              {
+                "staffNm": "마이클 린",
+                "staffEnNm": "Michael Lynne",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00102650"
+              },
+              {
+                "staffNm": "앤드류 레스니에",
+                "staffEnNm": "Andrew Lesnie",
+                "staffRoleGroup": "촬영",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00054963"
+              },
+              {
+                "staffNm": "자미 셀커크",
+                "staffEnNm": "Jamie Selkirk",
+                "staffRoleGroup": "편집",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00086393"
+              },
+              {
+                "staffNm": "애니 콜린스",
+                "staffEnNm": "Annie Collins",
+                "staffRoleGroup": "편집",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00055800"
+              },
+              {
+                "staffNm": "하워드 쇼어",
+                "staffEnNm": "Howard Shore",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084020"
+              },
+              {
+                "staffNm": "그랜트 메이저",
+                "staffEnNm": "Grant Major",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00074806"
+              },
+              {
+                "staffNm": "New Line Cinema",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "The Saul Zaentz Company",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "씨제이엔터테인먼트",
+                "staffEnNm": "",
+                "staffRoleGroup": "배급사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "워너브러더스코리아㈜",
+                "staffEnNm": "Warner Bros. Korea",
+                "staffRoleGroup": "배급사",
+                "staffRole": "재개봉 배급",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "(주)태원엔터테인먼트",
+                "staffEnNm": "",
+                "staffRoleGroup": "수입사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "워너브러더스코리아㈜",
+                "staffEnNm": "Warner Bros. Korea",
+                "staffRoleGroup": "수입사",
+                "staffRole": "재개봉 수입",
+                "staffEtc": "",
+                "staffId": ""
+              }
+            ]
+          },
+          "vods": { "vod": [{ "vodClass": "", "vodUrl": "" }] },
+          "openThtr": "",
+          "stat": [
+            {
+              "screenArea": "",
+              "screenCnt": "",
+              "salesAcc": "",
+              "audiAcc": "",
+              "statSouce": "",
+              "statDate": ""
+            }
+          ],
+          "screenArea": "",
+          "screenCnt": "",
+          "salesAcc": "",
+          "audiAcc": "",
+          "statSouce": "",
+          "statDate": "",
+          "themeSong": "",
+          "soundtrack": "",
+          "fLocation": "",
+          "Awards1": "뉴욕비평가협회상(2003) : 작품상 -|LA비평가협회상(2003) : 미술상 - 그랜트 메이저(Grant Major)|LA비평가협회상(2003) : 감독상 - 피터 잭슨|골든글로브 시상식(2004) : 작품상(드라마) -|골든글로브 시상식(2004) : 음악상 - 하워드 쇼어|골든글로브 시상식(2004) : 감독상 - 피터 잭슨|골든글로브 시상식(2004) : 주제가상 - 하워드 쇼어, 프란 월쉬, Annie Lennox|아카데미 시상식(2004) : 주제가상 -  Into the West |아카데미 시상식(2004) : 음악상 - 하워드 쇼어|아카데미 시상식(2004) : 분장상 - 리차드 테일러|아카데미 시상식(2004) : 편집상 - 자미 셀거크|아카데미 시상식(2004) : 감독상 - 피터 잭슨|아카데미 시상식(2004) : 음향상 - 크리스토퍼 보에즈|아카데미 시상식(2004) : 미술상 - 그랜트 메이저|아카데미 시상식(2004) : 각색상 - 프란 월쉬|아카데미 시상식(2004) : 시각효과상 - Jim Rygiel|아카데미 시상식(2004) : 작품상 - 피터 잭슨|아카데미 시상식(2004) : 의상상 - 엔길라 딕슨|미국배우조합상(2004) : 최고의 캐스팅상 - 숀 빈(Sean Bean)|미국배우조합상(2004) : 최고의 캐스팅상 - 케이트 블랑쉐(Cate Blanchett)|미국배우조합상(2004) : 최고의 캐스팅상 - 일라이저 우드(Elijah Wood)|미국배우조합상(2004) : 최고의 캐스팅상 - 버나드 힐(Bernard Hill)|미국배우조합상(2004) : 최고의 캐스팅상 - 휴고 위빙(Hugo Weaving)|미국배우조합상(2004) : 최고의 캐스팅상 - 올랜도 블룸(Orlando Bloom)|미국배우조합상(2004) : 최고의 캐스팅상 - 리브 타일러(Liv Tyler)|미국배우조합상(2004) : 최고의 캐스팅상 - 빌리 보이드(Billy Boyd)|미국배우조합상(2004) : 최고의 캐스팅상 - 존 노블(John Noble)|미국배우조합상(2004) : 최고의 캐스팅상 - 미란다 오토(Miranda Otto)|미국배우조합상(2004) : 최고의 캐스팅상 - 존 라이스-데이비스(John Rhys-Davies)|미국배우조합상(2004) : 최고의 캐스팅상 - 칼 어번(Karl Urban)|미국배우조합상(2004) : 최고의 캐스팅상 - 도미닉 모나한(Dominic Monaghan)|미국배우조합상(2004) : 최고의 캐스팅상 - 이안 홈(Ian Holm)|미국배우조합상(2004) : 최고의 캐스팅상 - 앤디 서키스(Andy Serkis)|미국배우조합상(2004) : 최고의 캐스팅상 - 숀 애스틴(Sean Astin)|미국배우조합상(2004) : 최고의 캐스팅상 - 비고 모텐슨(Viggo Mortensen)|미국배우조합상(2004) : 최고의 캐스팅상 - 데이빗 웬햄(David Wenham)|미국배우조합상(2004) : 최고의 캐스팅상 - 이안 맥켈런(Ian McKellen)",
+          "Awards2": "",
+          "regDate": "",
+          "modDate": "20221108",
+          "Codes": {
+            "Code": [
+              { "CodeNm": "FIMS", "CodeNo": "20030316" },
+              { "CodeNm": "FIMS", "CodeNo": "20168689" }
+            ]
+          },
+          "CommCodes": {
+            "CommCode": [
+              { "CommCodeNm": "FIMS", "CommCodeNo": "20030316" },
+              { "CommCodeNm": "FIMS", "CommCodeNo": "20168689" }
+            ]
+          },
+          "ALIAS": "srcKmdb2"
+        },
+        {
+          "DOCID": "F07793",
+          "movieId": "F",
+          "movieSeq": "07793",
+          "title": "  !HS 반지 !HE 의  !HS 제왕 !HE :  !HS 반지 !HE 원정대",
+          "titleEng": "The Lord of the Rings: The Fellowship of the Ring",
+          "titleOrg": "The Lord of the Rings: The Fellowship of the Ring",
+          "titleEtc": "반지의제왕:반지원정대^반지의 제왕: 반지원정대^The Lord of the Rings: The Fellowship of the Ring^반지의제왕-반지원정대^The Lord of the Rings: The Fellowship of the Ring^The Lord of the Rings: The Fellowship of the Ring",
+          "prodYear": "2001",
+          "directors": {
+            "director": [
+              {
+                "directorNm": "피터 잭슨",
+                "directorEnNm": "Peter Jackson",
+                "directorId": "00108698"
+              }
+            ]
+          },
+          "actors": {
+            "actor": [
+              {
+                "actorNm": "노엘 애플비",
+                "actorEnNm": "Noel Appleby",
+                "actorId": "00106056"
+              },
+              {
+                "actorNm": "숀 애스틴",
+                "actorEnNm": "Sean Astin",
+                "actorId": "00048830"
+              },
+              {
+                "actorNm": "살라 베이커",
+                "actorEnNm": "SALA BAKER",
+                "actorId": "00134033"
+              },
+              {
+                "actorNm": "숀 빈",
+                "actorEnNm": "Sean Bean",
+                "actorId": "00049141"
+              },
+              {
+                "actorNm": "케이트 블란쳇",
+                "actorEnNm": "Cate Blanchett",
+                "actorId": "00049090"
+              },
+              {
+                "actorNm": "올랜도 블룸",
+                "actorEnNm": "Orlando Bloom",
+                "actorId": "00106613"
+              },
+              {
+                "actorNm": "빌리 보이드",
+                "actorEnNm": "Billy Boyd",
+                "actorId": "00058550"
+              },
+              {
+                "actorNm": "마톤 소카즈",
+                "actorEnNm": "Marton Csokas",
+                "actorId": "00100664"
+              },
+              {
+                "actorNm": "미건 에드워즈",
+                "actorEnNm": "Megan Edwards",
+                "actorId": "00101774"
+              },
+              {
+                "actorNm": "마크 퍼거슨",
+                "actorEnNm": "Mark Ferguson",
+                "actorId": "00099973"
+              },
+              {
+                "actorNm": "이안 홀름",
+                "actorEnNm": "Ian Holm",
+                "actorId": "00084302"
+              },
+              {
+                "actorNm": "크리스토퍼 리",
+                "actorEnNm": "Christopher Lee",
+                "actorId": "00048840"
+              },
+              {
+                "actorNm": "로렌스 마코아르",
+                "actorEnNm": "Lawrence Makoare",
+                "actorId": "00095971"
+              },
+              {
+                "actorNm": "앤디 서키스",
+                "actorEnNm": "Andy Serkis",
+                "actorId": "00055158"
+              },
+              {
+                "actorNm": "브렌트 맥킨타이어",
+                "actorEnNm": "Brent McIntyre",
+                "actorId": "00059364"
+              },
+              {
+                "actorNm": "이안 맥켈런",
+                "actorEnNm": "lan McKellen",
+                "actorId": "00049820"
+              },
+              {
+                "actorNm": "사라 맥로드",
+                "actorEnNm": "Sarah McLeod",
+                "actorId": "00114914"
+              },
+              {
+                "actorNm": "비고 모텐슨",
+                "actorEnNm": "Viggo Mortensen",
+                "actorId": "00122383"
+              },
+              {
+                "actorNm": "크레이그 파커",
+                "actorEnNm": "Craig Parker",
+                "actorId": "00063996"
+              },
+              {
+                "actorNm": "존 라이스 데이비스",
+                "actorEnNm": "John Rhys Davies",
+                "actorId": "00049627"
+              },
+              {
+                "actorNm": "해리 싱클레어",
+                "actorEnNm": "Harry Sinclair",
+                "actorId": "00075979"
+              },
+              {
+                "actorNm": "리브 타일러",
+                "actorEnNm": "Liv Tyler",
+                "actorId": "00049811"
+              },
+              {
+                "actorNm": "데이빗 위덜리",
+                "actorEnNm": "David Weatherley",
+                "actorId": "00066310"
+              },
+              {
+                "actorNm": "휴고 위빙",
+                "actorEnNm": "Hugo Weaving",
+                "actorId": "00049885"
+              },
+              {
+                "actorNm": "일라이저 우드",
+                "actorEnNm": "Elijah Wood",
+                "actorId": "00049007"
+              },
+              {
+                "actorNm": "엘리자베스 무디",
+                "actorEnNm": "Elizabeth Moody",
+                "actorId": "00069480"
+              },
+              {
+                "actorNm": "피터 잭슨",
+                "actorEnNm": "Peter Jackson",
+                "actorId": "00108698"
+              },
+              {
+                "actorNm": "샤인 랜지",
+                "actorEnNm": "Shane Rangi",
+                "actorId": "00115743"
+              },
+              {
+                "actorNm": "피터 맥켄지",
+                "actorEnNm": "Peter McKenzie",
+                "actorId": "00108794"
+              },
+              {
+                "actorNm": "마이클 엘스워스",
+                "actorEnNm": "Michael Elsworth",
+                "actorId": "00102364"
+              },
+              {
+                "actorNm": "샘 라 후드",
+                "actorEnNm": "Sam La Hood",
+                "actorId": "00114446"
+              },
+              {
+                "actorNm": "피터 코리건",
+                "actorEnNm": "Peter Corrigan",
+                "actorId": "00108534"
+              },
+              {
+                "actorNm": "브라이언 서전트",
+                "actorEnNm": "Brian Sergent",
+                "actorId": "00059625"
+              },
+              {
+                "actorNm": "티모시 바틀렛",
+                "actorEnNm": "Timothy Bartlett",
+                "actorId": "00120139"
+              },
+              {
+                "actorNm": "앨런 리",
+                "actorEnNm": "ALAN LEE",
+                "actorId": "00134040"
+              },
+              {
+                "actorNm": "케이트 오루크",
+                "actorEnNm": "Kate O'Rourke",
+                "actorId": "00093161"
+              },
+              {
+                "actorNm": "존 벤존",
+                "actorEnNm": "Jørn Benzon",
+                "actorId": "00091395"
+              },
+              {
+                "actorNm": "서빈 크로선",
+                "actorEnNm": "Sabine Crossen",
+                "actorId": "00114373"
+              },
+              {
+                "actorNm": "태아 하트웰",
+                "actorEnNm": "Taea Hartwell",
+                "actorId": "00118608"
+              },
+              {
+                "actorNm": "도미니크 모나핸",
+                "actorEnNm": "Dominic Monaghan",
+                "actorId": "00067552"
+              }
+            ]
+          },
+          "nation": "미국,뉴질랜드",
+          "company": "New Line Cinema,The Saul Zaentz Company,WingNut Fi",
+          "plots": {
+            "plot": [
+              {
+                "plotLang": "한국어",
+                "plotText": "마지막 반지를 차지하는 자, 모든 힘을 지배하게 될 것이다! 악의 군주 사우론과 신들의 전쟁이 아주 먼 옛날 이야기가 되었을 때... 모든 힘과 세력을 잃고, 암흑의 세계에 숨어 지내던 사우론은 신들과의 전쟁에서 잃어버린 11개의 반지를 끌어 모으는 것에 성공한다. 그리고 11개의 반지를 지배할 12번째의 '절대반지'를 찾기 위해 모든 세력을 동원한다. 그러던 어느 날... 호빗이라 불리우는 난장이 종족 중의 한 명인 프로도는 자신의 삼촌에게서 우연히 그 절대 반지를 물려받게 되고, 마법사 간달프를 통해서 절대반지가 사우론의 손에 들어가면 악의 세력이 세상을 지배하게 된다는 것을 알게 된다. 하지만 그 절대반지를 영원히 파괴할 수 있는 유일한 방법은 그 반지가 만들어진 '불의 산'의 용암에 그것을 던져 넣는 길 뿐이다. 마침내 프로도와 그의 친구들, 엘프족인 레골라스, 난장이족 김리, 두명의 인간 전사, 아라곤, 보로미르 그리고 마법사 간달프로 구성된 반지원정대가 길고도 험난한 여정을 떠나게 되는데..."
+              }
+            ]
+          },
+          "runtime": "178",
+          "rating": "12세관람가",
+          "genre": "액션,드라마,어드벤처,판타지",
+          "kmdbUrl": "https://www.kmdb.or.kr/db/kor/detail/movie/F/07793",
+          "type": "극영화",
+          "use": "극장용",
+          "episodes": "",
+          "ratedYn": "Y",
+          "repRatDate": "20011218",
+          "repRlsDate": "20020101",
+          "ratings": {
+            "rating": [
+              {
+                "ratingMain": "Y",
+                "ratingDate": "20011218",
+                "ratingNo": "2001-F366",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20020101",
+                "runtime": "178"
+              },
+              {
+                "ratingMain": "N",
+                "ratingDate": "20031203",
+                "ratingNo": "2003-F331",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "",
+                "runtime": "208"
+              },
+              {
+                "ratingMain": "N",
+                "ratingDate": "20170104",
+                "ratingNo": "2017-MF00041",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20170111",
+                "runtime": "228"
+              },
+              {
+                "ratingMain": "",
+                "ratingDate": "",
+                "ratingNo": "",
+                "ratingGrade": "12세관람가",
+                "releaseDate": "20210311",
+                "runtime": ""
+              }
+            ]
+          },
+          "keywords": "시리즈,오크,우정,전사,전설,초자연,호빗,고대,마법,몬스터,반지,배신,블록버스터,서사극,성,소설원작,숲,재개봉",
+          "posters": "http://file.koreafilm.or.kr/thm/02/99/17/22/tn_DPF022121.jpg|http://file.koreafilm.or.kr/thm/02/00/02/91/tn_DPF007978.JPG",
+          "stlls": "http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710964.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710965.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710966.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710967.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710968.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710969.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710970.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710971.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/01/tn_DST710972.jpg|http://file.koreafilm.or.kr/thm/01/copy/00/56/02/tn_DST710973.jpg",
+          "staffs": {
+            "staff": [
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "감독",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "프란 월쉬",
+                "staffEnNm": "Fran Walsh",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00071500"
+              },
+              {
+                "staffNm": "필리파 보엔스",
+                "staffEnNm": "Philippa Boyens",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00109309"
+              },
+              {
+                "staffNm": "노엘 애플비",
+                "staffEnNm": "Noel Appleby",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00106056"
+              },
+              {
+                "staffNm": "숀 애스틴",
+                "staffEnNm": "Sean Astin",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00048830"
+              },
+              {
+                "staffNm": "살라 베이커",
+                "staffEnNm": "SALA BAKER",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00134033"
+              },
+              {
+                "staffNm": "숀 빈",
+                "staffEnNm": "Sean Bean",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049141"
+              },
+              {
+                "staffNm": "케이트 블란쳇",
+                "staffEnNm": "Cate Blanchett",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049090"
+              },
+              {
+                "staffNm": "올랜도 블룸",
+                "staffEnNm": "Orlando Bloom",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00106613"
+              },
+              {
+                "staffNm": "빌리 보이드",
+                "staffEnNm": "Billy Boyd",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00058550"
+              },
+              {
+                "staffNm": "마톤 소카즈",
+                "staffEnNm": "Marton Csokas",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100664"
+              },
+              {
+                "staffNm": "미건 에드워즈",
+                "staffEnNm": "Megan Edwards",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00101774"
+              },
+              {
+                "staffNm": "마크 퍼거슨",
+                "staffEnNm": "Mark Ferguson",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00099973"
+              },
+              {
+                "staffNm": "이안 홀름",
+                "staffEnNm": "Ian Holm",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084302"
+              },
+              {
+                "staffNm": "크리스토퍼 리",
+                "staffEnNm": "Christopher Lee",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00048840"
+              },
+              {
+                "staffNm": "로렌스 마코아르",
+                "staffEnNm": "Lawrence Makoare",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00095971"
+              },
+              {
+                "staffNm": "앤디 서키스",
+                "staffEnNm": "Andy Serkis",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00055158"
+              },
+              {
+                "staffNm": "브렌트 맥킨타이어",
+                "staffEnNm": "Brent McIntyre",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059364"
+              },
+              {
+                "staffNm": "이안 맥켈런",
+                "staffEnNm": "lan McKellen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049820"
+              },
+              {
+                "staffNm": "사라 맥로드",
+                "staffEnNm": "Sarah McLeod",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00114914"
+              },
+              {
+                "staffNm": "비고 모텐슨",
+                "staffEnNm": "Viggo Mortensen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00122383"
+              },
+              {
+                "staffNm": "크레이그 파커",
+                "staffEnNm": "Craig Parker",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00063996"
+              },
+              {
+                "staffNm": "존 라이스 데이비스",
+                "staffEnNm": "John Rhys Davies",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049627"
+              },
+              {
+                "staffNm": "해리 싱클레어",
+                "staffEnNm": "Harry Sinclair",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00075979"
+              },
+              {
+                "staffNm": "리브 타일러",
+                "staffEnNm": "Liv Tyler",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049811"
+              },
+              {
+                "staffNm": "데이빗 위덜리",
+                "staffEnNm": "David Weatherley",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00066310"
+              },
+              {
+                "staffNm": "휴고 위빙",
+                "staffEnNm": "Hugo Weaving",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049885"
+              },
+              {
+                "staffNm": "일라이저 우드",
+                "staffEnNm": "Elijah Wood",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00049007"
+              },
+              {
+                "staffNm": "엘리자베스 무디",
+                "staffEnNm": "Elizabeth Moody",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00069480"
+              },
+              {
+                "staffNm": "피터 잭슨",
+                "staffEnNm": "Peter Jackson",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108698"
+              },
+              {
+                "staffNm": "샤인 랜지",
+                "staffEnNm": "Shane Rangi",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00115743"
+              },
+              {
+                "staffNm": "피터 맥켄지",
+                "staffEnNm": "Peter McKenzie",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108794"
+              },
+              {
+                "staffNm": "마이클 엘스워스",
+                "staffEnNm": "Michael Elsworth",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00102364"
+              },
+              {
+                "staffNm": "샘 라 후드",
+                "staffEnNm": "Sam La Hood",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00114446"
+              },
+              {
+                "staffNm": "피터 코리건",
+                "staffEnNm": "Peter Corrigan",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108534"
+              },
+              {
+                "staffNm": "브라이언 서전트",
+                "staffEnNm": "Brian Sergent",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00059625"
+              },
+              {
+                "staffNm": "티모시 바틀렛",
+                "staffEnNm": "Timothy Bartlett",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00120139"
+              },
+              {
+                "staffNm": "앨런 리",
+                "staffEnNm": "ALAN LEE",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00134040"
+              },
+              {
+                "staffNm": "케이트 오루크",
+                "staffEnNm": "Kate O'Rourke",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00093161"
+              },
+              {
+                "staffNm": "존 벤존",
+                "staffEnNm": "Jørn Benzon",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00091395"
+              },
+              {
+                "staffNm": "서빈 크로선",
+                "staffEnNm": "Sabine Crossen",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00114373"
+              },
+              {
+                "staffNm": "태아 하트웰",
+                "staffEnNm": "Taea Hartwell",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00118608"
+              },
+              {
+                "staffNm": "도미니크 모나핸",
+                "staffEnNm": "Dominic Monaghan",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00067552"
+              },
+              {
+                "staffNm": "New Line Cinema",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "The Saul Zaentz Company",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "WingNut Films",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작자",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "마이클 린",
+                "staffEnNm": "Michael Lynne",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00102650"
+              },
+              {
+                "staffNm": "마크 오데스키",
+                "staffEnNm": "Mark Ordesky",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100147"
+              },
+              {
+                "staffNm": "로버트 샤이",
+                "staffEnNm": "ROBERT SHAYE",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00134043"
+              },
+              {
+                "staffNm": "밥 웨인스타인",
+                "staffEnNm": "Bob Weinstein",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00058911"
+              },
+              {
+                "staffNm": "하비 웨인스타인",
+                "staffEnNm": "Harvey Weinstein",
+                "staffRoleGroup": "기획",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00076060"
+              },
+              {
+                "staffNm": "앤드류 레스니에",
+                "staffEnNm": "Andrew Lesnie",
+                "staffRoleGroup": "촬영",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00054963"
+              },
+              {
+                "staffNm": "존 길버트",
+                "staffEnNm": "John Gilbert",
+                "staffRoleGroup": "편집",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00090107"
+              },
+              {
+                "staffNm": "데이빗 도날드슨",
+                "staffEnNm": "David Donaldson",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00065610"
+              },
+              {
+                "staffNm": "엔야",
+                "staffEnNm": "Enya",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00069998"
+              },
+              {
+                "staffNm": "데이빗 롱",
+                "staffEnNm": "David Long",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00065931"
+              },
+              {
+                "staffNm": "스티브 로체",
+                "staffEnNm": "Steve Roche",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00117850"
+              },
+              {
+                "staffNm": "자넷 로딕",
+                "staffEnNm": "Janet Roddick",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00086659"
+              },
+              {
+                "staffNm": "하워드 쇼어",
+                "staffEnNm": "Howard Shore",
+                "staffRoleGroup": "음악",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084020"
+              },
+              {
+                "staffNm": "조 블레이클리",
+                "staffEnNm": "Joe Bleakley",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00089321"
+              },
+              {
+                "staffNm": "필립 아이비",
+                "staffEnNm": "Philip Ivey",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00109231"
+              },
+              {
+                "staffNm": "라브 아우터사이드",
+                "staffEnNm": "Rob Outterside",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00112196"
+              },
+              {
+                "staffNm": "마크 로빈스",
+                "staffEnNm": "Mark Robins",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00100185"
+              },
+              {
+                "staffNm": "그랜트 메이저",
+                "staffEnNm": "Grant Major",
+                "staffRoleGroup": "미술",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00074806"
+              },
+              {
+                "staffNm": "데이빗 도날드슨",
+                "staffEnNm": "David Donaldson",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00065610"
+              },
+              {
+                "staffNm": "엔야",
+                "staffEnNm": "Enya",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00069998"
+              },
+              {
+                "staffNm": "데이빗 롱",
+                "staffEnNm": "David Long",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00065931"
+              },
+              {
+                "staffNm": "스티브 로체",
+                "staffEnNm": "Steve Roche",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00117850"
+              },
+              {
+                "staffNm": "자넷 로딕",
+                "staffEnNm": "Janet Roddick",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00086659"
+              },
+              {
+                "staffNm": "하워드 쇼어",
+                "staffEnNm": "Howard Shore",
+                "staffRoleGroup": "사운드(음향)",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00084020"
+              },
+              {
+                "staffNm": "New Line Cinema",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "The Saul Zaentz Company",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "WingNut Films",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "Warner Bros.",
+                "staffEnNm": "",
+                "staffRoleGroup": "배급사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "워너브러더스코리아㈜",
+                "staffEnNm": "Warner Bros. Korea",
+                "staffRoleGroup": "배급사",
+                "staffRole": "재개봉 배급",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "(주)태원엔터테인먼트",
+                "staffEnNm": "",
+                "staffRoleGroup": "수입사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "워너브러더스코리아㈜",
+                "staffEnNm": "Warner Bros. Korea",
+                "staffRoleGroup": "수입사",
+                "staffRole": "재개봉 수입",
+                "staffEtc": "",
+                "staffId": ""
+              }
+            ]
+          },
+          "vods": { "vod": [{ "vodClass": "", "vodUrl": "" }] },
+          "openThtr": "",
+          "stat": [
+            {
+              "screenArea": "",
+              "screenCnt": "",
+              "salesAcc": "",
+              "audiAcc": "",
+              "statSouce": "",
+              "statDate": ""
+            }
+          ],
+          "screenArea": "",
+          "screenCnt": "",
+          "salesAcc": "",
+          "audiAcc": "",
+          "statSouce": "",
+          "statDate": "",
+          "themeSong": "",
+          "soundtrack": "",
+          "fLocation": "",
+          "Awards1": "LA비평가협회상(2001) : 음악상 - 하워드 쇼어(Howard Shore)|아카데미 시상식(2002) : 분장상 - 피터 오웬|아카데미 시상식(2002) : 시각효과상 - Jim Rygiel|아카데미 시상식(2002) : 음악상 - 하워드 쇼어|아카데미 시상식(2002) : 촬영상 - 앤드류 레즈니|KINO 베스트10(2003) : 키노독자 2002년 외국영화 베스트 1 -|KINO 베스트10(2003) : 키노 2002년 외국영화 베스트 4 -|미국배우조합상(2002) : 영화부문 남우조연상 - 이안 맥켈런(Ian McKellen)",
+          "Awards2": "",
+          "regDate": "19000101",
+          "modDate": "20221116",
+          "Codes": {
+            "Code": [
+              { "CodeNm": "FIMS", "CodeNo": "20010083" },
+              { "CodeNm": "FIMS(추가)", "CodeNo": "20168324" }
+            ]
+          },
+          "CommCodes": {
+            "CommCode": [{ "CodeNm": "FIMS", "CodeNo": "20010083" }]
+          },
+          "ALIAS": "srcKmdb2"
+        }
+      ]
+    }
+  ]
+}
