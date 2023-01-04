@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getRecentMoviesFetch } from "../store/MoviesStore";
 import { useEffect } from "react";
+import MovieCard from "../components/MovieCard";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -17,10 +18,7 @@ export default function Home() {
         <h1>최신순</h1>
         <ul style={{ display: "flex" }}>
           {recentMovies.map((movie) => (
-            <li key={movie.id} tyle={{ width: "150px" }}>
-              <img src={movie.poster} style={{ display: "block" }} alt="X" />
-              {movie.title}
-            </li>
+            <MovieCard key={movie.id} movie={movie} />
           ))}
         </ul>
       </article>
