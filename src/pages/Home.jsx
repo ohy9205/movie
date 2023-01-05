@@ -6,7 +6,7 @@ import MovieCard from "../components/movie/MovieCard";
 import {
   getBoxOfficeMoviesFetch,
   getRecentMoviesFetch,
-} from "../store/movie-fetch";
+} from "../store/movie-actions";
 
 export default function Home() {
   const dispatch = useDispatch();

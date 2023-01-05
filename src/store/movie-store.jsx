@@ -8,7 +8,6 @@ const moviesSlice = createSlice({
       const movieList = action.payload;
       movieList.sort((a, b) => b.releaseDate - a.releaseDate);
       state.recent = movieList;
-      // state.recent = action.payload;
     },
     getBoxOfficeMovies: (state, action) => {
       state.boxOffice = action.payload;

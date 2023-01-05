@@ -1,7 +1,7 @@
 import axios from "axios";
 import { addMovie, searchMovies } from "../api/firebase";
-import { dataFormat } from "../util/data";
-import { getPeriodDate } from "../util/date";
+import { dataFormat } from "../utils/data";
+import { getPeriodDate } from "../utils/date";
 import { moviesAction } from "./movie-store";
 
 /** api 사용 */
