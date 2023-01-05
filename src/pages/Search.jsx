@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import MovieCardRow from "../components/movie/MovieCardRow";
 import Button from "../components/ui/Button";
 import { searchMovieFetch } from "../store/movie-actions";
-import { getGenreVO } from "../utils/genreVO";
+import { getGenreVO } from "../utils/genre";
 
 export default function Search() {
   const genreVO = getGenreVO();
