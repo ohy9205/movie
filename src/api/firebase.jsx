@@ -55,20 +55,24 @@ export const onUserStateChange = (callback) => {
 };
 
 // db로부터 데이터 찾기
-export const searchMovies = async ({ title, releaseDate, movieCode }) => {
+export const getMovie = async ({ title, releaseDate, movieCode }) => {
   const snapshot = await get(child(dbRef, "/movies"));
   if (snapshot.exists() && snapshot.val() !== null) {
     const values = Object.values(snapshot.val());
 
-    return values.find((movie) => {
-      if (movie.title === title && movie.releaseDate === releaseDate) {
-        return movie;
-      } else if (movie.title === title && movie.movieCode === movieCode) {
-        return movie;
-      } else {
-        return null;
-      }
-    });
+    if (releaseDate || movieCode) {
+      return values.find((movie) => {
+        if (movie.title === title && movie.releaseDate === releaseDate) {
+          return movie;
+        } else if (movie.title === title && movie.movieCode === movieCode) {
+          return movie;
+        } else {
+          return null;
+        }
+      });
+    } else {
+      return values.filter((movie) => movie.title.includes(title));
+    }
   } else {
     return null;
   }
