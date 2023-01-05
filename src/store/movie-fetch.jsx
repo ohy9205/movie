@@ -1,7 +1,7 @@
 import axios from "axios";
 import { addMovie, searchMovies } from "../api/firebase";
 import { dataFormat } from "../util/data";
-import { getTodayDate } from "../util/date";
+import { getPeriodDate } from "../util/date";
 import { moviesAction } from "./movie-store";
 
 /** api 사용 */
@@ -18,7 +18,7 @@ const boxOfficeClient = axios.create({
   baseURL: "/searchDailyBoxOfficeList.json",
   params: {
     key: process.env.REACT_APP_BOX_OFFICE_KEY,
-    targetDt: getTodayDate() - 1,
+    targetDt: getPeriodDate() - 1,
   },
 });
 
@@ -87,9 +87,9 @@ export const getRecentMoviesFetch = () => {
   return async (dispatch) => {
     const response = await moviesClient.get("", {
       params: {
-        listCount: 15,
-        releaseDts: getTodayDate() - 7,
-        releaseDte: getTodayDate(),
+        listCount: 50,
+        releaseDts: getPeriodDate(14),
+        releaseDte: getPeriodDate(),
       },
     });
 
@@ -98,6 +98,13 @@ export const getRecentMoviesFetch = () => {
       const responseData = responseMovieData(response);
       for (const data of responseData) {
         const movieFormat = dataFormat(data);
+        if (
+          movieFormat.releaseDate.length !== 8 ||
+          movieFormat.releaseDate.substring(6, 8) === "00"
+        ) {
+          continue;
+        }
+
         moviesList.push(movieFormat);
 
         const movie = await searchMovies(movieFormat);
