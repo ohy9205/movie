@@ -14,6 +14,9 @@ export default function Header() {
         <Link to="/search">Search</Link>
       </li>
       <li>
+        <Link to="/my_pick">My pick</Link>
+      </li>
+      <li>
         <Button text="로그아웃" onClick={logoutUser} />
       </li>
     </ul>
