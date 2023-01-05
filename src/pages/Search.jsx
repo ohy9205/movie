@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import MovieCard from "../components/movie/MovieCard";
 import MovieCardRow from "../components/movie/MovieCardRow";
 import Button from "../components/ui/Button";
-import { searchMovieFetch } from "../store/movie-actions";
+import { getMovieFetch, searchMovieFetch } from "../store/movie-actions";
 import { getGenreVO } from "../utils/genre";
 
 export default function Search() {
   const genreVO = getGenreVO();
   const dispatch = useDispatch();
-  const searchMovies = useSelector((state) => state.movies.search);
+  const searchMovieList = useSelector((state) => state.movies.search);
+  const randomMovieList = useSelector((state) => state.movies.random);
 
   const [search, setSearch] = useState({});
 
@@ -24,6 +26,39 @@ export default function Search() {
 
     setSearch({});
   };
+
+  useEffect(() => {
+    dispatch(getMovieFetch());
+  }, [dispatch]);
+
+  const searchMovieSection = (
+    <section>
+      <h1>검색결과</h1>
+      {searchMovieList.length <= 0 ? (
+        <p>최대 30개 까지 결과가 조회됩니다.</p>
+      ) : (
+        <p>총 {searchMovieList.length}개의 결과가 조회되었습니다.</p>
+      )}
+      {searchMovieList.length >= 30 && (
+        <p>검색 결과가 너무 많아요! 구체적인 검색어를 입력해주세요.</p>
+      )}
+      {searchMovieList &&
+        searchMovieList.map((movie) => (
+          <MovieCardRow key={movie.id} movie={movie} />
+        ))}
+    </section>
+  );
+
+  // 임의갯수의 영화 데이터
+  const randomMovieListSection = (
+    <section>
+      <h1>영화를 검색해보세요</h1>
+      {randomMovieList &&
+        randomMovieList.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+    </section>
+  );
 
   return (
     <>
@@ -49,21 +84,7 @@ export default function Search() {
           <Button text="검색" />
         </form>
       </header>
-      <section>
-        <h1>검색결과</h1>
-        {searchMovies.length <= 0 ? (
-          <p>최대 30개 까지 결과가 조회됩니다.</p>
-        ) : (
-          <p>총 {searchMovies.length}개의 결과가 조회되었습니다.</p>
-        )}
-        {searchMovies.length >= 30 && (
-          <p>검색 결과가 너무 많아요! 구체적인 검색어를 입력해주세요.</p>
-        )}
-        {searchMovies &&
-          searchMovies.map((movie) => (
-            <MovieCardRow key={movie.id} movie={movie} />
-          ))}
-      </section>
+      {searchMovieList.length > 0 ? searchMovieSection : randomMovieListSection}
     </>
   );
 }

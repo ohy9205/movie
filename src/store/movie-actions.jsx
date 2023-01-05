@@ -1,5 +1,5 @@
 import axios from "axios";
-import { addMovie, getMovie } from "../api/firebase";
+import { addMovie, getMovie, searchMovie } from "../api/firebase";
 import { changeDataFormat } from "../utils/data";
 import { getPeriodDate } from "../utils/date";
 import { moviesAction } from "./movie-slice";
@@ -40,11 +40,12 @@ const getBoxOffice = async () => {
 
 // 박스오피스 영화 정보 검색
 export const getBoxOfficeMovies = async (boxOfficeData) => {
-  let moviesList = [];
+  let movieList = [];
 
   for await (const data of boxOfficeData) {
-    const movie = await getMovie(data);
+    const movie = await searchMovie(data);
     if (!movie) {
+      console.log("boxoffice패칭");
       const response = await moviesClient.get("", {
         params: {
           title: data.title,
@@ -54,18 +55,17 @@ export const getBoxOfficeMovies = async (boxOfficeData) => {
 
       const responseData = getResponseMovieData(response);
       if (responseData) {
-        const responseData = getResponseMovieData(response);
         for (const data of responseData) {
           const formattedData = changeDataFormat(data);
           addMovie(formattedData);
-          moviesList.push(formattedData);
+          movieList.push(formattedData);
         }
       }
     } else {
-      moviesList.push(movie);
+      movieList.push(movie);
     }
   }
-  return moviesList;
+  return movieList;
 };
 
 // 리덕스에 박스오피스 데이터 저장
@@ -73,17 +73,17 @@ export const getBoxOfficeMoviesFetch = () => {
   return async (dispatch) => {
     const boxOfficeData = await getBoxOffice(); // 박스오피스 데이터를 불러오고
     if (boxOfficeData) {
-      const moviesList = await getBoxOfficeMovies(boxOfficeData); // db에서 데이터에 해당하는 영화정보를 불러오고 (없으면 db에 저장하고)
+      const movieList = await getBoxOfficeMovies(boxOfficeData); // db에서 데이터에 해당하는 영화정보를 불러오고 (없으면 db에 저장하고)
 
       // 리덕스에 저장
-      dispatch(moviesAction.getBoxOfficeMovies(moviesList));
+      dispatch(moviesAction.getBoxOfficeMovies(movieList));
     }
   };
 };
 
 // 최신 영화 데이터 패칭
 export const getRecentMoviesFetch = () => {
-  let moviesList = [];
+  let movieList = [];
 
   return async (dispatch) => {
     const response = await moviesClient.get("", {
@@ -107,16 +107,13 @@ export const getRecentMoviesFetch = () => {
           continue;
         }
 
-        moviesList.push(formattedData);
+        movieList.push(formattedData);
 
-        const movie = await getMovie(formattedData);
-        if (!movie) {
-          addMovie(formattedData);
-        }
+        addMovie(formattedData);
       }
     }
 
-    dispatch(moviesAction.getRecentMovies(moviesList));
+    dispatch(moviesAction.getRecentMovies(movieList));
   };
 };
 
@@ -157,3 +154,27 @@ export const searchMovieFetch = (search) => {
     }
   };
 };
+
+// 랜덤 영화 목록
+export const getMovieFetch = () => {
+  return async (dispatch) => {
+    const movie = await getMovie();
+    const randomSortedMovie = shuffle(movie)
+      // .sort(() => Math.random() - 0.5)
+      .splice(0, 30);
+    dispatch(moviesAction.getRandomMovies(randomSortedMovie));
+  };
+};
+
+function shuffle(array) {
+  for (let index = array.length - 1; index > 0; index--) {
+    // 무작위 index 값을 만든다. (0 이상의 배열 길이 값)
+    const randomPosition = Math.floor(Math.random() * (index + 1));
+
+    // 임시로 원본 값을 저장하고, randomPosition을 사용해 배열 요소를 섞는다.
+    const temporary = array[index];
+    array[index] = array[randomPosition];
+    array[randomPosition] = temporary;
+  }
+  return array;
+}

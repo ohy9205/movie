@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const moviesSlice = createSlice({
   name: "movies",
-  initialState: { boxOffice: [], recent: [], search: [] },
+  initialState: { boxOffice: [], recent: [], search: [], random: [] },
   reducers: {
     getRecentMovies: (state, action) => {
       const movieList = action.payload;
@@ -16,6 +16,11 @@ export const moviesSlice = createSlice({
       const movieList = action.payload;
       movieList.sort((a, b) => a.title.length - b.title.length);
       state.search = movieList;
+    },
+    getRandomMovies: (state, action) => {
+      const movieList = action.payload;
+      movieList.sort((a, b) => a.title.length - b.title.length);
+      state.random = movieList;
     },
   },
 });
