@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Movies from "./pages/Movies";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/sign_in" element={<Login />} />
         <Route path="/sign_up" element={<SignUp />} />
       </Routes>
