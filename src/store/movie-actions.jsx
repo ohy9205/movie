@@ -2,7 +2,7 @@ import axios from "axios";
 import { addMovie, getMovie } from "../api/firebase";
 import { changeDataFormat } from "../utils/data";
 import { getPeriodDate } from "../utils/date";
-import { moviesAction } from "./movie-store";
+import { moviesAction } from "./movie-slice";
 
 /** api 사용 */
 const moviesClient = axios.create({

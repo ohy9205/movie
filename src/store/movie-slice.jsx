@@ -1,8 +1,8 @@
-const { configureStore, createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit";
 
-const moviesSlice = createSlice({
+export const moviesSlice = createSlice({
   name: "movies",
-  initialState: { boxOffice: [], recent: [], myMovies: [], search: [] },
+  initialState: { boxOffice: [], recent: [], search: [] },
   reducers: {
     getRecentMovies: (state, action) => {
       const movieList = action.payload;
@@ -18,10 +18,6 @@ const moviesSlice = createSlice({
       state.search = movieList;
     },
   },
-});
-
-export const store = configureStore({
-  reducer: { movies: moviesSlice.reducer },
 });
 
 export const moviesAction = moviesSlice.actions;
