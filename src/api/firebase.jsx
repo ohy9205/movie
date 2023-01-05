@@ -8,7 +8,15 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { child, get, getDatabase, ref, set } from "firebase/database";
+import {
+  child,
+  get,
+  getDatabase,
+  onValue,
+  ref,
+  remove,
+  set,
+} from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -54,8 +62,17 @@ export const onUserStateChange = (callback) => {
   });
 };
 
-// db로부터 데이터 찾기
-export const getMovie = async ({ title, releaseDate, movieCode }) => {
+// db에서 데이터 들고오기
+export const getMovie = async () => {
+  const snapshot = await get(child(dbRef, "/movies"));
+  if (snapshot.exists() && snapshot.val() !== null) {
+    const values = Object.values(snapshot.val());
+    return values;
+  }
+};
+
+// db에서 데이터 찾기
+export const searchMovie = async ({ title, releaseDate, movieCode }) => {
   const snapshot = await get(child(dbRef, "/movies"));
   if (snapshot.exists() && snapshot.val() !== null) {
     const values = Object.values(snapshot.val());
@@ -78,11 +95,29 @@ export const getMovie = async ({ title, releaseDate, movieCode }) => {
   }
 };
 
-// 데이터베이스에 저장
+// 데이터베이스에 영화 저장
 export const addMovie = async (movie) => {
   try {
     await set(ref(db, `/movies/${movie.id}`), movie);
   } catch (error) {
     return;
   }
+};
+
+// 데이터베이스에 pick 저장
+export const addPick = (userId, movie) => {
+  set(ref(db, `/picks/${userId}/${movie.id}`), movie);
+};
+
+// 데이터베이스에서pick 데이터 들고오기
+export const getPick = (userUid, callback) => {
+  const pickRef = ref(db, `/picks/${userUid}`);
+  onValue(pickRef, (snapshot) => {
+    callback(snapshot.val());
+  });
+};
+
+// pick 데이터 삭제
+export const removePick = (userUid, movieId) => {
+  remove(ref(db, `/picks/${userUid}/${movieId}`));
 };
