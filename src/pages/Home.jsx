@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
-import MovieCard from "../components/MovieCard";
+import MovieCard from "../components/movie/MovieCard";
 import {
   getBoxOfficeMoviesFetch,
   getRecentMoviesFetch,

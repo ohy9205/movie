@@ -8,8 +8,6 @@ export default function MovieCard({ movie }) {
     setIsShow((showDetail) => !showDetail);
   };
 
-  const showDetailModal = () => {};
-
   return (
     <>
       <li key={movie.id} style={{ width: "150px" }} onClick={isShowToggle}>
