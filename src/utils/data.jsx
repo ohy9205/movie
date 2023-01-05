@@ -47,5 +47,6 @@ export const changeDataFormat = (data) => {
     titleOrg,
     director: directorNm,
     actors: actor.map((it) => it.actorNm),
+    createDate: new Date().getTime(),
   };
 };
