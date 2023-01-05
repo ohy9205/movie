@@ -5,7 +5,10 @@ const moviesSlice = createSlice({
   initialState: { boxOffice: [], recent: [], myMovies: [] },
   reducers: {
     getRecentMovies: (state, action) => {
-      state.recent = action.payload;
+      const movieList = action.payload;
+      movieList.sort((a, b) => b.releaseDate - a.releaseDate);
+      state.recent = movieList;
+      // state.recent = action.payload;
     },
     getBoxOfficeMovies: (state, action) => {
       state.boxOffice = action.payload;

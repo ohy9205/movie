@@ -18,7 +18,7 @@ const boxOfficeClient = axios.create({
   baseURL: "/searchDailyBoxOfficeList.json",
   params: {
     key: process.env.REACT_APP_BOX_OFFICE_KEY,
-    targetDt: getTodayDate(),
+    targetDt: getTodayDate() - 1,
   },
 });
 
@@ -88,7 +88,8 @@ export const getRecentMoviesFetch = () => {
     const response = await moviesClient.get("", {
       params: {
         listCount: 15,
-        releaseDts: getTodayDate(),
+        releaseDts: getTodayDate() - 7,
+        releaseDte: getTodayDate(),
       },
     });
 
