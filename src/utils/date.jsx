@@ -15,7 +15,7 @@ export const getPeriodDate = (period = 0) => {
 };
 
 /** 날짜 포맷 */
-export const dateFormat = (date) => {
+export const changeDateFormat = (date) => {
   const newDate = new Date(date);
   const year = newDate.getFullYear();
   const month = newDate.month() + 1;

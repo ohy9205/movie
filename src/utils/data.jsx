@@ -1,5 +1,5 @@
 /** db에 저장할 데이터 추출 */
-export const dataFormat = (data) => {
+export const changeDataFormat = (data) => {
   const {
     movieSeq,
     Codes: {
@@ -22,7 +22,6 @@ export const dataFormat = (data) => {
       director: [{ directorNm }],
     },
     actors: { actor },
-    // } = data;
   } = data;
 
   /**정규표현식으로 제목 수정 */
