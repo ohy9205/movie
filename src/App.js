@@ -10,6 +10,7 @@ import { useAuthContext } from "./store/AuthContext";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getPickFetch } from "./store/pick-actions";
+import Community from "./pages/Community";
 
 function App() {
   const { user } = useAuthContext();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/my_pick" element={<Pick movies={pickMovies} />} />
+        <Route path="/community" element={<Community />} />
         <Route path="/sign_in" element={<Login />} />
         <Route path="/sign_up" element={<SignUp />} />
       </Routes>

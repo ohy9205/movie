@@ -19,6 +19,9 @@ export default function Header({ pickCount }) {
         </Link>
       </li>
       <li>
+        <Link to="/community">Community</Link>
+      </li>
+      <li>
         <Button text="로그아웃" onClick={logoutUser} />
       </li>
     </ul>
