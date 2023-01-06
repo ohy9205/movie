@@ -28,7 +28,6 @@ export default function Search() {
     setKeywordText(search.keyword);
     dispatch(searchMovieFetch({ title: search.keyword, genre: search.genre }));
     setIsSearch(true);
-    setSearch({});
   };
 
   useEffect(() => {
