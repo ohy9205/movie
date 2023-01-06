@@ -24,6 +24,7 @@ const firebaseConfig = {
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
 };
 
 const app = initializeApp(firebaseConfig);
@@ -121,3 +122,10 @@ export const getPick = (userUid, callback) => {
 export const removePick = (userUid, movieId) => {
   remove(ref(db, `/picks/${userUid}/${movieId}`));
 };
+
+// 커뮤니티 게시글 저장
+export const addPost = (post) => {
+  set(ref(db, `/community/post/${post.id}`), post);
+};
+
+// 커뮤니티 게시글 들고오기
