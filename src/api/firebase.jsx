@@ -125,7 +125,15 @@ export const removePick = (userUid, movieId) => {
 
 // 커뮤니티 게시글 저장
 export const addPost = (post) => {
-  set(ref(db, `/community/post/${post.id}`), post);
+  set(ref(db, `/community/posts/${post.id}`), post);
 };
 
 // 커뮤니티 게시글 들고오기
+export const getPost = async () => {
+  const snapshot = await get(child(dbRef, "/community/posts"));
+  if (snapshot.exists()) {
+    console.log(snapshot.val());
+    console.log(Object.values(snapshot.val()));
+    return Object.values(snapshot.val());
+  }
+};

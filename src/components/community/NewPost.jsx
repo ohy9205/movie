@@ -17,11 +17,14 @@ export default function NewPost() {
 
     // 파일 업로드에 필요한 url(reader.result) 얻기
     if (files) {
-      const reader = new FileReader();
-      reader.readAsDataURL(files[0]);
-      reader.onload = () => {
-        setFileDataUrl(reader.result);
-      };
+      // 파일 제거했을때 방어로직
+      if (files[0]) {
+        const reader = new FileReader();
+        reader.readAsDataURL(files[0]);
+        reader.onload = () => {
+          setFileDataUrl(reader.result);
+        };
+      }
       return;
     }
 

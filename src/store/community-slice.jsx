@@ -1,11 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 export const communitySlice = createSlice({
   name: "community",
-  initialState: { postList: [], comment: [] },
+  initialState: { posts: [], comment: [] },
   reducers: {
     add: (state, action) => {
-      state.postList.push(action.payload);
+      console.log(current(state));
+      state.posts.push(action.payload);
+    },
+    get: (state, action) => {
+      const postList = action.payload;
+      state.posts = postList ? postList : state.posts;
     },
   },
 });
