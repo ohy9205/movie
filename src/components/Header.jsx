@@ -4,7 +4,7 @@ import { logoutUser } from "../api/firebase";
 import { useAuthContext } from "../store/AuthContext";
 import Button from "./ui/Button";
 
-export default function Header() {
+export default function Header({ pickCount }) {
   const { user } = useAuthContext();
   const { pathname } = useLocation();
 
@@ -14,7 +14,9 @@ export default function Header() {
         <Link to="/search">Search</Link>
       </li>
       <li>
-        <Link to="/my_pick">My pick</Link>
+        <Link to="/my_pick">
+          My pick <span>{pickCount}</span>
+        </Link>
       </li>
       <li>
         <Button text="로그아웃" onClick={logoutUser} />
