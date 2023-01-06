@@ -22,52 +22,6 @@ const boxOfficeClient = axios.create({
   },
 });
 
-// api response에서 영화 정보 추출
-const getResponseMovieData = (response) => {
-  return response.data.Data[0].Result;
-};
-
-// 박스 오피스 데이터를 들고옴
-const getBoxOffice = async () => {
-  const response = await boxOfficeClient.get("");
-  const responseData = response.data.boxOfficeResult.dailyBoxOfficeList;
-  return await responseData.map((data) => ({
-    movieCode: data.movieCd,
-    title: data.movieNm,
-    releaseDate: data.openDt.replace(/-/g, ""),
-  }));
-};
-
-// 박스오피스 영화 정보 검색
-export const getBoxOfficeMovies = async (boxOfficeData) => {
-  let movieList = [];
-
-  for await (const data of boxOfficeData) {
-    const movie = await searchMovie(data);
-    if (!movie) {
-      console.log("boxoffice패칭");
-      const response = await moviesClient.get("", {
-        params: {
-          title: data.title,
-          releaseDts: data.releaseDate,
-        },
-      });
-
-      const responseData = getResponseMovieData(response);
-      if (responseData) {
-        for (const data of responseData) {
-          const formattedData = changeDataFormat(data);
-          addMovie(formattedData);
-          movieList.push(formattedData);
-        }
-      }
-    } else {
-      movieList.push(movie);
-    }
-  }
-  return movieList;
-};
-
 // 리덕스에 박스오피스 데이터 저장
 export const getBoxOfficeMoviesFetch = () => {
   return async (dispatch) => {
@@ -97,7 +51,6 @@ export const getRecentMoviesFetch = () => {
     // db에 해당 데이터 있는지 확인하고 만약 데이터가 없으면 db에 저장
     const responseData = getResponseMovieData(response);
     if (responseData) {
-      const responseData = getResponseMovieData(response);
       for (const data of responseData) {
         const formattedData = changeDataFormat(data);
         if (
@@ -126,7 +79,7 @@ export const searchMovieFetch = (search) => {
         title: search.title,
         genre: search.genre,
         sort: "prodYear,1",
-        listCount: 100,
+        listCount: 50,
       },
     });
 
@@ -150,8 +103,8 @@ export const searchMovieFetch = (search) => {
           continue;
         }
       }
-      dispatch(moviesAction.searchMovies(movieList));
     }
+    dispatch(moviesAction.searchMovies(movieList));
   };
 };
 
@@ -159,11 +112,54 @@ export const searchMovieFetch = (search) => {
 export const getMovieFetch = () => {
   return async (dispatch) => {
     const movie = await getMovie();
-    const randomSortedMovie = shuffle(movie)
-      // .sort(() => Math.random() - 0.5)
-      .splice(0, 30);
+    const randomSortedMovie = shuffle(movie).splice(0, 20);
     dispatch(moviesAction.getRandomMovies(randomSortedMovie));
   };
+};
+
+// api response에서 영화 정보 추출
+const getResponseMovieData = (response) => {
+  return response.data.Data[0].Result;
+};
+
+// 박스 오피스 데이터를 들고옴
+const getBoxOffice = async () => {
+  const response = await boxOfficeClient.get("");
+  const responseData = response.data.boxOfficeResult.dailyBoxOfficeList;
+  return await responseData.map((data) => ({
+    movieCode: data.movieCd,
+    title: data.movieNm,
+    releaseDate: data.openDt.replace(/-/g, ""),
+  }));
+};
+
+// 박스오피스 영화 정보 검색
+export const getBoxOfficeMovies = async (boxOfficeData) => {
+  let movieList = [];
+
+  for await (const data of boxOfficeData) {
+    const movie = await searchMovie(data);
+    if (!movie) {
+      const response = await moviesClient.get("", {
+        params: {
+          title: data.title,
+          releaseDts: data.releaseDate,
+        },
+      });
+
+      const responseData = getResponseMovieData(response);
+      if (responseData && responseData.length > 0) {
+        for (const data of responseData) {
+          const formattedData = changeDataFormat(data);
+          addMovie(formattedData);
+          movieList.push(formattedData);
+        }
+      }
+    } else {
+      movieList.push(movie);
+    }
+  }
+  return movieList;
 };
 
 function shuffle(array) {
