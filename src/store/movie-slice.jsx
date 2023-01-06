@@ -14,7 +14,7 @@ export const moviesSlice = createSlice({
     },
     searchMovies: (state, action) => {
       const movieList = action.payload;
-      movieList.sort((a, b) => a.title.length - b.title.length);
+      movieList && movieList.sort((a, b) => a.title.length - b.title.length);
       state.search = movieList;
     },
     getRandomMovies: (state, action) => {
