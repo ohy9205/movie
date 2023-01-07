@@ -7,6 +7,7 @@ import {
   getBoxOfficeMoviesFetch,
   getRecentMoviesFetch,
 } from "../store/movie-actions";
+import MovieCarousel from "../components/home/MovieCarousel";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -22,21 +23,11 @@ export default function Home() {
     <section>
       <article>
         <h1>박스오피스</h1>
-        <ul style={{ display: "flex" }}>
-          {boxOfficeMovies &&
-            boxOfficeMovies.map((movie) => (
-              <MovieCard key={movie.id} movie={movie} />
-            ))}
-        </ul>
+        {boxOfficeMovies && <MovieCarousel movies={boxOfficeMovies} />}
       </article>
       <article>
         <h1>최신순</h1>
-        <ul style={{ display: "flex" }}>
-          {recentMovies &&
-            recentMovies.map((movie) => (
-              <MovieCard key={movie.id} movie={movie} />
-            ))}
-        </ul>
+        {recentMovies && <MovieCarousel movies={recentMovies} />}
       </article>
     </section>
   );
