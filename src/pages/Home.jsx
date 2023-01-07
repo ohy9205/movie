@@ -2,12 +2,11 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
-import MovieCard from "../components/movie/MovieCard";
 import {
   getBoxOfficeMoviesFetch,
   getRecentMoviesFetch,
 } from "../store/movie/movie-actions";
-import MovieCarousel from "../components/home/MovieCarousel";
+import MovieCarousel from "../components/movie/MovieCarousel";
 
 export default function Home() {
   const dispatch = useDispatch();
