@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addFile } from "../../api/upload";
 import { useAuthContext } from "../../store/AuthContext";
-import { addPostFetch } from "../../store/community-actions";
+import { addPostFetch, updatePostFetch } from "../../store/community-actions";
 import Button from "../ui/Button";
 
-export default function NewPost() {
+export default function NewPost({ onClose, isEdit, post }) {
   const { user } = useAuthContext();
   const [content, setContent] = useState("");
-  const [fileDataUrl, setFileDataUrl] = useState();
+  const [fileDataUrl, setFileDataUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState();
+  const [isImageDel, setIsImageDel] = useState(false);
   const dispatch = useDispatch();
 
   const onChangeHandler = (e) => {
@@ -35,26 +37,55 @@ export default function NewPost() {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const post = {
+    // 수정창일경우
+    if (isEdit) {
+      const newPost = {
+        ...post,
+        content,
+      };
+
+      dispatch(updatePostFetch(newPost, isImageDel));
+      onClose();
+      return;
+    }
+
+    const newPost = {
       id: uuidv4(),
       content,
       auth: user.email,
       commentCount: 0,
       createdAt: new Date().getTime(),
     };
-    dispatch(addPostFetch(post, fileDataUrl));
+
+    dispatch(addPostFetch(newPost, fileDataUrl));
+
+    setContent("");
+    setFileDataUrl("");
   };
+
+  useEffect(() => {
+    // 처음 수정 페이지에 들어왔을 때 파일 정보가 있으면 미리보기 보여주고 파일 데이터 유지
+    if (isEdit) {
+      setContent(post.content);
+      setImageUrl(post.imageUrl);
+    }
+  }, []);
 
   return (
     <>
       {user && (
         <article>
           <h2>{user.email}</h2>
-          <img
-            src={fileDataUrl && fileDataUrl}
-            style={{ width: "100px" }}
-            alt=""
-          />
+          {!isImageDel && (
+            <div>
+              <img
+                src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
+                style={{ width: "100px" }}
+                alt=""
+              />
+              <span onClick={() => setIsImageDel(true)}>X</span>
+            </div>
+          )}
           <form onSubmit={onSubmitHandler}>
             <input
               type="text"
@@ -63,8 +94,20 @@ export default function NewPost() {
               placeholder="게시글을 입력하세요."
               required
             />
-            <input type="file" accept="image/*" onChange={onChangeHandler} />
-            <Button text="게시글 작성" />
+            {!isEdit && (
+              <>
+                <label htmlFor="file">사진추가</label>
+                <input
+                  type="file"
+                  id="file"
+                  accept="image/*"
+                  onChange={onChangeHandler}
+                  hidden
+                />
+              </>
+            )}
+
+            <Button text={isEdit ? "수정" : "작성"} />
           </form>
         </article>
       )}

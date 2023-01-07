@@ -16,6 +16,7 @@ import {
   ref,
   remove,
   set,
+  update,
 } from "firebase/database";
 
 const firebaseConfig = {
@@ -132,8 +133,16 @@ export const addPost = (post) => {
 export const getPost = async () => {
   const snapshot = await get(child(dbRef, "/community/posts"));
   if (snapshot.exists()) {
-    console.log(snapshot.val());
-    console.log(Object.values(snapshot.val()));
     return Object.values(snapshot.val());
   }
+};
+
+// 게시글 수정
+export const updatePost = async (post) => {
+  update(ref(db, `/community/posts/${post.id}`), post);
+};
+
+// 게시글 삭제
+export const removePost = async (postId) => {
+  remove(ref(db, `/community/posts/${postId}`));
 };

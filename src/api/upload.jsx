@@ -1,5 +1,6 @@
 import { initializeApp } from "@firebase/app";
 import {
+  deleteObject,
   getDownloadURL,
   getStorage,
   ref,
@@ -18,8 +19,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
+// 파일추가
 export const addFile = async (postId, file) => {
   const attachmentRef = ref(storage, `/images/${postId}/${file.id}`);
   await uploadString(attachmentRef, file.url, "data_url");
   return getDownloadURL(ref(storage, attachmentRef));
+};
+
+// 파일삭제
+export const removeFile = async (postId, imageUrl) => {
+  const attachmentRef = ref(storage, `/images/${postId}/${imageUrl}`);
+  deleteObject(attachmentRef);
 };
