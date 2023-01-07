@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { logoutUser } from "../api/firebase";
 import { useAuthContext } from "../store/auth/AuthContext";
@@ -25,7 +25,8 @@ export default function Header({ pickCount }) {
       <li>
         <Link to="/community">커뮤니티</Link>
       </li>
-      <li>
+      <li className={styles.profile}>
+        {user && <p>{user.email.split("@")[0]}</p>}
         <Button text="로그아웃" onClick={logoutUser} />
       </li>
     </>

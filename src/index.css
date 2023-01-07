@@ -35,6 +35,8 @@ code {
   text-decoration: none;
   list-style: none;
   color: var(--color-text);
+  border: none;
+  outline: none;
 }
 
 #root {

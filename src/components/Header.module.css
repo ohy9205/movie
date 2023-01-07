@@ -54,3 +54,24 @@
   top: -0.4rem;
   right: -0.8rem;
 }
+
+.profile {
+  display: flex;
+  position: relative;
+  font-weight: 700;
+}
+
+.profile:hover button {
+  display: block;
+}
+
+.profile button {
+  display: none;
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1rem;
+  padding: 0.2rem 0rem;
+  width: 70px;
+  background-color: var(--color-grey);
+  color: var(--color-text);
+}
