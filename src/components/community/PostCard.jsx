@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAuthContext } from "../../store/AuthContext";
+import { useAuthContext } from "../../store/auth/AuthContext";
 import Button from "../ui/Button";
 import PostModal from "./PostModal";
 

@@ -6,7 +6,7 @@ import MovieCard from "../components/movie/MovieCard";
 import {
   getBoxOfficeMoviesFetch,
   getRecentMoviesFetch,
-} from "../store/movie-actions";
+} from "../store/movie/movie-actions";
 import MovieCarousel from "../components/home/MovieCarousel";
 
 export default function Home() {

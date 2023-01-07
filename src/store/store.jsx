@@ -1,6 +1,6 @@
-import { moviesSlice } from "./movie-slice";
-import { pickSlice } from "./pick-slice";
-import { communitySlice } from "./community-slice";
+import { moviesSlice } from "./movie/movie-slice";
+import { pickSlice } from "./pick/pick-slice";
+import { communitySlice } from "./community/community-slice";
 
 const { configureStore } = require("@reduxjs/toolkit");
 

@@ -1,6 +1,6 @@
 import { uuidv4 } from "@firebase/util";
-import { addPost, getPost, removePost, updatePost } from "../api/firebase";
-import { addFile, removeFile } from "../api/upload";
+import { addPost, getPost, removePost, updatePost } from "../../api/firebase";
+import { addFile, removeFile } from "../../api/upload";
 import { communityAction } from "./community-slice";
 
 // db에 게시글 저장

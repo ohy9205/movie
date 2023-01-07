@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removePostFetch } from "../../store/community-actions";
+import { removePostFetch } from "../../store/community/community-actions";
 import Button from "../ui/Button";
 
 export default function DeletePost({ onClose, post }) {

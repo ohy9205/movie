@@ -1,8 +1,11 @@
 import { uuidv4 } from "@firebase/util";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useAuthContext } from "../../store/AuthContext";
-import { addPostFetch, updatePostFetch } from "../../store/community-actions";
+import { useAuthContext } from "../../store/auth/AuthContext";
+import {
+  addPostFetch,
+  updatePostFetch,
+} from "../../store/community/community-actions";
 import Button from "../ui/Button";
 
 export default function NewPost({ onClose, isEdit, post }) {

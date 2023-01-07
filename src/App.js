@@ -5,10 +5,10 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
 import Pick from "./pages/Pick";
-import { useAuthContext } from "./store/AuthContext";
+import { useAuthContext } from "./store/auth/AuthContext";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getPickFetch } from "./store/pick-actions";
+import { getPickFetch } from "./store/pick/pick-actions";
 import Community from "./pages/Community";
 import SignIn from "./pages/SignIn";
 

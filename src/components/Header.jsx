@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { logoutUser } from "../api/firebase";
-import { useAuthContext } from "../store/AuthContext";
+import { useAuthContext } from "../store/auth/AuthContext";
 import Button from "./ui/Button";
 
 export default function Header({ pickCount }) {

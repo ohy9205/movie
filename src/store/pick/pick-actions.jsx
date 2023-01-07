@@ -1,4 +1,4 @@
-import { addPick, getPick, removePick } from "../api/firebase";
+import { addPick, getPick, removePick } from "../../api/firebase";
 import { pickAction } from "./pick-slice";
 
 //

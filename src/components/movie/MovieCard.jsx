@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useAuthContext } from "../../store/AuthContext";
-import { addPickFetch, removePickFetch } from "../../store/pick-actions";
+import { useAuthContext } from "../../store/auth/AuthContext";
+import { addPickFetch, removePickFetch } from "../../store/pick/pick-actions";
 import MovieDetailModal from "./MovieDetailModal";
 
 export default function MovieCard({ movie, isPick }) {
