@@ -1,7 +1,6 @@
 import { uuidv4 } from "@firebase/util";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addFile } from "../../api/upload";
 import { useAuthContext } from "../../store/AuthContext";
 import { addPostFetch, updatePostFetch } from "../../store/community-actions";
 import Button from "../ui/Button";

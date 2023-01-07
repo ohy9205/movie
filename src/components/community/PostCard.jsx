@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useAuthContext } from "../../store/AuthContext";
 import Button from "../ui/Button";
-import PostEditModal from "./PostEditModal";
-import PostMenuModal from "./PostMenuModal ";
+import PostModal from "./PostModal";
+
+export const MENU = "menu";
+export const EDIT = "edit";
+export const DELETE = "delete";
 
 export default function PostCard({ post }) {
   const [positon, setPosition] = useState();
@@ -11,7 +14,7 @@ export default function PostCard({ post }) {
   const [showEdit, setShowEdit] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
 
-  const toggleShowMenue = () => {
+  const toggleShowMenu = () => {
     setShowMenu((showMenu) => !showMenu);
   };
 
@@ -36,8 +39,30 @@ export default function PostCard({ post }) {
       <div style={{ display: "flex" }}>
         <h1>{post.auth}</h1>
         <div onClick={getPosition}>
-          {user.email === post.auth && !showMenu && (
-            <Button text="..." onClick={toggleShowMenue} />
+          {user.email === post.auth && (
+            <Button text="..." onClick={toggleShowMenu} />
+          )}
+          {showMenu && (
+            <PostModal
+              type={MENU}
+              toggleMenu={toggleShowMenu}
+              toggleEdit={toggleShowEdit}
+              toggleDelete={toggleShowDelete}
+              position={positon}
+            />
+          )}
+          {showEdit && (
+            <PostModal type={EDIT} toggleEdit={toggleShowEdit} post={post} />
+          )}
+          {showDelete && (
+            <PostModal
+              type={DELETE}
+              toggleDelete={toggleShowDelete}
+              post={post}
+            />
+          )}
+          {/* {user.email === post.auth && !showMenu && (
+            <Button text="..." onClick={toggleShowMenu} />
           )}
           {showEdit && (
             <PostEditModal onClose={toggleShowEdit} post={post} isEdit />
@@ -58,13 +83,13 @@ export default function PostCard({ post }) {
                 position={positon}
               />
             </div>
-          )}
+          )} */}
         </div>
       </div>
       <time dateTime={new Date(parseInt(post.createAt))}>timeago</time>
 
       <div>
-        {post.imageUrl.length > 0 && (
+        {post.imageUrl && post.imageUrl.length > 0 && (
           <img src={post.imageUrl} alt="사진" style={{ width: "100px" }} />
         )}
         <p>{post.content}</p>

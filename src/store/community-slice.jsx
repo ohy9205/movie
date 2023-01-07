@@ -16,7 +16,7 @@ export const communitySlice = createSlice({
       const statePosts = current(state.posts);
 
       state.posts = statePosts.map((post) => {
-        return post.id === updatePost.id && { ...post, ...updatePost };
+        return post.id === updatePost.id ? { ...post, ...updatePost } : post;
       });
     },
     remove: (state, action) => {

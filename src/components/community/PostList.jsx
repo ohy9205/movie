@@ -11,14 +11,13 @@ export default function PostList() {
     return list && list.sort((a, b) => b.createdAt - a.createdAt);
   };
 
-  const sortedPostList = getSorteList();
+  const sortedPostList = postList.length > 0 && getSorteList();
 
   return (
     <article>
       <h1>목록</h1>
       <ul>
         {sortedPostList &&
-          sortedPostList.length > 0 &&
           sortedPostList.map((post) => <PostCard key={post.id} post={post} />)}
       </ul>
     </article>
