@@ -3,8 +3,10 @@
   --color-bg-dark: #f5f5f5;
   --color-bg: #fdfffd;
   --color-grey: #d1d1d1;
+  --color-white: #eee;
   --color-text: #22243b;
   --color-accent: #5d7d8c;
+  /* --color-accent: #45829e; */
   --color-scrollbar: #aaa7a7;
 }
 
