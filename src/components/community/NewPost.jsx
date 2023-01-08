@@ -87,9 +87,9 @@ export default function NewPost({ onClose, isEdit, post }) {
   return (
     <>
       {user && (
-        <article className={styles.newPost}>
-          <p className={styles.user}>{user.email}</p>
-          <form onSubmit={onSubmitHandler}>
+        <section className={styles.newPost}>
+          <header className={styles.user}>{user.email}</header>
+          <article onSubmit={onSubmitHandler}>
             <textarea
               type="text"
               value={content}
@@ -109,26 +109,29 @@ export default function NewPost({ onClose, isEdit, post }) {
                 </span>
               </div>
             )}
-            {!isEdit && (
-              <div className={styles.submitBox}>
-                <label htmlFor="file">
-                  <BsCardImage />
-                </label>
-                <input
-                  type="file"
-                  id="file"
-                  accept="image/*"
-                  onChange={onChangeHandler}
-                  hidden
-                />
-                <Button text="작성" />
-              </div>
-            )}
+          </article>
+          {!isEdit && (
+            <footer className={styles.submitBox}>
+              <label htmlFor="file">
+                <BsCardImage />
+              </label>
+              <input
+                type="file"
+                id="file"
+                accept="image/*"
+                onChange={onChangeHandler}
+                hidden
+              />
+              <Button text="작성" />
+            </footer>
+          )}
 
-            {/* <Button text={isEdit ? "수정" : "작성"} /> */}
-            {isEdit && <Button text="수정" />}
-          </form>
-        </article>
+          {isEdit && (
+            <footer>
+              <Button text="수정" />
+            </footer>
+          )}
+        </section>
       )}
     </>
   );

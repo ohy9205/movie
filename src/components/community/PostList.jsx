@@ -14,13 +14,12 @@ export default function PostList() {
   const sortedPostList = postList.length > 0 && getSorteList();
 
   return (
-    <article>
-      {/* <article> */}
+    <section>
       <h1>목록</h1>
-      <ul>
+      <div>
         {sortedPostList &&
           sortedPostList.map((post) => <PostCard key={post.id} post={post} />)}
-      </ul>
-    </article>
+      </div>
+    </section>
   );
 }
