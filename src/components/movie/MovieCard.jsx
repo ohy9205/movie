@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useAuthContext } from "../../store/auth/AuthContext";
-import { addPickFetch, removePickFetch } from "../../store/pick/pick-actions";
+import {
+  addPickFetch,
+  getPickFetch,
+  removePickFetch,
+} from "../../store/pick/pick-actions";
 import MovieDetailModal from "./MovieDetailModal";
+import { BsSuitHeartFill } from "react-icons/bs";
+import { BsSuitHeart } from "react-icons/bs";
 import styles from "./MovieCard.module.css";
 
-export default function MovieCard({ movie, isPick }) {
+export default function MovieCard({ movie }) {
   const [isShow, setIsShow] = useState(false);
+  const [isPick, setIsPick] = useState();
   const dispatch = useDispatch();
   const { user } = useAuthContext();
 
@@ -14,36 +21,41 @@ export default function MovieCard({ movie, isPick }) {
     setIsShow((showDetail) => !showDetail);
   };
 
-  // const moveSlide = (i) => {
-  //   let nextIndex = current + i;
+  const toggleIsPick = () => {
+    setIsPick((isPick) => !isPick);
+  };
 
-  //   if (nextIndex < 0) nextIndex = imgSize.current - 1;
-  //   else if (nextIndex >= imgSize.current) nextIndex = 0;
-
-  //   setCurrent(nextIndex);
-  // };
+  //내가 찜한 영화인지 확인
+  useEffect(() => {
+    // dispatch(getPickFetch())
+  }, []);
 
   return (
-    <li className={styles.box}>
-      <div onClick={isShowToggle}>
+    <>
+      <li className={styles.box}>
         <img
           src={movie.poster}
           style={{ display: "block", width: "100%" }}
-          alt="X"
+          alt={movie.title + "포스터"}
+          onClick={isShowToggle}
         />
-        {movie.title}
-      </div>
-      {user && !isPick && (
-        <button onClick={() => dispatch(addPickFetch(user.uid, movie))}>
-          추가
-        </button>
-      )}
-      {user && isPick && (
-        <button onClick={() => dispatch(removePickFetch(user.uid, movie.id))}>
-          삭제
-        </button>
-      )}
+
+        <div className={styles.pickBox}>
+          <h1>{movie.title}</h1>
+          {user && !isPick ? (
+            <BsSuitHeart
+              className={`${styles.pick} ${styles.pickOn}`}
+              onClick={() => dispatch(removePickFetch(user.uid, movie))}
+            />
+          ) : (
+            <BsSuitHeartFill
+              className={styles.pick}
+              onClick={() => dispatch(addPickFetch(user.uid, movie))}
+            />
+          )}
+        </div>
+      </li>
       {isShow && <MovieDetailModal movie={movie} onClick={isShowToggle} />}
-    </li>
+    </>
   );
 }

@@ -1,4 +1,37 @@
 .box {
-  width: 250px;
-  flex: none;
+  width: 170px;
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  box-shadow: 7px 8px 12px -5px rgba(0, 0, 0, 0.78);
+  -webkit-box-shadow: 7px 8px 12px -5px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: 7px 8px 12px -5px rgba(0, 0, 0, 0.78);
+
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.box h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  /* padding: 10px; */
+}
+
+.box img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.pickOn path {
+  color: var(--color-accent);
+}
+
+.pickBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
 }

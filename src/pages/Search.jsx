@@ -39,7 +39,7 @@ export default function Search() {
   useEffect(() => {
     // 피드백처리
     if (searchMovieList.length === 0) {
-      setFeadback("검색된 결과가 없습니다.");
+      setFeadback("검색 결과가 없습니다.");
     } else if (searchMovieList.length >= 30) {
       setFeadback("검색 결과가 너무 많아요! 더 구체적으로 검색해보세요.");
     } else {
@@ -48,9 +48,9 @@ export default function Search() {
   }, [searchMovieList]);
 
   const searchMovieSection = (
-    <section>
+    <section className={styles.result}>
       <h1>'{keywordText}' 검색결과</h1>
-      {feadback && feadback}
+      <p>{feadback && feadback}</p>
 
       {searchMovieList.length > 0 &&
         searchMovieList.map((movie) => (
@@ -61,10 +61,10 @@ export default function Search() {
 
   // 임의갯수의 영화 데이터
   const randomMovieListSection = (
-    <section>
+    <section className={styles.random}>
       <h1>이런 영화도 있어요</h1>
       {randomMovieList && (
-        <ul style={{ display: "flex" }}>
+        <ul>
           {randomMovieList.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
@@ -76,7 +76,6 @@ export default function Search() {
   return (
     <>
       <section className={styles.search}>
-        {/* <h1>찾는 영화가 있으세요?</h1> */}
         <form onSubmit={onSubmitHandler}>
           <select name="genre" onChange={onChangeHandler} value={search.genre}>
             <option value="">전체</option>
@@ -96,7 +95,6 @@ export default function Search() {
             required
             placeholder="영화명을 입력하세요"
           />
-          {/* <FiSearch /> */}
           <Button text={<FiSearch />} />
         </form>
         <div className={styles.tipBox}>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MovieDetailModal from "./MovieDetailModal";
+import styles from "./MovieCardRow.module.css";
 
 export default function MovieCardRow({ movie }) {
   const { id, poster, title, releaseDate, prodYear, genre } = movie;
