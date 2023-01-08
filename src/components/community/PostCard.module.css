@@ -10,11 +10,15 @@
   align-items: center;
 }
 
-.headerBox .menuIcon {
+.menu button {
+  background-color: transparent;
+}
+
+.menu .menuIcon {
   font-size: 2rem;
 }
 
-.headerBox .menuIcon path {
+.menu .menuIcon path {
   color: var(--color-accent);
 }
 

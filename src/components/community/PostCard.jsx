@@ -4,6 +4,7 @@ import PostModal from "./PostModal";
 import styles from "./PostCard.module.css";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { format } from "timeago.js";
+import Button from "../ui/Button";
 
 export const MENU = "menu";
 export const EDIT = "edit";
@@ -31,7 +32,6 @@ export default function PostCard({ post }) {
   };
 
   const getPosition = (e) => {
-    if (e.target.nodeName !== "BUTTON") return;
     const rect = e.target.getBoundingClientRect();
     setPosition({ y: rect.top, x: rect.left });
   };
@@ -40,10 +40,16 @@ export default function PostCard({ post }) {
     <article className={styles.postCard}>
       <div className={styles.headerBox}>
         <h1>{post.auth}</h1>
-        <div className={styles.menu} onClick={getPosition}>
+        <div className={styles.menu}>
           {user.email === post.auth && (
-            <BiDotsHorizontalRounded
-              className={styles.menuIcon}
+            <Button
+              text={
+                <BiDotsHorizontalRounded
+                  id="menuBtn"
+                  className={styles.menuIcon}
+                  onClick={getPosition}
+                />
+              }
               onClick={toggleShowMenu}
             />
           )}
