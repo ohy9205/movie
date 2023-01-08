@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import MovieDetailModal from "./MovieDetailModal";
 import styles from "./MovieCardRow.module.css";
+import { changeDateFormat } from "../../utils/date";
+import PickIcon from "../ui/PickIcon";
 
 export default function MovieCardRow({ movie }) {
-  const { id, poster, title, releaseDate, prodYear, genre } = movie;
+  const { poster, title, releaseDate, prodYear, genre } = movie;
   const [isShow, setIsShow] = useState(false);
 
   const isShowToggle = () => {
@@ -12,17 +14,21 @@ export default function MovieCardRow({ movie }) {
 
   return (
     <>
-      <li key={id} onClick={isShowToggle} style={{ display: "flex" }}>
-        <img
-          src={poster}
-          style={{ display: "block", width: "100px" }}
-          alt="X"
-        />
-        <div>
+      <li className={styles.box}>
+        <div className={styles.info} onClick={isShowToggle}>
+          {poster ? (
+            <img src={poster} alt={movie.title + " 포스터"} />
+          ) : (
+            <div className={styles.poster}>포스터 정보 없음</div>
+          )}
+          {/* <img src={poster} alt={movie.title + " 포스터"} /> */}
           <h2>{title}</h2>
-          <p>{genre}</p>
+          <p className={styles.genre}>{genre}</p>
+          <p className={styles.date}>
+            {changeDateFormat(releaseDate) || prodYear}
+          </p>
         </div>
-        <p>{releaseDate || prodYear}</p>
+        <PickIcon className={styles.pickIconBox} movie={movie} />
       </li>
       {isShow && <MovieDetailModal movie={movie} onClick={isShowToggle} />}
     </>
