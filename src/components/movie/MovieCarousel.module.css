@@ -1,0 +1,18 @@
+.box {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carouselBox {
+  width: 800px;
+  margin: auto;
+}
+
+.boxInner {
+  display: flex;
+  gap: 25px;
+  overflow: hidden;
+}
