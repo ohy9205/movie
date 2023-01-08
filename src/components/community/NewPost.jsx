@@ -1,5 +1,5 @@
 import { uuidv4 } from "@firebase/util";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useAuthContext } from "../../store/auth/AuthContext";
 import {
@@ -7,6 +7,9 @@ import {
   updatePostFetch,
 } from "../../store/community/community-actions";
 import Button from "../ui/Button";
+import { TiDelete } from "react-icons/ti";
+import { BsCardImage } from "react-icons/bs";
+import styles from "./NewPost.module.css";
 
 export default function NewPost({ onClose, isEdit, post }) {
   const { user } = useAuthContext();
@@ -15,6 +18,14 @@ export default function NewPost({ onClose, isEdit, post }) {
   const [imageUrl, setImageUrl] = useState();
   const [isImageDel, setIsImageDel] = useState(false);
   const dispatch = useDispatch();
+
+  const onClickDel = () => {
+    if (isEdit) {
+      setIsImageDel(true);
+    } else {
+      setFileDataUrl("");
+    }
+  };
 
   const onChangeHandler = (e) => {
     const { value, files } = e.target;
@@ -76,29 +87,33 @@ export default function NewPost({ onClose, isEdit, post }) {
   return (
     <>
       {user && (
-        <article>
-          <h2>{user.email}</h2>
-          {!isImageDel && (
-            <div>
-              <img
-                src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
-                style={{ width: "100px" }}
-                alt=""
-              />
-              <span onClick={() => setIsImageDel(true)}>X</span>
-            </div>
-          )}
+        <article className={styles.newPost}>
+          <p className={styles.user}>{user.email}</p>
           <form onSubmit={onSubmitHandler}>
-            <input
+            <textarea
               type="text"
               value={content}
               onChange={onChangeHandler}
               placeholder="게시글을 입력하세요."
               required
             />
+
+            {!isImageDel && (fileDataUrl || imageUrl) && (
+              <div className={styles.imgBox}>
+                <img
+                  src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
+                  alt="첨부"
+                />
+                <span onClick={onClickDel}>
+                  <TiDelete className={styles.delBtn} />
+                </span>
+              </div>
+            )}
             {!isEdit && (
-              <>
-                <label htmlFor="file">사진추가</label>
+              <div className={styles.submitBox}>
+                <label htmlFor="file">
+                  <BsCardImage />
+                </label>
                 <input
                   type="file"
                   id="file"
@@ -106,10 +121,12 @@ export default function NewPost({ onClose, isEdit, post }) {
                   onChange={onChangeHandler}
                   hidden
                 />
-              </>
+                <Button text="작성" />
+              </div>
             )}
 
-            <Button text={isEdit ? "수정" : "작성"} />
+            {/* <Button text={isEdit ? "수정" : "작성"} /> */}
+            {isEdit && <Button text="수정" />}
           </form>
         </article>
       )}

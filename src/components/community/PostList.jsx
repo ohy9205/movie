@@ -15,6 +15,7 @@ export default function PostList() {
 
   return (
     <article>
+      {/* <article> */}
       <h1>목록</h1>
       <ul>
         {sortedPostList &&
