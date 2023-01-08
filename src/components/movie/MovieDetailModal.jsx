@@ -27,7 +27,10 @@ const ModalOverlay = ({ movie }) => {
   return (
     <section className={styles.detail}>
       <article className={styles.basicBox}>
-        <img src={poster} alt={`${title} 포스터`} />
+        <img
+          src={poster || "/assets/poster_none.jpg"}
+          alt={`${title} 포스터`}
+        />
         <div className={styles.basic}>
           <h1>{title}</h1>
           <strong>{!titleOrg ? titleEng : `${titleOrg}, ${titleEng}`}</strong>

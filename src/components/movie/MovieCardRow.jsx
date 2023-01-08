@@ -16,12 +16,10 @@ export default function MovieCardRow({ movie }) {
     <>
       <li className={styles.box}>
         <div className={styles.info} onClick={isShowToggle}>
-          {poster ? (
-            <img src={poster} alt={movie.title + " 포스터"} />
-          ) : (
-            <div className={styles.poster}>포스터 정보 없음</div>
-          )}
-          {/* <img src={poster} alt={movie.title + " 포스터"} /> */}
+          <img
+            src={poster || "/assets/poster_none.jpg"}
+            alt={movie.title + " 포스터"}
+          />
           <h2>{title}</h2>
           <p className={styles.genre}>{genre}</p>
           <p className={styles.date}>
