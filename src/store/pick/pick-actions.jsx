@@ -10,7 +10,6 @@ export const getPickFetch = (userUid) => {
 
 export const addPickFetch = (userUid, movie) => {
   return () => {
-    console.log(userUid);
     addPick(userUid, { ...movie, pickDate: new Date().getTime() });
   };
 };

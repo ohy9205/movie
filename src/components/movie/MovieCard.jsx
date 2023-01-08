@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useAuthContext } from "../../store/auth/AuthContext";
 import {
   addPickFetch,
@@ -13,9 +13,10 @@ import styles from "./MovieCard.module.css";
 
 export default function MovieCard({ movie }) {
   const [isShow, setIsShow] = useState(false);
-  const [isPick, setIsPick] = useState();
+  const [isPick, setIsPick] = useState(false);
   const dispatch = useDispatch();
   const { user } = useAuthContext();
+  const pickMovieList = useSelector((state) => state.pick.pick);
 
   const isShowToggle = () => {
     setIsShow((showDetail) => !showDetail);
@@ -25,9 +26,24 @@ export default function MovieCard({ movie }) {
     setIsPick((isPick) => !isPick);
   };
 
+  const addPickHandler = () => {
+    dispatch(addPickFetch(user.uid, movie));
+    toggleIsPick();
+  };
+
+  const removePickHandler = () => {
+    dispatch(removePickFetch(user.uid, movie.id));
+    toggleIsPick();
+  };
+
   //내가 찜한 영화인지 확인
   useEffect(() => {
-    // dispatch(getPickFetch())
+    console.log(pickMovieList);
+    if (pickMovieList.length > 0) {
+      for (const pick of pickMovieList) {
+        pick.id === movie.id && setIsPick(true);
+      }
+    }
   }, []);
 
   return (
@@ -45,12 +61,12 @@ export default function MovieCard({ movie }) {
           {user && !isPick ? (
             <BsSuitHeart
               className={`${styles.pick} ${styles.pickOn}`}
-              onClick={() => dispatch(removePickFetch(user.uid, movie))}
+              onClick={addPickHandler}
             />
           ) : (
             <BsSuitHeartFill
               className={styles.pick}
-              onClick={() => dispatch(addPickFetch(user.uid, movie))}
+              onClick={removePickHandler}
             />
           )}
         </div>

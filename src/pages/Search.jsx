@@ -34,7 +34,7 @@ export default function Search() {
 
   useEffect(() => {
     dispatch(getMovieFetch());
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     // 피드백처리
