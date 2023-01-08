@@ -100,7 +100,7 @@ export default function Search() {
           <Button text={<FiSearch />} />
         </form>
         <div className={styles.tipBox}>
-          <h2>검색 TIP > </h2>
+          <h2>검색 TIP {">"} </h2>
           <div>
             <p>
               단어 단위로 입력하면 더 정확한 결과를 얻을 수 있습니다. [ex.
