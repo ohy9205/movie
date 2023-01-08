@@ -5,6 +5,8 @@ import MovieCardRow from "../components/movie/MovieCardRow";
 import Button from "../components/ui/Button";
 import { getMovieFetch, searchMovieFetch } from "../store/movie/movie-actions";
 import { getGenreVO } from "../utils/genre";
+import styles from "./Search.module.css";
+import { FiSearch } from "react-icons/fi";
 
 export default function Search() {
   const genreVO = getGenreVO();
@@ -60,7 +62,7 @@ export default function Search() {
   // 임의갯수의 영화 데이터
   const randomMovieListSection = (
     <section>
-      <h1>이런 영화는 어떠세요?</h1>
+      <h1>이런 영화도 있어요</h1>
       {randomMovieList && (
         <ul style={{ display: "flex" }}>
           {randomMovieList.map((movie) => (
@@ -73,7 +75,8 @@ export default function Search() {
 
   return (
     <>
-      <header>
+      <section className={styles.search}>
+        {/* <h1>찾는 영화가 있으세요?</h1> */}
         <form onSubmit={onSubmitHandler}>
           <select name="genre" onChange={onChangeHandler} value={search.genre}>
             <option value="">전체</option>
@@ -91,10 +94,21 @@ export default function Search() {
             autoComplete="off"
             minLength={2}
             required
+            placeholder="영화명을 입력하세요"
           />
-          <Button text="검색" />
+          {/* <FiSearch /> */}
+          <Button text={<FiSearch />} />
         </form>
-      </header>
+        <div className={styles.tipBox}>
+          <h2>검색 TIP > </h2>
+          <div>
+            <p>
+              단어 단위로 입력하면 더 정확한 결과를 얻을 수 있습니다. [ex.
+              곤지(X) → 곤지암(O)]
+            </p>
+          </div>
+        </div>
+      </section>
       {isSearch ? searchMovieSection : randomMovieListSection}
     </>
   );

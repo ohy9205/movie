@@ -111,8 +111,9 @@ export const searchMovieFetch = (search) => {
 // 랜덤 영화 목록
 export const getMovieFetch = () => {
   return async (dispatch) => {
-    const movie = await getMovie();
-    const randomSortedMovie = shuffle(movie).splice(0, 20);
+    const movies = await getMovie();
+    const filterMovies = movies.filter((movie) => movie.poster.length > 0);
+    const randomSortedMovie = shuffle(filterMovies).splice(0, 20);
     dispatch(moviesAction.getRandomMovies(randomSortedMovie));
   };
 };

@@ -1,0 +1,67 @@
+.search {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+  background-color: var(--color-accent);
+}
+
+.search h1 {
+  margin-bottom: 1.5rem;
+}
+
+.search form {
+  width: 60%;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+}
+
+.search form select {
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.search form select option {
+  color: inherit;
+}
+
+.search form input {
+  padding: 1rem;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.search form button {
+  display: flex;
+  font-size: 2rem;
+  background-color: var(--color-white);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.tipBox {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 60%;
+}
+
+.tipBox h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+.tipBox div {
+  display: none;
+}
+
+.tipBox h2:hover ~ div {
+  display: block;
+}
+
+.tipBox p {
+  color: var(--color-white);
+}
