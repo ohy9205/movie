@@ -95,6 +95,7 @@ export default function NewPost({ onClose, isEdit, post }) {
               value={content}
               onChange={onChangeHandler}
               placeholder="게시글을 입력하세요."
+              maxLength="300"
               required
             />
 
@@ -122,13 +123,13 @@ export default function NewPost({ onClose, isEdit, post }) {
                 onChange={onChangeHandler}
                 hidden
               />
-              <Button text="작성" />
+              <Button text="작성" onClick={onSubmitHandler} />
             </footer>
           )}
 
           {isEdit && (
             <footer>
-              <Button text="수정" />
+              <Button text="수정" onClick={onSubmitHandler} />
             </footer>
           )}
         </section>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useAuthContext } from "../../store/auth/AuthContext";
-import Button from "../ui/Button";
 import PostModal from "./PostModal";
+import styles from "./PostCard.module.css";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { format } from "timeago.js";
 
 export const MENU = "menu";
 export const EDIT = "edit";
@@ -35,12 +37,15 @@ export default function PostCard({ post }) {
   };
 
   return (
-    <li>
-      <div style={{ display: "flex" }}>
+    <article className={styles.postCard}>
+      <div className={styles.headerBox}>
         <h1>{post.auth}</h1>
-        <div onClick={getPosition}>
+        <div className={styles.menu} onClick={getPosition}>
           {user.email === post.auth && (
-            <Button text="..." onClick={toggleShowMenu} />
+            <BiDotsHorizontalRounded
+              className={styles.menuIcon}
+              onClick={toggleShowMenu}
+            />
           )}
           {showMenu && (
             <PostModal
@@ -61,39 +66,21 @@ export default function PostCard({ post }) {
               post={post}
             />
           )}
-          {/* {user.email === post.auth && !showMenu && (
-            <Button text="..." onClick={toggleShowMenu} />
-          )}
-          {showEdit && (
-            <PostEditModal onClose={toggleShowEdit} post={post} isEdit />
-          )}
-          {showDelete && (
-            <PostEditModal
-              onClose={toggleShowDelete}
-              postId={post.id}
-              post={post}
-            />
-          )}
-          {showMenu && (
-            <div>
-              <PostMenuModal
-                onClose={toggleShowMenue}
-                onEdit={toggleShowEdit}
-                onDelete={toggleShowDelete}
-                position={positon}
-              />
-            </div>
-          )} */}
         </div>
       </div>
-      <time dateTime={new Date(parseInt(post.createAt))}>timeago</time>
 
-      <div>
-        {post.imageUrl && post.imageUrl.length > 0 && (
-          <img src={post.imageUrl} alt="사진" style={{ width: "100px" }} />
-        )}
+      <time
+        className={styles.timeAgo}
+        dateTime={new Date(parseInt(post.createAt))}>
+        {format(post.createAt)}
+      </time>
+
+      <div className={styles.content}>
         <p>{post.content}</p>
+        {post.imageUrl && post.imageUrl.length > 0 && (
+          <img src={post.imageUrl} alt="첨부" />
+        )}
       </div>
-    </li>
+    </article>
   );
 }

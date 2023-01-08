@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import PostCard from "./PostCard";
+import styles from "./PostList.module.css";
 
 export default function PostList() {
   const postList = useSelector((state) => state.community.posts);
@@ -14,12 +15,10 @@ export default function PostList() {
   const sortedPostList = postList.length > 0 && getSorteList();
 
   return (
-    <section>
-      <h1>목록</h1>
-      <div>
-        {sortedPostList &&
-          sortedPostList.map((post) => <PostCard key={post.id} post={post} />)}
-      </div>
+    <section className={styles.postList}>
+      {/* <h1>목록</h1> */}
+      {sortedPostList &&
+        sortedPostList.map((post) => <PostCard key={post.id} post={post} />)}
     </section>
   );
 }
