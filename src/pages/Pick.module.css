@@ -1,0 +1,8 @@
+.pick {
+  margin: 2rem;
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-between;
+}
