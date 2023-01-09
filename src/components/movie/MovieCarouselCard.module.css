@@ -1,5 +1,5 @@
 .card {
-  width: 220px;
+  width: 180px;
   padding: 0 10px;
   height: 100%;
   flex: none;
@@ -8,7 +8,7 @@
 .card img {
   border-radius: 5px;
   width: 100%;
-  height: 280px;
+  height: 230px;
   object-fit: cover;
 }
 
@@ -17,13 +17,14 @@
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .pickBox h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-size: 0.8rem;
 }
 
 .pickBox .pickIcon {

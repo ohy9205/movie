@@ -7,6 +7,7 @@ import {
   getRecentMoviesFetch,
 } from "../store/movie/movie-actions";
 import MovieCarousel from "../components/movie/MovieCarousel";
+import styles from "./Home.module.css";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <section>
+    <section className={styles.home}>
       <article>
         <h1>박스오피스</h1>
         {boxOfficeMovies.length > 0 && (
