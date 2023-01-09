@@ -56,7 +56,7 @@
 }
 
 .profile {
-  display: flex;
+  /* display: flex; */
   position: relative;
   font-weight: 700;
 }

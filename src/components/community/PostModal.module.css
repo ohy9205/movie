@@ -1,0 +1,21 @@
+.backdrop {
+  background-color: grey;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.5;
+}
+
+.overlay {
+  background: white;
+  position: fixed;
+  /* top: 0; */
+  /* left: 0; */
+}
+
+/* background: "white",
+          position: "fixed",
+          // top: position.y,
+          top: `${top}`,
+          left: position.x,
+          zIndex: "99999", */

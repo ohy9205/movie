@@ -1,47 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import DeletePost from "./DeletePost";
 import NewPost from "./NewPost";
 import { DELETE, EDIT, MENU } from "./PostCard";
+import styles from "./PostModal.module.css";
 
 const Backdrop = ({ toggleMenu, toggleEdit, toggleDelete }) => {
   return (
     <div
+      className={styles.backdrop}
       onClick={toggleMenu || toggleEdit || toggleDelete}
-      style={{
-        background: "gray",
-        width: "100vw",
-        height: "100vh",
-        position: "absolute",
-        opacity: "0.5",
-      }}
     />
   );
 };
 
-const ModalOverlay = ({
-  position,
-  toggleEdit,
-  toggleDelete,
-  // toggleMenu,
-  post,
-  type,
-}) => {
-  if (type === MENU) {
-    return (
-      <ul
-        style={{
-          background: "white",
-          position: "absolute",
-          top: position.y,
-          left: position.x,
-          zIndex: "99999",
-        }}>
-        <li onClick={toggleEdit}>수정하기</li>
-        <li onClick={toggleDelete}>삭제하기</li>
-      </ul>
-    );
-  } else if (type === EDIT) {
+const ModalOverlay = ({ toggleEdit, toggleDelete, post, type }) => {
+  if (type === EDIT) {
     return (
       <div
         style={{
@@ -69,28 +43,31 @@ const ModalOverlay = ({
     );
   }
 };
-export default function PostModal({
-  toggleMenu,
-  toggleEdit,
-  toggleDelete,
-  position,
-  post,
-  type,
-}) {
-  console.log(post);
+export default function PostModal({ toggleEdit, toggleDelete, post, type }) {
+  // 현재 위치에서 띄우기
+  useEffect(() => {
+    document.body.style.cssText = `
+    position: fixed;
+    top: -${window.scrollY}px;
+    overflow-y: scroll;
+    width: 100%;`;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = "";
+      window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+    };
+  }, []);
 
   return (
     <div>
       {ReactDOM.createPortal(
-        <Backdrop toggleMenu={toggleMenu || toggleEdit || toggleDelete} />,
+        <Backdrop toggleMenu={toggleEdit || toggleDelete} />,
         document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
         <ModalOverlay
-          position={position}
           toggleEdit={toggleEdit}
           toggleDelete={toggleDelete}
-          toggleMenu={toggleMenu}
           post={post}
           type={type}
         />,

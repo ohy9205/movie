@@ -4,73 +4,39 @@ import PostModal from "./PostModal";
 import styles from "./PostCard.module.css";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
 import { format } from "timeago.js";
-import Button from "../ui/Button";
 
-export const MENU = "menu";
 export const EDIT = "edit";
 export const DELETE = "delete";
 
 export default function PostCard({ post }) {
-  const [positon, setPosition] = useState();
   const { user } = useAuthContext();
-  const [showMenu, setShowMenu] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
 
-  const toggleShowMenu = () => {
-    setShowMenu((showMenu) => !showMenu);
-  };
-
   const toggleShowEdit = () => {
-    setShowMenu(false);
     setShowEdit((showEdit) => !showEdit);
   };
 
   const toggleShowDelete = () => {
-    setShowMenu(false);
     setShowDelete((showDelete) => !showDelete);
-  };
-
-  const getPosition = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    setPosition({ y: rect.top, x: rect.left });
   };
 
   return (
     <article className={styles.postCard}>
       <div className={styles.headerBox}>
         <h1>{post.auth}</h1>
-        <div className={styles.menu}>
+        <div>
           {user.email === post.auth && (
-            <Button
-              text={
-                <BiDotsHorizontalRounded
-                  id="menuBtn"
-                  className={styles.menuIcon}
-                  onClick={getPosition}
-                />
-              }
-              onClick={toggleShowMenu}
-            />
-          )}
-          {showMenu && (
-            <PostModal
-              type={MENU}
-              toggleMenu={toggleShowMenu}
-              toggleEdit={toggleShowEdit}
-              toggleDelete={toggleShowDelete}
-              position={positon}
-            />
-          )}
-          {showEdit && (
-            <PostModal type={EDIT} toggleEdit={toggleShowEdit} post={post} />
-          )}
-          {showDelete && (
-            <PostModal
-              type={DELETE}
-              toggleDelete={toggleShowDelete}
-              post={post}
-            />
+            <div className={styles.menu}>
+              <BiDotsHorizontalRounded
+                id="menuBtn"
+                className={styles.menuIcon}
+              />
+              <ul className={styles.subMenu}>
+                <li onClick={toggleShowEdit}>수정하기</li>
+                <li onClick={toggleShowDelete}>삭제하기</li>
+              </ul>
+            </div>
           )}
         </div>
       </div>
@@ -87,6 +53,13 @@ export default function PostCard({ post }) {
           <img src={post.imageUrl} alt="첨부" />
         )}
       </div>
+
+      {showEdit && (
+        <PostModal type={EDIT} toggleEdit={toggleShowEdit} post={post} />
+      )}
+      {showDelete && (
+        <PostModal type={DELETE} toggleDelete={toggleShowDelete} post={post} />
+      )}
     </article>
   );
 }

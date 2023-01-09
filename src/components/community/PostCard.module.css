@@ -8,10 +8,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* padding: 1.5rem; */
 }
 
-.menu button {
-  background-color: transparent;
+.menu {
+  position: relative;
+  height: auto;
+}
+
+.menu:hover .subMenu {
+  display: block;
+}
+
+.subMenu {
+  width: 80px;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  border-radius: 5px;
+
+  box-shadow: 5px 2px 12px -5px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 5px 2px 12px -5px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 5px 2px 12px -5px rgba(0, 0, 0, 0.48);
+
+  display: none;
+  z-index: 9;
+}
+
+.subMenu li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.subMenu li:hover {
+  background-color: var(--color-white);
+}
+
+.subMenu li:first-child {
+  border-bottom: 1px solid var(--color-white);
 }
 
 .menu .menuIcon {
