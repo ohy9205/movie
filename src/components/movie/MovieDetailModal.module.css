@@ -14,13 +14,11 @@
   -moz-box-shadow: 6px 6px 13px -4px rgba(43, 43, 43, 0.75);
 
   overflow-y: scroll;
+  z-index: 9999;
 }
 
 .basicBox {
   display: flex;
-}
-
-.basicBox img {
 }
 
 .basic {
@@ -33,7 +31,8 @@
   white-space: nowrap;
 }
 
-.basic img {
+.basicBox img {
+  border-radius: 10px;
 }
 
 .basic h1 {
@@ -64,4 +63,5 @@ p {
   top: 0;
   left: 0;
   opacity: 0.5;
+  z-index: 999;
 }

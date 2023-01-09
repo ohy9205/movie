@@ -22,11 +22,13 @@ export default function Home() {
     <section>
       <article>
         <h1>박스오피스</h1>
-        {boxOfficeMovies && <MovieCarousel movies={boxOfficeMovies} />}
+        {boxOfficeMovies.length > 0 && (
+          <MovieCarousel movies={boxOfficeMovies} />
+        )}
       </article>
       <article>
         <h1>최신순</h1>
-        {recentMovies && <MovieCarousel movies={recentMovies} />}
+        {recentMovies.length > 0 && <MovieCarousel movies={recentMovies} />}
       </article>
     </section>
   );
