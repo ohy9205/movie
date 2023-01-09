@@ -6,3 +6,8 @@
   padding: 0.5rem 0.7rem;
   cursor: pointer;
 }
+
+.cancle {
+  background-color: var(--color-grey);
+  color: var(--color-text);
+}

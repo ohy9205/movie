@@ -15,10 +15,9 @@ export default function PostList() {
   const sortedPostList = postList.length > 0 && getSorteList();
 
   return (
-    <section className={styles.postList}>
-      {/* <h1>목록</h1> */}
+    <div className={styles.postList}>
       {sortedPostList &&
         sortedPostList.map((post) => <PostCard key={post.id} post={post} />)}
-    </section>
+    </div>
   );
 }

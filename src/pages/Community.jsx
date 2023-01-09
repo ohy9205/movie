@@ -15,8 +15,12 @@ export default function Community() {
   return (
     <section className={styles.community}>
       {/* <h1>Community</h1> */}
-      <NewPost />
-      <PostList />
+      <section className={styles.newPost}>
+        <NewPost />
+      </section>
+      <section className={styles.postList}>
+        <PostList />
+      </section>
     </section>
   );
 }

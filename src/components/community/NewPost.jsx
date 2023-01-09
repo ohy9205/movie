@@ -87,7 +87,7 @@ export default function NewPost({ onClose, isEdit, post }) {
   return (
     <>
       {user && (
-        <section className={styles.newPost}>
+        <div className={styles.newPost}>
           <header className={styles.user}>{user.email}</header>
           <article onSubmit={onSubmitHandler}>
             <textarea
@@ -132,7 +132,7 @@ export default function NewPost({ onClose, isEdit, post }) {
               <Button text="수정" onClick={onSubmitHandler} />
             </footer>
           )}
-        </section>
+        </div>
       )}
     </>
   );
