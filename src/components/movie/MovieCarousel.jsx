@@ -1,31 +1,90 @@
 import React, { useRef, useState } from "react";
-import MovieCard from "../movie/MovieCard";
 import styles from "./MovieCarousel.module.css";
-import Button from "../ui/Button";
+import MovieCarouselCard from "./MovieCarouselCard";
+import { GrNext, GrPrevious } from "react-icons/gr";
+
+// 배열을 나눔
+const chunk = (data, size) => {
+  const arr = [];
+  for (let i = 0; i < data.length; i += size) {
+    arr.push(data.slice(i, i + size));
+  }
+  return arr;
+};
 
 export default function MovieCarousel({ movies }) {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
   const slideRef = useRef();
+  let slide;
+  let slideNum;
+  let copiedSlide;
 
-  const onNextSlider = () => {
-    setCurrent((current) => current + 1);
+  // 카피 슬라이드
+  const copySlide = (slide) => {
+    const before = slide[slideNum - 1];
+    const after = slide[0];
+    return [before, ...slide, after];
   };
 
-  const onPrevSlider = () => {
-    setCurrent((current) => current - 1);
+  if (movies.length > 0) {
+    slide = chunk(movies, 5);
+    slideNum = slide.length;
+    copiedSlide = copySlide(slide);
+    slideNum = copiedSlide.length;
+  }
+
+  const handleSlide = (direction) => {
+    if (current === slideNum - 1) {
+      setCurrent(1);
+
+      if (slideRef.current) {
+        slideRef.current.style.transition = "";
+      }
+
+      setTimeout(() => {
+        setCurrent(2);
+      }, 0);
+    } else if (current === 0) {
+      setCurrent(slideNum - 2);
+
+      if (slideRef.current) {
+        slideRef.current.style.transition = "";
+      }
+      setTimeout(() => {
+        setCurrent(slideNum - 3);
+      }, 0);
+    } else {
+      setCurrent((current) => current + direction);
+    }
+
+    setTimeout(() => {
+      if (slideRef.current) {
+        slideRef.current.style.transition = "all 500ms ease-in-out";
+      }
+    }, 0);
   };
 
   return (
     <div className={styles.box}>
-      <Button text={"<"} onClick={onPrevSlider} />
+      <GrPrevious className={styles.slideBtn} onClick={() => handleSlide(1)} />
+
       <div className={styles.carouselBox}>
-        <ul ref={slideRef} class={styles.boxInner}>
-          {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
+        <ul
+          ref={slideRef}
+          className={styles.cardBox}
+          style={{
+            transform: `translateX(${-100 * current}%)`,
+            transition: "all 500ms ease-in-out",
+          }}>
+          {copiedSlide &&
+            copiedSlide.map((slides) => {
+              return slides.map((movie) => (
+                <MovieCarouselCard key={movie.id} movie={movie} />
+              ));
+            })}
         </ul>
       </div>
-      <Button text={">"} onClick={onNextSlider} />
+      <GrNext className={styles.slideBtn} onClick={() => handleSlide(1)} />
     </div>
   );
 }

@@ -1,18 +1,21 @@
 .box {
-  width: 1000px;
-  margin: auto;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  overflow: hidden;
 }
 
 .carouselBox {
-  width: 800px;
-  margin: auto;
+  width: 1100px;
+  /* background-color: beige; */
+
+  overflow: hidden;
 }
 
-.boxInner {
+.cardBox {
   display: flex;
-  gap: 25px;
-  overflow: hidden;
+}
+
+.slideBtn {
+  font-size: 2rem;
+  cursor: pointer;
 }
