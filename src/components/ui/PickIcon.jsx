@@ -32,7 +32,7 @@ export default function PickIcon({ movie, className }) {
         pick.id === movie.id && setIsPick(true);
       }
     }
-  }, []);
+  }, [movie, pickMovieList]);
 
   return (
     <div className={className}>

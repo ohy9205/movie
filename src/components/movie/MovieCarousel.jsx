@@ -66,7 +66,7 @@ export default function MovieCarousel({ movies }) {
 
   return (
     <div className={styles.box}>
-      <GrPrevious className={styles.slideBtn} onClick={() => handleSlide(1)} />
+      <GrPrevious className={styles.slideBtn} onClick={() => handleSlide(-1)} />
 
       <div className={styles.carouselBox}>
         <ul

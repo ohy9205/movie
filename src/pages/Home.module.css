@@ -1,0 +1,13 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.homeTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+}
