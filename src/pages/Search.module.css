@@ -4,46 +4,16 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 4rem;
-  background-color: var(--color-accent);
+  /* background-color: var(--color-accent); */
 }
 
 .search h1 {
   margin-bottom: 1.5rem;
 }
 
-.search form {
-  width: 60%;
-  overflow: hidden;
-  border-radius: 5px;
-  display: flex;
-}
-
-.search form select {
-  padding: 1rem;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.search form select option {
-  color: inherit;
-}
-
-.search form input {
-  padding: 1rem;
-  flex-grow: 1;
-  font-size: 1rem;
-}
-
-.search form button {
-  display: flex;
-  font-size: 2rem;
-  background-color: var(--color-white);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .tipBox {
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding: 0.5rem 0;
   width: 60%;
@@ -52,18 +22,13 @@
 .tipBox h2 {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-white);
 }
-.tipBox div {
+.tipBox p {
   display: none;
 }
 
-.tipBox h2:hover ~ div {
+.tipBox h2:hover ~ p {
   display: block;
-}
-
-.tipBox p {
-  color: var(--color-white);
 }
 
 /* 검색결과 */
@@ -75,15 +40,4 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 1rem;
-}
-
-/* 랜덤리스트 */
-.random {
-  padding: 0 2rem;
-}
-
-.random ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }

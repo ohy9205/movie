@@ -1,13 +1,23 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid var(--color-accent);
+
+  background-color: var(--color-accent);
+  color: #fff;
 }
 
 .wrapper {
+  width: 1200px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleBox {
+  display: flex;
+  gap: 1rem;
 }
 
 .titleIcon {
@@ -15,17 +25,22 @@
 }
 
 .titleIcon path {
-  color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .title {
-  color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   gap: 1.5rem;
+}
+
+.nav li a {
+  color: var(--color-white);
 }
 
 .pick {
@@ -34,17 +49,19 @@
   position: relative;
 }
 
+.pickIcon path {
+  color: var(--color-white);
+}
+
 .pickIcon {
   font-size: 1.8rem;
-  background-color: white;
-  color: white;
 }
 
 .count {
-  background-color: var(--color-accent);
+  /* background-color: var(--color-white); */
+  background-color: var(--color-grey);
   border-radius: 100%;
   font-weight: 700;
-  color: var(--color-white);
   display: block;
   width: 1.4rem;
   height: 1.4rem;
@@ -59,6 +76,8 @@
   /* display: flex; */
   position: relative;
   font-weight: 700;
+
+  color: var(--color-white);
 }
 
 .profile:hover button {

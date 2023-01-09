@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MovieDetailModal from "./MovieDetailModal";
 import styles from "./MovieCard.module.css";
+import MovieDetailModal from "./MovieDetailModal";
 import PickIcon from "../ui/PickIcon";
 
 export default function MovieCard({ movie }) {
@@ -9,10 +9,9 @@ export default function MovieCard({ movie }) {
   const isShowToggle = () => {
     setIsShow((showDetail) => !showDetail);
   };
-
   return (
     <>
-      <li className={styles.box}>
+      <li className={styles.card}>
         <img
           src={movie.poster || "/assets/poster_none.jpg"}
           style={{ display: "block", width: "100%" }}
@@ -22,7 +21,7 @@ export default function MovieCard({ movie }) {
 
         <div className={styles.pickBox}>
           <h1>{movie.title}</h1>
-          <PickIcon movie={movie} />
+          <PickIcon className={styles.pickIcon} movie={movie} />
         </div>
       </li>
       {isShow && <MovieDetailModal movie={movie} onClick={isShowToggle} />}

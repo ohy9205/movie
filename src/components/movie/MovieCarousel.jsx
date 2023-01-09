@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import styles from "./MovieCarousel.module.css";
-import MovieCarouselCard from "./MovieCarouselCard";
+import MovieCarouselCard from "./MovieCard";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import Card from "../ui/Card";
 
 // 배열을 나눔
 const chunk = (data, size) => {
@@ -68,7 +69,7 @@ export default function MovieCarousel({ movies }) {
     <div className={styles.box}>
       <GrPrevious className={styles.slideBtn} onClick={() => handleSlide(-1)} />
 
-      <div className={styles.carouselBox}>
+      <Card className={styles.carouselBox}>
         <ul
           ref={slideRef}
           className={styles.cardBox}
@@ -83,7 +84,7 @@ export default function MovieCarousel({ movies }) {
               ));
             })}
         </ul>
-      </div>
+      </Card>
       <GrNext className={styles.slideBtn} onClick={() => handleSlide(1)} />
     </div>
   );

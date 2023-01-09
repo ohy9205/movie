@@ -94,7 +94,7 @@ export default function NewPost({ onClose, isEdit, post }) {
               type="text"
               value={content}
               onChange={onChangeHandler}
-              placeholder="게시글을 입력하세요."
+              placeholder="최대 300자까지 입력 가능합니다."
               maxLength="300"
               required
             />

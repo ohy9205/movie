@@ -6,12 +6,41 @@
   /* margin: 2rem; */
 }
 
+.home header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+
 .article {
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .homeTitle {
   font-size: 2rem;
   text-align: center;
-  margin: 2rem;
+  margin: 1.5rem;
+}
+
+/* 랜덤리스트 */
+.random {
+  width: 1000px;
+  padding: 0 2rem;
+  margin: 4rem 0;
+}
+
+.secondTitle {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.random ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ramdom ul li {
+  margin-bottom: 2rem;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { logoutUser } from "../api/firebase";
 import { useAuthContext } from "../store/auth/AuthContext";
@@ -26,7 +26,7 @@ export default function Header({ pickCount }) {
         <Link to="/community">커뮤니티</Link>
       </li>
       <li className={styles.profile}>
-        {user && <p>{user.email.split("@")[0]}</p>}
+        {user && user.email.split("@")[0]}
         <Button text="로그아웃" onClick={logoutUser} />
       </li>
     </>
@@ -49,17 +49,17 @@ export default function Header({ pickCount }) {
 
   return (
     <header className={styles.header}>
-      <Link to="/">
-        <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
+        <Link to="/" className={styles.titleBox}>
           <MdMovieFilter className={styles.titleIcon} />
 
           <h1 className={styles.title}>Movyes</h1>
-        </div>
-      </Link>
-      <ul className={styles.nav}>
-        {user && userExist}
-        {!user && userNone}
-      </ul>
+        </Link>
+        <ul className={styles.nav}>
+          {user && userExist}
+          {!user && userNone}
+        </ul>
+      </div>
     </header>
   );
 }
