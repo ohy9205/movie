@@ -7,6 +7,8 @@ export const pickSlice = createSlice({
     get: (state, action) => {
       if (action.payload) {
         state.pick = Object.values(action.payload);
+      } else {
+        state.pick = [];
       }
     },
   },

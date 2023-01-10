@@ -1,5 +1,5 @@
 import { uuidv4 } from "@firebase/util";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useAuthContext } from "../../store/auth/AuthContext";
 import {
@@ -82,17 +82,17 @@ export default function NewPost({ onClose, isEdit, post }) {
       setContent(post.content);
       setImageUrl(post.imageUrl);
     }
-  }, []);
+  }, [isEdit, post]);
 
   return (
     <>
       {user && (
         <div className={styles.newPost}>
-          <header className={styles.user}>{user.email}</header>
+          <p className={styles.user}>{user.email}</p>
           <article onSubmit={onSubmitHandler}>
             <textarea
               type="text"
-              value={content}
+              value={content || ""}
               onChange={onChangeHandler}
               placeholder="최대 300자까지 입력 가능합니다."
               maxLength="300"

@@ -3,14 +3,12 @@ import { getGenreVO } from "../../utils/genre";
 import { FiSearch } from "react-icons/fi";
 import Button from "./Button";
 import styles from "./SearchForm.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { searchMovieFetch } from "../../store/movie/movie-actions";
+import { useNavigate } from "react-router-dom";
 
-// export default function SearchForm({ onSubmit, onChange }) {
 export default function SearchForm({ setKeyword }) {
-  const dispatch = useDispatch();
   const genreVO = getGenreVO();
   const [search, setSearch] = useState({ keyword: "", genre: "" });
+  const navigate = useNavigate();
 
   const onChangeHandler = (e) => {
     setSearch((search) => ({ ...search, [e.target.name]: e.target.value }));
@@ -19,9 +17,11 @@ export default function SearchForm({ setKeyword }) {
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
-    // 검색
-    setKeyword(search.keyword);
-    dispatch(searchMovieFetch({ title: search.keyword, genre: search.genre }));
+    if (search.genre) {
+      navigate(`/search?keyword=${search.keyword}&genre=${search.genre}`);
+    } else {
+      navigate(`/search?keyword=${search.keyword}`);
+    }
   };
 
   return (

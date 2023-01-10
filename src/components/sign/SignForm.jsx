@@ -29,7 +29,10 @@ export default function SignForm({ isLogin }) {
       ? loginUser(user, setError)
       : createUser(user, setError));
 
-    response && (isLogin ? navigate("/") : navigate("/login"));
+    if (response) {
+      isLogin ? navigate("/") : navigate("/sign_in");
+      return;
+    }
     setIsLoading(false);
     setUser({});
     emailRef.current.focus();

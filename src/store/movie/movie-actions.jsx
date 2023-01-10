@@ -84,8 +84,10 @@ export const searchMovieFetch = (search) => {
     });
 
     const responseData = getResponseMovieData(response);
+
     if (responseData) {
       for (const data of responseData) {
+        if (data.genre === "에로") continue;
         if (movieList.length >= 30) {
           break;
         }

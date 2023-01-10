@@ -3,9 +3,11 @@ import {
   browserSessionPersistence,
   createUserWithEmailAndPassword,
   getAuth,
+  GoogleAuthProvider,
   onAuthStateChanged,
   setPersistence,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import {
@@ -32,6 +34,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase(app);
 const dbRef = ref(db);
+const provider = new GoogleAuthProvider();
 
 // 회원가입
 export const createUser = async ({ email, password }, callback) => {
@@ -47,9 +50,15 @@ export const createUser = async ({ email, password }, callback) => {
 export const loginUser = async ({ email, password }, callback) => {
   await setPersistence(auth, browserSessionPersistence);
 
-  return await signInWithEmailAndPassword(auth, email, password)
+  // return await signInWithEmailAndPassword(auth, email, password)
+  return signInWithEmailAndPassword(auth, email, password)
     .then((res) => res)
     .catch((error) => callback(`로그인에 실패했습니다. ${error.code}`));
+};
+
+// 구글로그인
+export const loginGoggle = () => {
+  signInWithPopup(auth, provider);
 };
 
 // 로그아웃

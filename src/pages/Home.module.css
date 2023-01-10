@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* margin: 2rem; */
 }
 
 .home header {
@@ -25,8 +24,7 @@
 
 /* 랜덤리스트 */
 .random {
-  width: 1000px;
-  padding: 0 2rem;
+  width: 85%;
   margin: 4rem 0;
 }
 
@@ -38,7 +36,7 @@
 .random ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .ramdom ul li {

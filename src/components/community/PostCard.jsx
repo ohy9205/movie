@@ -3,7 +3,6 @@ import { useAuthContext } from "../../store/auth/AuthContext";
 import PostModal from "./PostModal";
 import styles from "./PostCard.module.css";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
-import { format } from "timeago.js";
 import Card from "../../components/ui/Card";
 
 export const EDIT = "edit";
@@ -47,7 +46,7 @@ export default function PostCard({ post }) {
       <time
         className={styles.timeAgo}
         dateTime={new Date(parseInt(post.createAt))}>
-        {format(post.createAt)}
+        {post.createAt}
       </time>
 
       <div className={styles.content}>
