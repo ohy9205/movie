@@ -1,5 +1,5 @@
 # 🎬 Movyes
-- 영화 정보를 얻을 수 있고 다른 유저들과 소통할 수 있는 웹 사이트입니다.
+- 영화의 기본 정보(줄거리, 상영시간 등)를 확인할 수 있습니다.
 - 관심있는 영화는 모아서 확인할 수 있습니다. 
 - 게시판을 통해 다른 유저들과 소통이 가능한 커뮤니티 사이트입니다.
 
@@ -14,15 +14,14 @@
 - 게시판 CRUD
 
 ## 사용 기술 및 라이브러리
-html, css, javascript
-css moudle
-React.js
-Create-React-App
-react-router-dom
-react-query
-redux-toolkit
-react-icons
-firebase auth, realtime database, storage
+- html, css, javascript
+- css moudle
+- React.js
+- Create-React-App
+- react-router-dom
+- redux-toolkit
+- react-icons
+- firebase auth, realtime database, storage
 
 ## 폴더 구조
 ```
@@ -49,5 +48,6 @@ npm start
 ```
 
 ## 회고
-자세한 개발기는 블로그에서 확인 가능합니다.
+자세한 개발기는 블로그에서 확인 가능합니다. 
+<br>
 https://velog.io/@ohy9205/project-Movyes-%EC%98%81%ED%99%94-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-React-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A4%80%EB%B9%84
