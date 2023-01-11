@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/movyes/static/css/main.c24784ca.css",
-    "main.js": "/movyes/static/js/main.d57d2d89.js",
-    "index.html": "/movyes/index.html",
-    "main.c24784ca.css.map": "/movyes/static/css/main.c24784ca.css.map",
-    "main.d57d2d89.js.map": "/movyes/static/js/main.d57d2d89.js.map"
+    "main.css": "/movie/static/css/main.c24784ca.css",
+    "main.js": "/movie/static/js/main.4acc43f7.js",
+    "index.html": "/movie/index.html",
+    "main.c24784ca.css.map": "/movie/static/css/main.c24784ca.css.map",
+    "main.4acc43f7.js.map": "/movie/static/js/main.4acc43f7.js.map"
   },
   "entrypoints": [
     "static/css/main.c24784ca.css",
-    "static/js/main.d57d2d89.js"
+    "static/js/main.4acc43f7.js"
   ]
 }
