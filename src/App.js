@@ -18,10 +18,10 @@ function App() {
   }, [user, dispathch]);
 
   return (
-    <ProtectedRoute user={user}>
+    <>
       <Header pickCount={pickMovies.length} />
       <Outlet />
-    </ProtectedRoute>
+    </>
   );
 }
 

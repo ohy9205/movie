@@ -13,6 +13,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -23,33 +24,33 @@ const router = createBrowserRouter([
       {
         index: true,
         element: (
-          // <ProtectedRoute>
-          <Home />
-          // </ProtectedRoute>
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
         ),
       },
       {
         path: "search",
         element: (
-          // <ProtectedRoute>
-          <Search />
-          // </ProtectedRoute>
+          <ProtectedRoute>
+            <Search />
+          </ProtectedRoute>
         ),
       },
       {
         path: "community",
         element: (
-          // <ProtectedRoute>
-          <Community />
-          // </ProtectedRoute>
+          <ProtectedRoute>
+            <Community />
+          </ProtectedRoute>
         ),
       },
       {
         path: "my_pick",
         element: (
-          // <ProtectedRoute>
-          <Pick />
-          // </ProtectedRoute>
+          <ProtectedRoute>
+            <Pick />
+          </ProtectedRoute>
         ),
       },
       { path: "sign_in", element: <SignIn /> },
