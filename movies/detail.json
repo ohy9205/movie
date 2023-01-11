@@ -1,0 +1,175 @@
+{
+  "Query": "",
+  "KMAQuery": "",
+  "TotalCount": 1,
+  "Data": [
+    {
+      "CollName": "kmdb_new2",
+      "TotalCount": 1,
+      "Count": 1,
+      "Result": [
+        {
+          "DOCID": "F44730",
+          "movieId": "F",
+          "movieSeq": "44730",
+          "title": " 고양이 대습격",
+          "titleEng": "The Uncanny",
+          "titleOrg": "The Uncanny",
+          "titleEtc": "고양이대습격^고양이 대습격^The Uncanny^The Uncanny",
+          "prodYear": "1977",
+          "directors": {
+            "director": [
+              {
+                "directorNm": "데니스 헤록스",
+                "directorEnNm": "Denis Heroux",
+                "directorId": "00066750"
+              }
+            ]
+          },
+          "actors": {
+            "actor": [
+              {
+                "actorNm": "피터 쿠싱",
+                "actorEnNm": "Peter Cushing",
+                "actorId": "00108541"
+              },
+              {
+                "actorNm": "레이 밀란드",
+                "actorEnNm": "Ray Milland",
+                "actorId": "00110603"
+              },
+              {
+                "actorNm": "조안 그린우드",
+                "actorEnNm": "Joan Greenwood",
+                "actorId": "00089123"
+              }
+            ]
+          },
+          "nation": "영국,캐나다",
+          "company": "Cinévidéo,The Rank Organisation",
+          "plots": {
+            "plot": [
+              {
+                "plotLang": "한국어",
+                "plotText": "인간에게 한을 품은 고양이들의 복수를 담은, 옴니버스 스타일의 3가지 이야기. 늙은 숙모의 재산을 가로채기 위해 숙모를 죽이지만 숙모가 기르던 고양이들의 습격으로 죽게되는 조카의 이야기. 고아가 되어 친척집에 얹쳐살던 소녀가 구박을 견디지 못하고 기르던 고양이와 함께 복수를 한다는 이야기."
+              }
+            ]
+          },
+          "runtime": "89",
+          "rating": "",
+          "genre": "공포",
+          "kmdbUrl": "https://www.kmdb.or.kr/db/kor/detail/movie/F/44730",
+          "type": "극영화",
+          "use": "",
+          "episodes": "",
+          "ratedYn": "",
+          "repRatDate": "",
+          "repRlsDate": "",
+          "ratings": {
+            "rating": [
+              {
+                "ratingMain": "Y",
+                "ratingDate": "",
+                "ratingNo": "",
+                "ratingGrade": "",
+                "releaseDate": "",
+                "runtime": "89"
+              }
+            ]
+          },
+          "keywords": "",
+          "posters": "",
+          "stlls": "",
+          "staffs": {
+            "staff": [
+              {
+                "staffNm": "데니스 헤록스",
+                "staffEnNm": "Denis Heroux",
+                "staffRoleGroup": "감독",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00066750"
+              },
+              {
+                "staffNm": "Michel Parry",
+                "staffEnNm": "",
+                "staffRoleGroup": "각본",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "피터 쿠싱",
+                "staffEnNm": "Peter Cushing",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00108541"
+              },
+              {
+                "staffNm": "레이 밀란드",
+                "staffEnNm": "Ray Milland",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00110603"
+              },
+              {
+                "staffNm": "조안 그린우드",
+                "staffEnNm": "Joan Greenwood",
+                "staffRoleGroup": "출연",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": "00089123"
+              },
+              {
+                "staffNm": "Cinévidéo",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              },
+              {
+                "staffNm": "The Rank Organisation",
+                "staffEnNm": "",
+                "staffRoleGroup": "제작사",
+                "staffRole": "",
+                "staffEtc": "",
+                "staffId": ""
+              }
+            ]
+          },
+          "vods": { "vod": [{ "vodClass": "", "vodUrl": "" }] },
+          "openThtr": "",
+          "stat": [
+            {
+              "screenArea": "",
+              "screenCnt": "",
+              "salesAcc": "",
+              "audiAcc": "",
+              "statSouce": "",
+              "statDate": ""
+            }
+          ],
+          "screenArea": "",
+          "screenCnt": "",
+          "salesAcc": "",
+          "audiAcc": "",
+          "statSouce": "",
+          "statDate": "",
+          "themeSong": "",
+          "soundtrack": "",
+          "fLocation": "",
+          "Awards1": "",
+          "Awards2": "",
+          "regDate": "20180904",
+          "modDate": "20180917",
+          "Codes": { "Code": [{ "CodeNm": "", "CodeNo": "" }] },
+          "CommCodes": { "CommCode": [{ "CodeNm": "", "CodeNo": "" }] },
+          "ALIAS": "srcKmdb2"
+        }
+      ]
+    }
+  ]
+}
