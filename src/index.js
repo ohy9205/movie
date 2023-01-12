@@ -15,49 +15,52 @@ import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./pages/ProtectedRoute";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFound />,
-    children: [
-      {
-        index: true,
-        element: (
-          <ProtectedRoute>
-            <Home />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "search",
-        element: (
-          <ProtectedRoute>
-            <Search />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "community",
-        element: (
-          <ProtectedRoute>
-            <Community />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "my_pick",
-        element: (
-          <ProtectedRoute>
-            <Pick />
-          </ProtectedRoute>
-        ),
-      },
-      { path: "sign_in", element: <SignIn /> },
-      { path: "sign_up", element: <SignUp /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <NotFound />,
+      children: [
+        {
+          index: true,
+          element: (
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "search",
+          element: (
+            <ProtectedRoute>
+              <Search />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "community",
+          element: (
+            <ProtectedRoute>
+              <Community />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "my_pick",
+          element: (
+            <ProtectedRoute>
+              <Pick />
+            </ProtectedRoute>
+          ),
+        },
+        { path: "sign_in", element: <SignIn /> },
+        { path: "sign_up", element: <SignUp /> },
+      ],
+    },
+  ],
+  { basename: process.env.PUBLIC_URL }
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
