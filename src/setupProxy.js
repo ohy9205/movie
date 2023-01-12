@@ -15,17 +15,4 @@ module.exports = function (app) {
       changeOrigin: true,
     })
   );
-
-  // app.use(
-  //   createProxyMiddleware("/search_json2.jsp", {
-  //     target: "http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api",
-  //     changeOrigin: true,
-  //   })
-  // );
-  // app.use(
-  //   createProxyMiddleware("/searchDailyBoxOfficeList.json", {
-  //     target: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice",
-  //     changeOrigin: true,
-  //   })
-  // );
 };

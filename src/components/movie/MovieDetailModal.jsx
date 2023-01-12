@@ -37,7 +37,7 @@ const ModalOverlay = ({ movie }) => {
           <p>장르 : {genre}</p>
           <p>러닝타임 : {`${runtime}분`}</p>
           {releaseDate && <p>개봉일 : {changeDateFormat(releaseDate)}</p>}
-          {!releaseDate && <p>제작일 : {prodYear}</p>}
+          {!releaseDate && <p>제작연도 : {prodYear}</p>}
           <p>국가 : {nation}</p>
           <p>등급 : {rating}</p>
           <p>감독 : {director}</p>

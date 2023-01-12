@@ -104,6 +104,7 @@ export default function NewPost({ onClose, isEdit, post }) {
                 <img
                   src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
                   alt="첨부"
+                  accept="image/*"
                 />
                 <span onClick={onClickDel}>
                   <TiDelete className={styles.delBtn} />

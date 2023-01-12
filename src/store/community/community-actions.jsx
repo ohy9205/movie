@@ -43,8 +43,9 @@ export const updatePostFetch = (post, isImageDel) => {
       // firestore에서 이미지 삭제
       removeFile(post.id, post.image);
 
-      // 글정보에서 imageUrl 제거
+      // 글정보에서 imageUrl, image 제거
       post.imageUrl = "";
+      post.image = "";
     }
 
     // 리덕스 업데이트
