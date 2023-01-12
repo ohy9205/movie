@@ -7,7 +7,8 @@ import { moviesAction } from "./movie-slice";
 /** api 사용 */
 const moviesClient = axios.create({
   // baseURL: "/search_json2.jsp",
-  baseURL: "http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api",
+  baseURL:
+    "http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp",
   params: {
     collection: "kmdb_new2",
     ServiceKey: process.env.REACT_APP_MOVIES_SERVICE_KEY,
@@ -17,7 +18,8 @@ const moviesClient = axios.create({
 
 const boxOfficeClient = axios.create({
   // baseURL: "/searchDailyBoxOfficeList.json",
-  baseURL: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice",
+  baseURL:
+    "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
   params: {
     key: process.env.REACT_APP_BOX_OFFICE_KEY,
     targetDt: getPeriodDate() - 1,
@@ -63,8 +65,11 @@ export const getRecentMoviesFetch = () => {
         }
 
         movieList.push(formattedData);
-
         addMovie(formattedData);
+
+        if (movieList.length === 20) {
+          break;
+        }
       }
     }
 
