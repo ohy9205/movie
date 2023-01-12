@@ -1,15 +1,12 @@
 .community {
   padding: 2rem;
 
-  display: flex;
+  /* display: flex; */
   gap: 5rem;
 }
 
 .newPost {
-  border-radius: 5px;
-  width: 45%;
 }
 
 .postList {
-  width: 55%;
 }

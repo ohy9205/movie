@@ -88,14 +88,14 @@ export default function NewPost({ onClose, isEdit, post }) {
     <>
       {user && (
         <div className={styles.newPost}>
-          <p className={styles.user}>{user.email}</p>
-          <article onSubmit={onSubmitHandler}>
+          <header className={styles.user}>{user.email}</header>
+          <article className={styles.content} onSubmit={onSubmitHandler}>
             <textarea
               type="text"
               value={content || ""}
               onChange={onChangeHandler}
-              placeholder="최대 300자까지 입력 가능합니다."
-              maxLength="300"
+              placeholder="최대 1000자까지 입력 가능합니다."
+              maxLength="1000"
               required
             />
 

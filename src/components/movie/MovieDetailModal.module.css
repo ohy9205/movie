@@ -47,7 +47,7 @@ p {
 
 .summary {
   margin-top: 2rem;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: var(--color-white);
   word-break: keep-all;
   padding: 2rem;
