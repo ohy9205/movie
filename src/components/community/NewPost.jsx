@@ -94,13 +94,13 @@ export default function NewPost({ onClose, isEdit, post }) {
               type="text"
               value={content || ""}
               onChange={onChangeHandler}
-              placeholder="최대 1000자까지 입력 가능합니다."
-              maxLength="1000"
+              placeholder="최대 500자까지 입력 가능합니다."
+              maxLength="500"
               required
             />
 
             {!isImageDel && (fileDataUrl || imageUrl) && (
-              <div className={styles.imgBox}>
+              <div className={`${styles.imgBox} ${isEdit && styles.isEdit}`}>
                 <img
                   src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
                   alt="첨부"
