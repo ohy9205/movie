@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <section className={styles.home}>
-      {isLoading && <h1>로딩중...</h1>}
+      {isLoading && <h1 className={styles.loading}>로딩중...</h1>}
       {!isLoading && (
         <>
           <header>

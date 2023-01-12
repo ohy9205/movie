@@ -39,8 +39,8 @@
   font-size: 1.5rem;
 }
 
-.basic strong,
-p {
+.basic > strong,
+.basic > p {
   overflow: hidden;
   text-overflow: ellipsis;
 }

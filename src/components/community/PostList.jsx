@@ -17,7 +17,11 @@ export default function PostList() {
   return (
     <div className={styles.postList}>
       {sortedPostList &&
-        sortedPostList.map((post) => <PostCard key={post.id} post={post} />)}
+        sortedPostList.map((post) => (
+          <article>
+            <PostCard key={post.id} post={post} />
+          </article>
+        ))}
     </div>
   );
 }

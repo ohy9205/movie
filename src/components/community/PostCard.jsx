@@ -22,10 +22,10 @@ export default function PostCard({ post }) {
   };
 
   return (
-    <Card className={styles.postCard}>
-      <div className={styles.headerBox}>
-        <h1>{post.auth}</h1>
-        <div>
+    <>
+      <Card className={styles.postCard}>
+        <div className={styles.headerBox}>
+          <h1>{post.auth}</h1>
           {user.email === post.auth && (
             <div className={styles.menu}>
               <BiDotsHorizontalRounded
@@ -33,32 +33,26 @@ export default function PostCard({ post }) {
                 className={styles.menuIcon}
               />
               <Card className={styles.subMenu}>
-                <ul>
-                  <li onClick={toggleShowEdit}>수정하기</li>
-                  <li onClick={toggleShowDelete}>삭제하기</li>
-                </ul>
+                <span onClick={toggleShowEdit}>수정하기</span>
+                <span onClick={toggleShowDelete}>삭제하기</span>
               </Card>
             </div>
           )}
         </div>
-      </div>
 
-      <time
-        className={styles.timeAgo}
-        dateTime={new Date(parseInt(post.createAt))}>
-        {post.createAt}
-      </time>
+        <time
+          className={styles.timeAgo}
+          dateTime={new Date(parseInt(post.createAt))}>
+          {post.createAt}
+        </time>
 
-      <div className={styles.content}>
-        <p>{post.content}</p>
+        <p className={styles.content}>{post.content}</p>
         {post.imageUrl && post.imageUrl.length > 0 && (
-          // <Link to={post.imageUrl}>
           <a href={post.imageUrl} target="_blank" rel="noopener noreferrer">
             <img src={post.imageUrl} alt="첨부" />
           </a>
-          // </Link>
         )}
-      </div>
+      </Card>
 
       {showEdit && (
         <PostModal type={EDIT} toggleEdit={toggleShowEdit} post={post} />
@@ -66,6 +60,6 @@ export default function PostCard({ post }) {
       {showDelete && (
         <PostModal type={DELETE} toggleDelete={toggleShowDelete} post={post} />
       )}
-    </Card>
+    </>
   );
 }

@@ -39,7 +39,7 @@ export default function PostModal({ toggleEdit, toggleDelete, post, type }) {
   }, []);
 
   return (
-    <div>
+    <>
       {ReactDOM.createPortal(
         <Backdrop toggleMenu={toggleEdit || toggleDelete} />,
         document.getElementById("backdrop-root")
@@ -53,6 +53,6 @@ export default function PostModal({ toggleEdit, toggleDelete, post, type }) {
         />,
         document.getElementById("modal-root")
       )}
-    </div>
+    </>
   );
 }

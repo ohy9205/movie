@@ -87,33 +87,33 @@ export default function NewPost({ onClose, isEdit, post }) {
   return (
     <>
       {user && (
-        <div className={styles.newPost}>
-          <header className={styles.user}>{user.email}</header>
-          <article className={styles.content} onSubmit={onSubmitHandler}>
-            <textarea
-              type="text"
-              value={content || ""}
-              onChange={onChangeHandler}
-              placeholder="최대 500자까지 입력 가능합니다."
-              maxLength="500"
-              required
-            />
+        // <div className={styles.newPost}>
+        <form className={styles.newPost} onSubmit={onSubmitHandler}>
+          <h2 className={styles.user}>{user.email}</h2>
+          <textarea
+            type="text"
+            value={content || ""}
+            onChange={onChangeHandler}
+            placeholder="최대 500자까지 입력 가능합니다."
+            maxLength="500"
+            required
+          />
 
-            {!isImageDel && (fileDataUrl || imageUrl) && (
-              <div className={`${styles.imgBox} ${isEdit && styles.isEdit}`}>
-                <img
-                  src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
-                  alt="첨부"
-                  accept="image/*"
-                />
-                <span onClick={onClickDel}>
-                  <TiDelete className={styles.delBtn} />
-                </span>
-              </div>
-            )}
-          </article>
+          {!isImageDel && (fileDataUrl || imageUrl) && (
+            <div className={`${styles.imgBox} ${isEdit && styles.isEdit}`}>
+              <img
+                src={imageUrl ? imageUrl : fileDataUrl && fileDataUrl}
+                alt="첨부"
+                accept="image/*"
+              />
+              <span onClick={onClickDel}>
+                <TiDelete className={styles.delBtn} />
+              </span>
+            </div>
+          )}
+
           {!isEdit && (
-            <footer className={styles.submitBox}>
+            <div className={styles.submitBox}>
               <label htmlFor="file">
                 <BsCardImage />
               </label>
@@ -124,16 +124,17 @@ export default function NewPost({ onClose, isEdit, post }) {
                 onChange={onChangeHandler}
                 hidden
               />
-              <Button text="작성" onClick={onSubmitHandler} />
-            </footer>
+              <Button text="작성" />
+            </div>
           )}
 
           {isEdit && (
-            <footer>
-              <Button text="수정" onClick={onSubmitHandler} />
-            </footer>
+            <div>
+              <Button text="수정" />
+            </div>
           )}
-        </div>
+        </form>
+        // </div>
       )}
     </>
   );

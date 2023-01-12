@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.home .loading {
+  margin-top: 3rem;
+}
+
 .home header {
   width: 100%;
   display: flex;
