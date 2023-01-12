@@ -18,7 +18,7 @@ export default function PostList() {
     <div className={styles.postList}>
       {sortedPostList &&
         sortedPostList.map((post) => (
-          <article>
+          <article key={post.id}>
             <PostCard key={post.id} post={post} />
           </article>
         ))}
