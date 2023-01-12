@@ -5,10 +5,7 @@
   --color-grey: #d1d1d1;
   --color-white: #eee;
   --color-text: #22243b;
-  /* --color-accent: #3f515a; */
-  --color-accent: #353535;
-  /* --color-accent: #5d7d8c; */
-  /* --color-accent: #45829e; */
+  --color-accent: #6d1a1a;
   --color-scrollbar: #aaa7a7;
 }
 
@@ -41,19 +38,9 @@ code {
   outline: none;
 }
 
-#root {
-  /* max-width: 1200px; */
-  /* min-width: 1200px; */
-  /* margin: auto; */
-}
-
 section {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-header {
-  /* min-width: 1200px; */
 }
 
 .wrapper {
