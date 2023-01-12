@@ -13,7 +13,9 @@ export default function MovieCard({ movie }) {
     <>
       <li className={styles.card}>
         <img
-          src={movie.poster || "/assets/poster_none.jpg"}
+          src={
+            movie.poster || `${process.env.PUBLIC_URL}/assets/poster_none.jpg`
+          }
           style={{ display: "block", width: "100%" }}
           alt={movie.title + "포스터"}
           onClick={isShowToggle}
