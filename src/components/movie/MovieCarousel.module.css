@@ -5,9 +5,8 @@
 }
 
 .carouselBox {
-  width: 900px;
-  /* background-color: beige; */
-
+  max-width: 900px;
+  width: 90%;
   overflow: hidden;
 }
 
@@ -18,6 +17,7 @@
 .slideBtn {
   font-size: 2rem;
   cursor: pointer;
+  width: 5%;
 }
 
 .slideBtn polyline {
