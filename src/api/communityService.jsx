@@ -1,12 +1,4 @@
-import {
-  child,
-  get,
-  getDatabase,
-  ref,
-  remove,
-  set,
-  update,
-} from "firebase/database";
+import { child, get, ref, remove, set, update } from "firebase/database";
 import Firebase from "./firebase";
 
 export class CommunityService extends Firebase {
