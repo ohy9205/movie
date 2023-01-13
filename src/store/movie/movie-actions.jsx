@@ -1,8 +1,11 @@
 import axios from "axios";
-import { addMovie, getMovie, searchMovie } from "../../api/firebase";
+import { MovieService } from "../../api/movieService";
 import { changeDataFormat } from "../../utils/data";
 import { getPeriodDate } from "../../utils/date";
 import { moviesAction } from "./movie-slice";
+
+const movie = new MovieService();
+const { add, search, get } = movie;
 
 /** api 사용 */
 const moviesClient = axios.create({
@@ -65,7 +68,7 @@ export const getRecentMoviesFetch = () => {
         }
 
         movieList.push(formattedData);
-        addMovie(formattedData);
+        add(formattedData);
 
         if (movieList.length === 20) {
           break;
@@ -106,7 +109,7 @@ export const searchMovieFetch = (search) => {
         const searchTitle = search.title.replace(/ /g, "");
 
         if (formattedDataTitle.indexOf(searchTitle) !== -1) {
-          addMovie(formattedData);
+          add(formattedData);
           movieList.push(formattedData);
         } else {
           continue;
@@ -120,7 +123,7 @@ export const searchMovieFetch = (search) => {
 // 랜덤 영화 목록
 export const getMovieFetch = () => {
   return async (dispatch) => {
-    const movies = await getMovie();
+    const movies = await get();
     if (movies.length > 0) {
       const filterMovies = movies.filter((movie) => movie.poster.length > 0);
 
@@ -151,7 +154,7 @@ export const getBoxOfficeMovies = async (boxOfficeData) => {
   let movieList = [];
 
   for await (const data of boxOfficeData) {
-    const movie = await searchMovie(data);
+    const movie = await search(data);
     if (!movie) {
       const response = await moviesClient.get("", {
         params: {
@@ -164,7 +167,7 @@ export const getBoxOfficeMovies = async (boxOfficeData) => {
       if (responseData && responseData.length > 0) {
         for (const data of responseData) {
           const formattedData = changeDataFormat(data);
-          addMovie(formattedData);
+          add(formattedData);
           movieList.push(formattedData);
         }
       }
