@@ -42,8 +42,8 @@ export default function PostCard({ post }) {
 
         <time
           className={styles.timeAgo}
-          dateTime={new Date(parseInt(post.createAt))}>
-          {post.createAt}
+          dateTime={new Date(parseInt(post.createdAt)).toLocaleDateString()}>
+          {new Date(parseInt(post.createdAt)).toLocaleDateString()}
         </time>
 
         <p className={styles.content}>{post.content}</p>
