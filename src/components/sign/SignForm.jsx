@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import { createUser, loginGoggle, loginUser } from "../../api/firebase";
 import Button from "../ui/Button";
 import styles from "./SignForm.module.css";
 import { FcGoogle } from "react-icons/fc";
 import { useAuthContext } from "../../store/auth/AuthContext";
+import { useAuth } from "../../api/authService";
 
 export default function SignForm({ isLogin }) {
   const { user: userInfo } = useAuthContext();
@@ -14,6 +14,7 @@ export default function SignForm({ isLogin }) {
   const [error, setError] = useState();
   const emailRef = useRef();
   const passwordRef = useRef();
+  const { signIn, signUp, signInWithGoogle } = useAuth();
 
   const btnText = isLogin ? "로그인" : "가입하기";
 
@@ -28,7 +29,7 @@ export default function SignForm({ isLogin }) {
     e.preventDefault();
     setIsLoading(true);
 
-    isLogin ? loginUser(user, setError) : createUser(user, setError);
+    isLogin ? signIn(user, setError) : signUp(user, setError);
 
     setIsLoading(false);
     setUser({});
@@ -72,7 +73,7 @@ export default function SignForm({ isLogin }) {
         {isLoading && <p>Sending request...</p>}
         {error && <p>{error}</p>}
       </form>
-      <p className={styles.socialLogin} onClick={loginGoggle}>
+      <p className={styles.socialLogin} onClick={signInWithGoogle}>
         <span className={styles.socilLoginIcon}>
           <FcGoogle />
         </span>

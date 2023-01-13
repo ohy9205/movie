@@ -1,15 +1,16 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { logoutUser } from "../api/firebase";
 import { useAuthContext } from "../store/auth/AuthContext";
 import Button from "./ui/Button";
 import { MdMovieFilter } from "react-icons/md";
 import styles from "./Header.module.css";
 import { BsEmojiHeartEyes } from "react-icons/bs";
+import { useAuth } from "../api/authService";
 
 export default function Header({ pickCount }) {
   const { user } = useAuthContext();
   const { pathname } = useLocation();
+  const { logout } = useAuth();
 
   const userExist = (
     <>
@@ -27,7 +28,7 @@ export default function Header({ pickCount }) {
       </li>
       <li className={styles.profile}>
         {user && user.email}
-        <Button text="로그아웃" onClick={logoutUser} />
+        <Button text="로그아웃" onClick={logout} />
       </li>
     </>
   );
