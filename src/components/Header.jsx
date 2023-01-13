@@ -26,7 +26,7 @@ export default function Header({ pickCount }) {
         <Link to="/community">커뮤니티</Link>
       </li>
       <li className={styles.profile}>
-        {user && user.email.split("@")[0]}
+        {user && user.email}
         <Button text="로그아웃" onClick={logoutUser} />
       </li>
     </>
