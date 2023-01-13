@@ -1,11 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import { createUser, loginUser } from "../../api/firebase";
+import { createUser, loginGoggle, loginUser } from "../../api/firebase";
 import Button from "../ui/Button";
 import styles from "./SignForm.module.css";
+import { FcGoogle } from "react-icons/fc";
+import { useAuthContext } from "../../store/auth/AuthContext";
 
 export default function SignForm({ isLogin }) {
+  const { user: userInfo } = useAuthContext();
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
@@ -25,22 +28,22 @@ export default function SignForm({ isLogin }) {
     e.preventDefault();
     setIsLoading(true);
 
-    const response = await (isLogin
-      ? loginUser(user, setError)
-      : createUser(user, setError));
+    isLogin ? loginUser(user, setError) : createUser(user, setError);
 
-    if (response) {
-      isLogin ? navigate("/") : navigate("/sign_in");
-      return;
-    }
     setIsLoading(false);
     setUser({});
     emailRef.current.focus();
   };
 
+  useEffect(() => {
+    if (userInfo) {
+      isLogin ? navigate("/") : navigate("/sign_in");
+    }
+  }, [userInfo, isLogin, navigate]);
+
   return (
     <div className={styles.sign}>
-      <h1>{isLogin ? "로그인" : "회원가입"}</h1>
+      <h1 className={styles.title}>{isLogin ? "로그인" : "회원가입"}</h1>
       <form className={styles.signForm} onSubmit={onSubmitHandler}>
         <div className={styles.inputBox}>
           <input
@@ -69,8 +72,13 @@ export default function SignForm({ isLogin }) {
         {isLoading && <p>Sending request...</p>}
         {error && <p>{error}</p>}
       </form>
-
-      <Link to={isLogin ? "/sign_up" : "/sign_in"}>
+      <p className={styles.socialLogin} onClick={loginGoggle}>
+        <span className={styles.socilLoginIcon}>
+          <FcGoogle />
+        </span>
+        로그인 하러가기
+      </p>
+      <Link to={isLogin ? "/sign_up" : "/sign_in"} className={styles.link}>
         <p>{isLogin ? "아직 가입을 안하셨나요?" : "이미 가입하셨나요?"}</p>
       </Link>
     </div>

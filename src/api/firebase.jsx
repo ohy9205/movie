@@ -50,14 +50,14 @@ export const createUser = async ({ email, password }, callback) => {
 export const loginUser = async ({ email, password }, callback) => {
   await setPersistence(auth, browserSessionPersistence);
 
-  // return await signInWithEmailAndPassword(auth, email, password)
   return signInWithEmailAndPassword(auth, email, password)
     .then((res) => res)
     .catch((error) => callback(`로그인에 실패했습니다. ${error.code}`));
 };
 
 // 구글로그인
-export const loginGoggle = () => {
+export const loginGoggle = async () => {
+  await setPersistence(auth, browserSessionPersistence);
   signInWithPopup(auth, provider);
 };
 
