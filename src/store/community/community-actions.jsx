@@ -1,7 +1,10 @@
 import { uuidv4 } from "@firebase/util";
-import { addPost, getPost, removePost, updatePost } from "../../api/firebase";
-import { addFile, removeFile } from "../../api/upload";
+import { AttachmentService } from "../../api/attachmentService";
+import { CommunityService } from "../../api/communityService";
 import { communityAction } from "./community-slice";
+
+const community = new CommunityService();
+const attachment = new AttachmentService();
 
 // db에 게시글 저장
 export const addPostFetch = (post, fileDataUrl) => {
@@ -12,7 +15,7 @@ export const addPostFetch = (post, fileDataUrl) => {
     if (fileDataUrl) {
       file = { id: uuidv4(), url: fileDataUrl };
       // 파일 저장하고 url얻기
-      fileUploadUrl = await addFile(post.id, file);
+      fileUploadUrl = await attachment.add(post.id, file);
     }
 
     const newPost = {
@@ -23,14 +26,14 @@ export const addPostFetch = (post, fileDataUrl) => {
     // 리덕스에 업로드
     dispatch(communityAction.add(newPost));
     // db에 저장
-    addPost(newPost);
+    community.add(newPost);
   };
 };
 
 // 게시글 가져오기
 export const getPostListFetch = () => {
   return async (dispatch) => {
-    const postList = await getPost();
+    const postList = await community.get();
     dispatch(communityAction.get(postList));
   };
 };
@@ -41,7 +44,7 @@ export const updatePostFetch = (post, isImageDel) => {
     // 이미지 삭제 여부를 판단하는 조건필요
     if (isImageDel) {
       // firestore에서 이미지 삭제
-      removeFile(post.id, post.image);
+      attachment.remove(post.id, post.image);
 
       // 글정보에서 imageUrl, image 제거
       post.imageUrl = "";
@@ -51,7 +54,7 @@ export const updatePostFetch = (post, isImageDel) => {
     // 리덕스 업데이트
     dispatch(communityAction.update(post));
     // db도 업데이트
-    updatePost(post);
+    community.update(post);
   };
 };
 
@@ -60,10 +63,10 @@ export const removePostFetch = (post) => {
   return async (dispatch) => {
     // 만약 사진 정보가 있으면 사진부터 삭제
     if (post.image.length > 0) {
-      removeFile(post.id, post.image);
+      attachment.remove(post.id, post.image);
     }
 
     dispatch(communityAction.remove(post.id));
-    removePost(post.id);
+    community.remove(post.id);
   };
 };
