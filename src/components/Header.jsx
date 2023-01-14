@@ -37,12 +37,12 @@ export default function Header({ pickCount }) {
     <li>
       {pathname === "/sign_in" && (
         <Link to="/sign_up">
-          <Button text="회원가입" />
+          <Button text="회원가입" cancle />
         </Link>
       )}
-      {pathname === "/sign_up" && (
+      {(pathname === "/sign_up" || pathname === "/") && (
         <Link to="/sign_in">
-          <Button text="로그인" />
+          <Button text="로그인" cancle />
         </Link>
       )}
     </li>

@@ -10,6 +10,7 @@
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
+  min-height: 85%;
 }
 
 .pickBox {

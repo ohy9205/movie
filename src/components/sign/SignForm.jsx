@@ -73,12 +73,14 @@ export default function SignForm({ isLogin }) {
         {isLoading && <p>Sending request...</p>}
         {error && <p>{error}</p>}
       </form>
-      <p className={styles.socialLogin} onClick={signInWithGoogle}>
-        <span className={styles.socilLoginIcon}>
-          <FcGoogle />
-        </span>
-        로그인 하러가기
-      </p>
+      {isLogin && (
+        <p className={styles.socialLogin} onClick={signInWithGoogle}>
+          <span className={styles.socilLoginIcon}>
+            <FcGoogle />
+          </span>
+          로그인 하러가기
+        </p>
+      )}
       <Link to={isLogin ? "/sign_up" : "/sign_in"} className={styles.link}>
         <p>{isLogin ? "아직 가입을 안하셨나요?" : "이미 가입하셨나요?"}</p>
       </Link>

@@ -28,7 +28,7 @@ const ModalOverlay = ({ movie }) => {
     <section className={styles.detail}>
       <article className={styles.basicBox}>
         <img
-          src={poster || "/assets/poster_none.jpg"}
+          src={poster || `${process.env.PUBLIC_URL}/assets/poster_none.jpg`}
           alt={`${title} 포스터`}
         />
         <div className={styles.basic}>
