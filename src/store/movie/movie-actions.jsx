@@ -49,7 +49,7 @@ export const getRecentMoviesFetch = () => {
   return async (dispatch) => {
     const response = await moviesClient.get("", {
       params: {
-        listCount: 50,
+        listCount: 30,
         releaseDts: getPeriodDate(14),
         releaseDte: getPeriodDate(),
       },
@@ -57,6 +57,7 @@ export const getRecentMoviesFetch = () => {
 
     // db에 해당 데이터 있는지 확인하고 만약 데이터가 없으면 db에 저장
     const responseData = getResponseMovieData(response);
+
     if (responseData) {
       for (const data of responseData) {
         const formattedData = changeDataFormat(data);
@@ -70,13 +71,17 @@ export const getRecentMoviesFetch = () => {
         movieList.push(formattedData);
         add(formattedData);
 
-        if (movieList.length === 20) {
+        if (movieList.length === 15) {
           break;
         }
       }
     }
 
-    dispatch(moviesAction.getRecentMovies(movieList));
+    dispatch(
+      moviesAction.getRecentMovies(
+        movieList.length < 15 ? movieList.slice(0, 9) : movieList
+      )
+    );
   };
 };
 
