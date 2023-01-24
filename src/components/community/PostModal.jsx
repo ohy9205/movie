@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import DeletePost from "./DeletePost";
 import NewPost from "./NewPost";
-import { DELETE, EDIT } from "./PostCard";
+import { DELETE, EDIT } from "./PostDetail";
 import styles from "./PostModal.module.css";
 
 const Backdrop = ({ toggleMenu }) => {

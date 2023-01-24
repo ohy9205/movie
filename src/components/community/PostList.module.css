@@ -1,6 +1,26 @@
-.postList {
+.postList li {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.postInfo {
+  background-color: var(--color-accent);
+  border-radius: 10px;
+}
+
+.postList li p:first-child {
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.postInfo p {
+  color: var(--color-white);
+}
+
+.post {
+  border-bottom: 1px solid var(--color-grey);
 }

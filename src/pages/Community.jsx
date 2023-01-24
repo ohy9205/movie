@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import NewPost from "../components/community/NewPost";
+import { Link } from "react-router-dom";
 import PostList from "../components/community/PostList";
+import Button from "../components/ui/Button";
 import { getPostListFetch } from "../store/community/community-actions";
 import styles from "./Community.module.css";
 
@@ -14,13 +15,12 @@ export default function Community() {
 
   return (
     <section className={styles.community}>
-      {/* <h1>Community</h1> */}
-      <div className={styles.newPost}>
-        <NewPost />
-      </div>
-      <div className={styles.postList}>
-        <PostList />
-      </div>
+      <p>자유롭게 의견을 나눠보세요.</p>
+      <Link to="/community/new">
+        <Button text="새 글 작성" />
+      </Link>
+
+      <PostList />
     </section>
   );
 }

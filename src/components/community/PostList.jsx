@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import PostCard from "./PostCard";
+import { Link } from "react-router-dom";
 import styles from "./PostList.module.css";
 
 export default function PostList() {
@@ -15,13 +15,33 @@ export default function PostList() {
   const sortedPostList = postList.length > 0 && getSorteList();
 
   return (
-    <div className={styles.postList}>
+    <ul className={styles.postList}>
+      <li className={styles.postInfo}>
+        <p>제목</p>
+        <p>작성자</p>
+        <p>작성일</p>
+      </li>
       {sortedPostList &&
         sortedPostList.map((post) => (
-          <article key={post.id}>
-            <PostCard key={post.id} post={post} />
-          </article>
+          <Link
+            to={`/community/detail/${post.id}`}
+            state={{ post: post }}
+            key={post.id}>
+            <li key={post.id} className={styles.post}>
+              <p>{post.title}</p>
+              <p>{post.auth}</p>
+              <time
+                className={styles.timeAgo}
+                dateTime={new Date(
+                  parseInt(post.createdAt)
+                ).toLocaleDateString()}>
+                {new Date(parseInt(post.createdAt))
+                  .toLocaleDateString()
+                  .slice(0, 11)}
+              </time>
+            </li>
+          </Link>
         ))}
-    </div>
+    </ul>
   );
 }

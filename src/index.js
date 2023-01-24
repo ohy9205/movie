@@ -14,6 +14,8 @@ import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import NewPost from "./components/community/NewPost";
+import PostDetail from "./components/community/PostDetail";
 
 document.cookie = "safeCookie1=foo; SameSite=Lax";
 document.cookie = "safeCookie2=foo";
@@ -47,6 +49,30 @@ const router = createBrowserRouter(
           element: (
             <ProtectedRoute>
               <Community />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "community/new",
+          element: (
+            <ProtectedRoute>
+              <NewPost />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: `community/detail/:postId`,
+          element: (
+            <ProtectedRoute>
+              <PostDetail />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: `community/edit/:postId`,
+          element: (
+            <ProtectedRoute>
+              <NewPost />
             </ProtectedRoute>
           ),
         },

@@ -40,13 +40,13 @@ code {
 }
 
 section {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
 }
 
