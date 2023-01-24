@@ -39,13 +39,6 @@ export default function Search() {
     <section>
       <div className={styles.search}>
         <SearchForm />
-        <div className={styles.tipBox}>
-          <h2>검색 TIP {">"} </h2>
-          <p>
-            단어 단위로 입력하면 더 정확한 결과를 얻을 수 있습니다. [ex. 곤지(X)
-            → 곤지암(O)]
-          </p>
-        </div>
       </div>
       {feedback && (
         <div className={`${styles.result} `}>

@@ -28,7 +28,10 @@ export default function Header({ pickCount }) {
       </li>
       <li className={styles.profile}>
         {user && user.email}
-        <Button text="로그아웃" onClick={logout} />
+        {/* <ul text="로그아웃" onClick={logout}> */}
+        <ul className={styles.submenu}>
+          <li onClick={logout}>로그아웃</li>
+        </ul>
       </li>
     </>
   );

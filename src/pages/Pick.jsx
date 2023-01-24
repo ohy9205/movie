@@ -7,7 +7,7 @@ export default function Pick() {
   const movies = useSelector((state) => state.pick.pick);
   return (
     <section className={styles.pick}>
-      <h1 className={styles.pickTitle}>내가 'Pick'한 영화</h1>
+      <h1 className={styles.pickTitle}>My Pick List</h1>
       {movies.length > 0 && (
         <ul className={styles.box}>
           {movies.map((movie) => (

@@ -132,7 +132,7 @@ export const getMovieFetch = () => {
     if (movies.length > 0) {
       const filterMovies = movies.filter((movie) => movie.poster.length > 0);
 
-      const randomSortedMovie = shuffle(filterMovies).splice(0, 20);
+      const randomSortedMovie = shuffle(filterMovies).splice(0, 10);
       dispatch(moviesAction.getRandomMovies(randomSortedMovie));
     }
   };

@@ -58,7 +58,6 @@
 }
 
 .count {
-  /* background-color: var(--color-white); */
   background-color: var(--color-grey);
   border-radius: 100%;
   font-weight: 700;
@@ -84,13 +83,17 @@
   display: block;
 }
 
-.profile button {
-  display: none;
-  position: absolute;
+/* .profile button { */
+.profile .submenu {
+  /* display: none; */
+  /* position: absolute;
   bottom: -1.5rem;
   right: -1rem;
-  padding: 0.2rem 0rem;
-  width: 70px;
+  width: 70px; */
+  width: 100%;
   background-color: var(--color-grey);
   color: var(--color-text);
+  text-align: center;
+  padding: 0.2rem 0rem;
+  font-size: 0.8rem;
 }

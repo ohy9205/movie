@@ -37,3 +37,14 @@
 line {
   color: var(--color-white);
 }
+
+.tipBox {
+  display: flex;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.tipBoxTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
