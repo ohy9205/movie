@@ -23,9 +23,6 @@ export default function Header({ pickCount }) {
         <Link to="/community">커뮤니티</Link>
       </li>
       <li>
-        <Link to="/my_pick">My pick</Link>
-      </li>
-      <li>
         <Link to="/my_pick" className={styles.pick}>
           <BsEmojiHeartEyes className={styles.pickIcon} />
           <span className={styles.count}>{pickCount}</span>
