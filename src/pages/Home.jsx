@@ -9,7 +9,6 @@ import {
 } from "../store/movie/movie-actions";
 import MovieCarousel from "../components/movie/MovieCarousel";
 import styles from "./Home.module.css";
-import MovieCard from "../components/movie/MovieCard";
 import SearchForm from "../components/ui/SearchForm";
 
 export default function Home() {
