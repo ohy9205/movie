@@ -17,6 +17,7 @@
 
 .titleBox {
   display: flex;
+  align-items: center;
 }
 
 .titleIcon {
@@ -29,6 +30,7 @@
 
 .title {
   color: var(--color-white);
+  font-family: "Roboto", sans-serif;
 }
 
 .nav {

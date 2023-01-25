@@ -20,13 +20,13 @@ export default function Header({ pickCount }) {
         <Link to="/search">검색</Link>
       </li>
       <li>
+        <Link to="/community">커뮤니티</Link>
+      </li>
+      <li>
         <Link to="/my_pick" className={styles.pick}>
           <BsEmojiHeartEyes className={styles.pickIcon} />
           <span className={styles.count}>{pickCount}</span>
         </Link>
-      </li>
-      <li>
-        <Link to="/community">커뮤니티</Link>
       </li>
       <li className={styles.profile}>
         {user && (
@@ -64,7 +64,7 @@ export default function Header({ pickCount }) {
         <Link to="/" className={styles.titleBox}>
           <MdMovieFilter className={styles.titleIcon} />
 
-          <h1 className={styles.title}>Movyes</h1>
+          <h1 className={styles.title}>MovYes</h1>
         </Link>
         <ul className={styles.nav}>
           {user && userExist}
