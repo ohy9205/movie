@@ -15,8 +15,7 @@ export default function Community() {
 
   return (
     <section className={styles.community}>
-      <p>자유롭게 의견을 나눠보세요.</p>
-      <Link to="/community/new">
+      <Link to="/community/new" className={styles.newPostBtn}>
         <Button text="새 글 작성" />
       </Link>
 

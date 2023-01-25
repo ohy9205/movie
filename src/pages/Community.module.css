@@ -1,15 +1,15 @@
 .community {
-  width: 80%;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  margin-top: 2rem;
 }
 
-.newPost {
-  padding: 2rem;
+.newPostBtn {
+  display: flex;
+  justify-content: right;
+  padding-right: 1rem;
+  /* width: 100%; */
 }
 
-.postList {
-  padding: 2rem;
+.newPostBtn button {
+  /* width: 100%; */
+  margin-bottom: 2rem;
 }

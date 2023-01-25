@@ -16,31 +16,28 @@ export default function PostList() {
 
   return (
     <ul className={styles.postList}>
-      <li className={styles.postInfo}>
-        <p>제목</p>
-        <p>작성자</p>
-        <p>작성일</p>
-      </li>
       {sortedPostList &&
         sortedPostList.map((post) => (
-          <Link
-            to={`/community/detail/${post.id}`}
-            state={{ post: post }}
-            key={post.id}>
-            <li key={post.id} className={styles.post}>
-              <p>{post.title}</p>
-              <p>{post.auth}</p>
-              <time
-                className={styles.timeAgo}
-                dateTime={new Date(
-                  parseInt(post.createdAt)
-                ).toLocaleDateString()}>
-                {new Date(parseInt(post.createdAt))
-                  .toLocaleDateString()
-                  .slice(0, 11)}
-              </time>
-            </li>
-          </Link>
+          <li key={post.id} className={styles.post}>
+            <Link
+              to={`/community/detail/${post.id}`}
+              state={{ post: post }}
+              key={post.id}>
+              <>
+                <p>{post.title}</p>
+                <p>{post.auth}</p>
+                <time
+                  className={styles.timeAgo}
+                  dateTime={new Date(
+                    parseInt(post.createdAt)
+                  ).toLocaleDateString()}>
+                  {new Date(parseInt(post.createdAt))
+                    .toLocaleDateString()
+                    .slice(0, 11)}
+                </time>
+              </>
+            </Link>
+          </li>
         ))}
     </ul>
   );

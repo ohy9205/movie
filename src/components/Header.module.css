@@ -17,7 +17,6 @@
 
 .titleBox {
   display: flex;
-  gap: 1rem;
 }
 
 .titleIcon {
@@ -72,28 +71,25 @@
 }
 
 .profile {
-  /* display: flex; */
   position: relative;
-  font-weight: 700;
+}
 
+.profile p {
+  cursor: pointer;
   color: var(--color-white);
 }
 
-.profile:hover button {
-  display: block;
-}
-
-/* .profile button { */
 .profile .submenu {
-  /* display: none; */
-  /* position: absolute;
-  bottom: -1.5rem;
-  right: -1rem;
-  width: 70px; */
+  position: absolute;
   width: 100%;
+  border-radius: 10px;
   background-color: var(--color-grey);
   color: var(--color-text);
   text-align: center;
   padding: 0.2rem 0rem;
   font-size: 0.8rem;
+}
+
+.logout {
+  cursor: pointer;
 }

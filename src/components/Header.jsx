@@ -6,11 +6,13 @@ import { MdMovieFilter } from "react-icons/md";
 import styles from "./Header.module.css";
 import { BsEmojiHeartEyes } from "react-icons/bs";
 import { useAuth } from "../api/authService";
+import { useState } from "react";
 
 export default function Header({ pickCount }) {
   const { user } = useAuthContext();
   const { pathname } = useLocation();
   const { logout } = useAuth();
+  const [showSubMenu, setShowSubmenu] = useState(false);
 
   const userExist = (
     <>
@@ -27,11 +29,16 @@ export default function Header({ pickCount }) {
         <Link to="/community">커뮤니티</Link>
       </li>
       <li className={styles.profile}>
-        {user && user.email}
-        {/* <ul text="로그아웃" onClick={logout}> */}
-        <ul className={styles.submenu}>
-          <li onClick={logout}>로그아웃</li>
-        </ul>
+        {user && (
+          <p onClick={() => setShowSubmenu((state) => !state)}>{user.email}</p>
+        )}
+        {showSubMenu && (
+          <ul className={styles.submenu}>
+            <li onClick={logout} className={styles.logout}>
+              로그아웃
+            </li>
+          </ul>
+        )}
       </li>
     </>
   );
