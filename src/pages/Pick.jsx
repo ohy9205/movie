@@ -1,23 +1,21 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import MovieCard from "../components/movie/MovieCard";
-import { useAuthContext } from "../store/AuthContext";
-import { getPickFetch } from "../store/pick-actions";
+import styles from "./Pick.module.css";
 
 export default function Pick() {
-  const dispathch = useDispatch();
-  const { user } = useAuthContext();
-  const pickMovies = useSelector((state) => state.pick.pick);
-  useEffect(() => {
-    user && dispathch(getPickFetch(user.uid));
-  }, [user, dispathch]);
+  const movies = useSelector((state) => state.pick.pick);
   return (
-    <section>
-      <h1>내가 '픽한 영화</h1>
-      {pickMovies &&
-        pickMovies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} isPick />
-        ))}
+    <section className={styles.pick}>
+      <h1 className={styles.pickTitle}>My Pick List</h1>
+      {movies.length > 0 && (
+        <ul className={styles.box}>
+          {movies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} isPick />
+          ))}
+        </ul>
+      )}
+      {movies.length <= 0 && <h3>관심있는 영화를 Pick 해보세요</h3>}
     </section>
   );
 }

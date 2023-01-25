@@ -1,0 +1,15 @@
+.community {
+  margin-top: 2rem;
+}
+
+.newPostBtn {
+  display: flex;
+  justify-content: right;
+  padding-right: 1rem;
+  /* width: 100%; */
+}
+
+.newPostBtn button {
+  /* width: 100%; */
+  margin-bottom: 2rem;
+}

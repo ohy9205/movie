@@ -1,0 +1,33 @@
+.card {
+  width: 20%;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 1rem 0;
+  flex: none;
+}
+
+.card img {
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  min-height: 85%;
+}
+
+.pickBox {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.pickBox h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+}
+
+.pickBox .pickIcon {
+  cursor: pointer;
+}

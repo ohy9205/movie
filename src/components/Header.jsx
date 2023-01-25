@@ -1,53 +1,79 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { logoutUser } from "../api/firebase";
-import { useAuthContext } from "../store/AuthContext";
+import { useAuthContext } from "../store/auth/AuthContext";
 import Button from "./ui/Button";
+import { MdMovieFilter } from "react-icons/md";
+import styles from "./Header.module.css";
+import { BsEmojiHeartEyes } from "react-icons/bs";
+import { useAuth } from "../api/authService";
+import { useState } from "react";
 
-export default function Header() {
+export default function Header({ pickCount }) {
   const { user } = useAuthContext();
   const { pathname } = useLocation();
+  const { logout } = useAuth();
+  const [showSubMenu, setShowSubmenu] = useState(false);
 
   const userExist = (
-    <ul>
+    <>
       <li>
-        <Link to="/search">Search</Link>
+        <Link to="/search">검색</Link>
+      </li>
+      <li>
+        <Link to="/community">커뮤니티</Link>
       </li>
       <li>
         <Link to="/my_pick">My pick</Link>
       </li>
       <li>
-        <Button text="로그아웃" onClick={logoutUser} />
+        <Link to="/my_pick" className={styles.pick}>
+          <BsEmojiHeartEyes className={styles.pickIcon} />
+          <span className={styles.count}>{pickCount}</span>
+        </Link>
       </li>
-    </ul>
+      <li className={styles.profile}>
+        {user && (
+          <p onClick={() => setShowSubmenu((state) => !state)}>{user.email}</p>
+        )}
+        {showSubMenu && (
+          <ul className={styles.submenu}>
+            <li onClick={logout} className={styles.logout}>
+              로그아웃
+            </li>
+          </ul>
+        )}
+      </li>
+    </>
   );
 
   const userNone = (
-    <ul>
-      <li>
-        {pathname === "/sign_in" && (
-          <Link to="/sign_up">
-            <Button text="회원가입" />
-          </Link>
-        )}
-        {pathname === "/sign_up" && (
-          <Link to="/sign_in">
-            <Button text="로그인" />
-          </Link>
-        )}
-      </li>
-    </ul>
+    <li>
+      {pathname === "/sign_in" && (
+        <Link to="/sign_up">
+          <Button text="회원가입" cancle />
+        </Link>
+      )}
+      {(pathname === "/sign_up" || pathname === "/") && (
+        <Link to="/sign_in">
+          <Button text="로그인" cancle />
+        </Link>
+      )}
+    </li>
   );
 
   return (
-    <header style={{ display: "flex" }}>
-      <Link to="/">
-        <h1>Movyes</h1>
-      </Link>
-      <nav>
-        {user && userExist}
-        {!user && userNone}
-      </nav>
+    <header className={styles.header}>
+      <div className={styles.wrapper}>
+        <Link to="/" className={styles.titleBox}>
+          <MdMovieFilter className={styles.titleIcon} />
+
+          <h1 className={styles.title}>MovYes</h1>
+        </Link>
+        <ul className={styles.nav}>
+          {user && userExist}
+          {!user && userNone}
+        </ul>
+      </div>
     </header>
   );
 }

@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleBox {
+  display: flex;
+  gap: 1rem;
+}
+
+.titleIcon {
+  font-size: 3rem;
+}
+
+.titleIcon path {
+  color: var(--color-white);
+}
+
+.title {
+  color: var(--color-white);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.nav li a {
+  color: var(--color-white);
+}
+
+.pick {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.pickIcon path {
+  color: var(--color-white);
+}
+
+.pickIcon {
+  font-size: 1.8rem;
+}
+
+.count {
+  /* background-color: var(--color-white); */
+  background-color: var(--color-grey);
+  border-radius: 100%;
+  font-weight: 700;
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  text-align: center;
+
+  position: absolute;
+  top: -0.4rem;
+  right: -0.8rem;
+}
+
+.profile {
+  /* display: flex; */
+  position: relative;
+  font-weight: 700;
+
+  color: var(--color-white);
+}
+
+.profile:hover button {
+  display: block;
+}
+
+.profile button {
+  display: none;
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1rem;
+  padding: 0.2rem 0rem;
+  width: 70px;
+  background-color: var(--color-grey);
+  color: var(--color-text);
+}

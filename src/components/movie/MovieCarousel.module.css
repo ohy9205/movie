@@ -1,0 +1,25 @@
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.carouselBox {
+  max-width: 900px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.cardBox {
+  display: flex;
+}
+
+.slideBtn {
+  font-size: 2rem;
+  cursor: pointer;
+  width: 5%;
+}
+
+.slideBtn polyline {
+  stroke: var(--color-accent);
+}

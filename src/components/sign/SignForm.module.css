@@ -1,0 +1,59 @@
+.sign {
+  padding: 2rem;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.signForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-grey);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.inputBox input {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.inputBox input:first-child {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.signForm button {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.socialLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.socilLoginIcon {
+  font-size: 2rem;
+}
+
+.link {
+  text-align: center;
+}

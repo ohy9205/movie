@@ -1,39 +1,31 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useAuthContext } from "../../store/AuthContext";
-import { addPickFetch, removePickFetch } from "../../store/pick-actions";
+
+import styles from "./MovieCard.module.css";
 import MovieDetailModal from "./MovieDetailModal";
+import PickIcon from "../ui/PickIcon";
 
 export default function MovieCard({ movie, isPick }) {
   const [isShow, setIsShow] = useState(false);
-  const dispatch = useDispatch();
-  const { user } = useAuthContext();
 
   const isShowToggle = () => {
     setIsShow((showDetail) => !showDetail);
   };
-
   return (
     <>
-      <li style={{ width: "150px" }}>
-        <div onClick={isShowToggle}>
-          <img
-            src={movie.poster}
-            style={{ display: "block", width: "100%" }}
-            alt="X"
-          />
-          {movie.title}
+      <li className={styles.card}>
+        <img
+          src={
+            movie.poster || `${process.env.PUBLIC_URL}/assets/poster_none.jpg`
+          }
+          style={{ display: "block", width: "100%" }}
+          alt={movie.title + "포스터"}
+          onClick={isShowToggle}
+        />
+
+        <div className={styles.pickBox}>
+          <h1>{movie.title}</h1>
+          <PickIcon className={styles.pickIcon} movie={movie} />
         </div>
-        {user && !isPick && (
-          <button onClick={() => dispatch(addPickFetch(user.uid, movie))}>
-            추가
-          </button>
-        )}
-        {user && isPick && (
-          <button onClick={() => dispatch(removePickFetch(user.uid, movie.id))}>
-            삭제
-          </button>
-        )}
       </li>
       {isShow && <MovieDetailModal movie={movie} onClick={isShowToggle} />}
     </>

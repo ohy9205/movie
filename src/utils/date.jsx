@@ -14,13 +14,10 @@ export const getPeriodDate = (period = 0) => {
   }`;
 };
 
-/** 날짜 포맷 */
+/** 날짜 포맷 - YYYYMMDD*/
 export const changeDateFormat = (date) => {
-  const newDate = new Date(date);
-  const year = newDate.getFullYear();
-  const month = newDate.month() + 1;
-  const day = newDate.getDate();
-  return `${year}-${month < 10 ? `0${month}` : month}-${
-    day < 10 ? `0${day}` : day
-  }`;
+  const year = date.slice(0, 4);
+  const month = date.slice(4, 6);
+  const day = date.slice(6, 8);
+  return `${year}-${month}-${day}`;
 };

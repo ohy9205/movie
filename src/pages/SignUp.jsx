@@ -1,15 +1,9 @@
-import { Link } from "react-router-dom";
 import SignForm from "../components/sign/SignForm";
 
-export default function Login() {
+export default function SignUp() {
   return (
     <section>
-      <h1>회원가입</h1>
-      {<SignForm />}
-
-      <Link to="/login">
-        <p>로그인 하러가기</p>
-      </Link>
+      <SignForm />
     </section>
   );
 }
