@@ -166,8 +166,6 @@ export const getBoxOfficeMovies = async (boxOfficeData) => {
       const response = await moviesClient.get("", {
         params: {
           title: data.title,
-          // movieId: data.movieCode,
-          // releaseDts: data.releaseDate,
           releaseDts: data.releaseDate.slice(0, 4),
         },
       });
