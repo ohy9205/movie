@@ -79,7 +79,7 @@ export const getRecentMoviesFetch = () => {
 
     dispatch(
       moviesAction.getRecentMovies(
-        movieList.length < 15 ? movieList.slice(0, 9) : movieList
+        movieList.length < 15 ? movieList.slice(0, 10) : movieList
       )
     );
   };
@@ -158,16 +158,19 @@ const getBoxOffice = async () => {
 export const getBoxOfficeMovies = async (boxOfficeData) => {
   let movieList = [];
 
-  for await (const data of boxOfficeData) {
+  for (const data of boxOfficeData) {
+    // db에서 해당 데이터 검색
     const movie = await search(data);
+    // db에 해당 데이터가 없으면 api에서 검색
     if (!movie) {
       const response = await moviesClient.get("", {
         params: {
           title: data.title,
-          releaseDts: data.releaseDate,
+          // movieId: data.movieCode,
+          // releaseDts: data.releaseDate,
+          releaseDts: data.releaseDate.slice(0, 4),
         },
       });
-
       const responseData = getResponseMovieData(response);
       if (responseData && responseData.length > 0) {
         for (const data of responseData) {
